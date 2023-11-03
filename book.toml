@@ -1,0 +1,11 @@
+[book]
+authors = ["sitandr"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Typst Examples Book"
+
+[preprocessor.typst-highlight]
+#disable_inline = true
+typst_default = true
+render = true
