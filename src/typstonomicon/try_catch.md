@@ -1,6 +1,7 @@
 # Try&Catch
 
 ```
+// author: laurmaedge
 // Renders an image or a placeholder if it doesn't exist.
 // Don’t try this at home, kids!
 #let maybe-image(path, ..args) = locate(loc => {

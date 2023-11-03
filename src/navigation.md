@@ -4,7 +4,7 @@ The book consists of several chapters, each with its own goal.
 
 ## 1. Tutorial
 
-More specialized examples, much less words than in [Official Tutorial](https://typst.app/docs/tutorial/). It is _highly recommended to read it anyway_.
+More specialized examples, less words than in [Official Tutorial](https://typst.app/docs/tutorial/). It is _highly recommended to read it anyway_.
 
 ## 2. Snippets
 
