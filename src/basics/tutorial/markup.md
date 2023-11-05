@@ -9,7 +9,9 @@ No including packages or other weird things.
 Blank line will move text to new paragraph.
 
 Btw, you can use any language and unicode symbols
-with no problems by default: ßçœ̃ɛ̃ø∀ёы好😆…
+with no problems by default: ßçœ̃ɛ̃ø∀αβёыა😆…
+
+(as long as current font supports it)
 ```
 
 ## Markup
@@ -19,7 +21,7 @@ with no problems by default: ßçœ̃ɛ̃ø∀ёы好😆…
 
 This was a heading. Number of `=` in front of name corresponds to heading level.
 
-===== Fifth-level heading 
+===== Fifth-level heading
 
 Okay, let's move to _emphasis_ and *bold* text.
 Markup syntax is generally similar to

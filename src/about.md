@@ -2,9 +2,9 @@
 
 This book provides lots of [Typst](https://github.com/typst/typst) snippets that can help you to write better Typst code.
 
-This book isn't an official. Some snippets&suggestions here may be outdated or useless. However, _all of them should compile on last version of Typst[^1]_.
+This is an unofficial book. Some snippets&suggestions here may be outdated or useless. However, _all of them should compile on last version of Typst[^1]_.
 
-**CAUTION:** currently the book is a very early WIP, so don't rely on it.
+**CAUTION:** currently the book is a very early **WIP**, so don't rely on it.
 
 ## Contributions
 Any contributions are very welcome! If you have a good code snippet that you want to share, feel free to submit an issue with snipper or make a PR.

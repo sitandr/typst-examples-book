@@ -14,7 +14,7 @@
   - [Scripting](./basics/scripting/README.md)
     - [Basics](./basics/scripting/basics.md)
   -  [States&Query](./basics/states/README.md)
-     -  [Counters]()
+     -  [Counters](./basics/states/counters.md)
   -  [Page settings]()
 - [Typst Snippets]()
     - [Logos&Figures](./snippets/logos.md)
