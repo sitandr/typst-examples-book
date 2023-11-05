@@ -20,3 +20,4 @@ Using SVG-s images is totally fine. Totally. But if you are lazy and don't want 
 I'd like to avoid writing #LaTeX if I can.
 ```
 
+// TODO: math/emptyset
