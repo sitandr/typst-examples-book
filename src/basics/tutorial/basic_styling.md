@@ -54,12 +54,12 @@ so we are going to use it a lot
 
 ## Setting something else
 
-```
 Of course, you can use `set` rule with all built-in functions
 and all their named arguments to make something "default".
 
 For example, let's make all quotes there authored by that book:
 
+```
 #set quote(block: true, attribution: [Typst Examples Book])
 
 #quote[
@@ -71,6 +71,25 @@ For example, let's make all quotes there authored by that book:
     that it is hard to verify their authenticity.
 ]
 ```
+
+## Opinionated defaults
+
+That allows you to set the defaults for the document in general as you want:
+
+```
+set par(justify: true)
+set list(indent: 1em)
+set enum(indent: 1em)
+set page(numbering: "1")
+
+- List item
+- List item
+
++ Enum item
++ Enum item
+```
+
+Don't complain about bad defaults! Set your own.
 
 ## Numbering
 
@@ -90,10 +109,10 @@ are very useful with set rules. Let's see what I mean.
 == And second again
 = Now returning to first
 = These are actual romanian numerals
+```
 
 Of course, there are lots of other cool properties
 that can be _set_, so feel free to dive into Reference
 and explore them!
 
 And we are now moving to something much more interesting…
-```

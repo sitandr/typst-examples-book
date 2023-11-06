@@ -32,6 +32,22 @@ it will be both _emphasized_ and _blue_.
 Isn't that cool?
 ```
 
+## Blocks
+
+One of the most important usages is that you can set up all spacing using blocks. Like every element with text contains text that can be set up, every _block element_ contains blocks:
+
+```
+Text before
+= Heading
+Text after
+
+#show heading: set block(spacing: 0.5em)
+
+Text before
+= Heading
+Text after
+```
+
 ## Selector
 
 ```
@@ -77,7 +93,9 @@ It is very easy, see yourself:
 = Smallcaps heading
 ```
 
-## Formatting to get an article look
+## Setting spacing
+
+## Formatting to get an "article look"
 
 ```
 #set page(

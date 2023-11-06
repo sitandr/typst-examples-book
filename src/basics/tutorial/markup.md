@@ -88,6 +88,15 @@ I hope you noticed auto-matched "smart quotes" there.
       to write something with it.
 ```
 
+**Notice:**
+
+```
+Typst doesn't support markdown-like syntax for lists:
+1. Apple
+1. Pair
+1. Soup
+```
+
 ## Math
 
 ```
