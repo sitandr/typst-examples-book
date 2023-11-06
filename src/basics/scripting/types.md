@@ -22,6 +22,15 @@ We have already seen it. A type that represents what is displayed in document.
 
 **Important:** It is very hard to convert _content_ to _plain text_, as _content_ may contain *anything*! Sp be careful when passing and storing content in variables.
 
+## None (`none`)
+
+Nothing. Also known as `null` in other languages. It isn't displayed, converts to empty content.
+
+```
+#none
+#repr(none)
+```
+
 ## String (`str`)
 
 > [Link to Reference](https://typst.app/docs/reference/foundations/str/).
@@ -71,23 +80,28 @@ You can convert a value to an integer with this type's constructor.
 #n \
 #(n += 1) \
 #n \
-#calc.pow(2, n)
+#calc.pow(2, n)\
+#type(n)\
+#repr(n)
+```
 
+```
 #(1 + 2) \
 #(2 - 5) \
 #(3 + 4 < 8)
+```
 
+```
 #0xff \
 #0o10 \
 #0b1001
+```
 
+```
 #int(false) \
 #int(true) \
 #int(2.7) \
 #(int("27") + int("4"))
-
-#type(n)\
-#repr(n)
 ```
 
 ## Float (`float`)
@@ -105,11 +119,15 @@ However, precision may be lost.
 #calc.pow(2, n) \
 #(0.2 + 0.1) \
 #type(n) 
+```
 
+```
 #3.14 \
 #1e4 \
 #(10 / 4)
+```
 
+```
 #float(40%) \
 #float("2.7") \
 #float("1e5")

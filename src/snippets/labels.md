@@ -1,0 +1,23 @@
+# Labels
+
+## Get chapter of label
+
+```
+#let ref-heading(label) = locate(loc => {
+  let elems = query(label, loc)
+  if elems.len() != 1 {
+    panic("found multiple elements")
+  }
+  let element = elems.first()
+  if element.func() != heading {
+    panic("label must target heading")
+  }
+  link(label, element.body)
+})
+
+= Design <design>
+#lorem(20)
+
+= Implementation
+In #ref-heading(<design>), we discussed...
+```

@@ -77,10 +77,10 @@ For example, let's make all quotes there authored by that book:
 That allows you to set the defaults for the document in general as you want:
 
 ```
-set par(justify: true)
-set list(indent: 1em)
-set enum(indent: 1em)
-set page(numbering: "1")
+#set par(justify: true)
+#set list(indent: 1em)
+#set enum(indent: 1em)
+#set page(numbering: "1")
 
 - List item
 - List item

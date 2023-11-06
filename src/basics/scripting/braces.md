@@ -44,6 +44,40 @@ That's when we use `{}`:
 #f("world")
 ```
 
+## Return
+
+**Important**: by default braces return anything that "returns" into them. For example,
+
+```
+#let change_world() = {
+    // some code there changing everything in the world
+    str(4e7)
+    // another code changing the world
+}
+
+#let g() = {
+    "Hahaha, I will change the world now! "
+    change_world()
+    " So here is my long evil monologue..."
+}
+
+#g()
+```
+
+To avoid returning everything, return only what you want explicitly, otherwise everything will be joined:
+
+```
+#let f() = {
+    "Some long text"
+    // Crazy numbers
+    "2e7"
+    return none
+}
+
+// Returns nothing
+#f()
+```
+
 ## Default values
 
 What we made just now was inventing "default values".
