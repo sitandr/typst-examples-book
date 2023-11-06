@@ -1,9 +1,11 @@
 # Basics
 
-```
+## Variables I
+
 Let's start with _variables_.
 The concept is very simple, just some value you can reuse:
 
+```
 #let author = "John Doe"
 
 This is a book by #author. #author is a great guy.
@@ -13,6 +15,7 @@ This is a book by #author. #author is a great guy.
 ]
 ```
 
+## Variables II
 You can store _any_ Typst value in variable:
 
 ```
@@ -21,4 +24,31 @@ You can store _any_ Typst value in variable:
 #block_text
 
 #figure(caption: "The block", block_text)
+```
+
+## Functions
+
+We have already seen some "custom" functions
+in [Advanced Styling](../tutorial/advanced_styling.md) chapter.
+
+Functions are values that take some values
+and output some values:
+
+```
+// This is a syntax that we have seen earlier
+#let f = (name) => "Hello, " + name
+
+#f("world!")
+```
+
+### Alternative syntax
+
+You can write the same shorter:
+
+```
+// The following syntaxes are equivalent
+#let f = (name) => "Hello, " + name
+#let f(name) = "Hello, " + name
+
+#f("world!")
 ```

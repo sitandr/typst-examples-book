@@ -31,3 +31,8 @@ To use mighty package, just write, like this:
     })
 })
 ```
+
+## Contributing
+
+If you are author of a package or just want to make a fair overview,
+feel free to make issues/PR-s!

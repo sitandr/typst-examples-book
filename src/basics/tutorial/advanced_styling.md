@@ -63,6 +63,7 @@ no need to use show rules
 Let's try now writing custom functions. 
 It is very easy, see yourself:
 
+// "it" is a heading, we take it and output things in braces
 #show heading: it => {
   // center it
   set align(center)
