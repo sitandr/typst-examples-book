@@ -15,7 +15,7 @@ We may use same for functions bodies:
 #f[World] // also don't forget we can use it to pass content!
 ```
 
-**Important:** It is very hard to convert _content_ to _plain text_, as _content_ may contain *anything*!
+**Important:** It is very hard to convert _content_ to _plain text_, as _content_ may contain *anything*! Sp be careful when passing and storing content in variables.
 
 ## Braces
 However, we often want to use code inside functions.
@@ -34,7 +34,7 @@ That's when we use `{}`:
     } else {
         name
     }
-    
+
     // finish sentence
     "!"
 }
