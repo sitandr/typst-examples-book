@@ -45,6 +45,24 @@ Mutable object that stores data with their indices.
     .join(", ", last: " and "))
 ```
 
+### List operations
+
+```
+// sum of lists:
+#((1, 2, 3) + (4, 5, 6))
+
+// list product:
+#((1, 2, 3) * 4)
+```
+
+### Empty list
+
+```
+#() \ // this is an empty list
+#(1,)\  // this is a list with one element
+BAD: #(1) // this is just an element, not a list!
+```
+
 ## Dictionaries (`dict`)
 
 > [Link to Reference](https://typst.app/docs/reference/foundations/dictionary/).
@@ -65,4 +83,11 @@ Dictionaries are objects that store a string "key" and a value, associated with 
 #dict.at("born") \
 #dict.insert("city", "Berlin ")
 #("name" in dict)
+```
+
+### Empty dictionary
+
+```
+This is an empty list: #() \
+This is an empty dict: #(:)
 ```

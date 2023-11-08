@@ -44,6 +44,27 @@ That's when we use `{}`:
 #f("world")
 ```
 
+## Scopes
+
+**This is a very important thing to remember**.
+
+_You can't use variables outside of scopes they are defined (unless it is file root, then you can import them)_. _Set and show rules affect things in their scope only._
+
+```
+#{
+    let a = 3;
+}
+// can't use "a" there.
+
+#[
+    #show "true": "false"
+
+    This is true.
+]
+
+This is true.
+```
+
 ## Return
 
 **Important**: by default braces return anything that "returns" into them. For example,
@@ -78,6 +99,7 @@ To avoid returning everything, return only what you want explicitly, otherwise e
 #f()
 ```
 
+
 ## Default values
 
 What we made just now was inventing "default values".
@@ -85,6 +107,7 @@ They are very common in styling, so there is a special syntax for them:
 
 ```
 #let f(name: "anonym") = [Hello, #name!]
+
 #f()
 #f(name: "Joe")
 #f(name: "world")
