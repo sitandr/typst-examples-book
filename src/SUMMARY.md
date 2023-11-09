@@ -41,6 +41,7 @@
     - [Setting chapter headers]()     <!-- - [Bibliography setup]()?-->
     - [General layout]()
       - [Page setup]()
+      - [Hiding](./snippets/hidding.md)
     - [Code formatting]()
     - [Hyphenation]()
     - [Scripting](./snippets/scripting/index.md)
