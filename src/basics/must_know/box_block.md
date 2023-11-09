@@ -14,3 +14,11 @@ Both have similar useful properties:
 #box(stroke: red, inset: 1em)[Box text]
 #block(stroke: red, inset: 1em)[Block text]
 ```
+
+## `rect`
+
+There is also `rect` that works like `block`, but has useful default inset and stroke:
+
+```
+#rect[Block text]
+```

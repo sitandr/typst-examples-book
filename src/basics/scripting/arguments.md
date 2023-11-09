@@ -17,3 +17,13 @@ This may be super useful in tables:
   ..a
 )
 ```
+
+## Key arguments
+
+The same idea works with key arguments:
+
+```
+#let text-params = (fill: blue, size: 0.8em)
+
+Some #text(..text-params)[text].
+```
