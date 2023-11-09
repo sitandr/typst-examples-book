@@ -1,10 +1,9 @@
 # Summary
 
 - [About](./about.md)
-- [Navigation](./navigation.md)
-# Examples
+# The Book
 - [Typst Basics](./basics/README.md)
-  - [Tutorial by Examples]()
+  - [Tutorial by Examples](./basics/tutorial/index.md)
     -  [Markup language](./basics/tutorial/markup.md)
     -  [Functions](./basics/tutorial/functions.md)
     -  [Basic styling](./basics/tutorial/basic_styling.md)
@@ -36,11 +35,10 @@
      - [Location and sizes]()
      - [Semicolon syntax]()
      - [Classes](./basics/math/classes.md)
-- [Typst Snippets]()
+- [Typst Snippets](./snippets/index.md)
     - [Logos&Figures](./snippets/logos.md)
     - [Labels](./snippets/labels.md)
-    - [Bibliography setup]()
-    - [Setting chapter headers]()
+    - [Setting chapter headers]()     <!-- - [Bibliography setup]()?-->
     - [General layout]()
       - [Page setup]()
     - [Code formatting]()
@@ -53,6 +51,7 @@
       - [Symbols]() <!--TODO: emptyset, replacing-->
       - [Fonts](./snippets/math/fonts.md)
       - [Text&Content]()
+    - [Color&Gradients]()
     - [Pretty things](./snippets/pretty.md)
     - [Numbering](./snippets/numbering.md)
     - [Special documents](./snippets/special/index.md)
@@ -61,7 +60,7 @@
     - [Overview]()
     - [Drawing](./packages/drawing.md)
     - [Graphs]()
-    - [Custom boxes]() <!--TODO: for theorems look into math-->
+    - [Custom boxes]() <!--TODO: add note "for theorems look into math"-->
     - [Math]()
     - [Presentations]()
     - [Tables]()
@@ -69,7 +68,7 @@
     - [Themes]()
     - [Misc]()
     - [External](./packages/external.md)
-- [Typstonomicon, or The Code You Should Not Write]()
+- [Typstonomicon, or The Code You Should Not Write](./typstonomicon/index.md)
     - [Try&Catch](./typstonomicon/try_catch.md)
     - [Breakpoints on broken blocks](./typstonomicon/block_break.md)
     - [Extracting plain text](./typstonomicon/extract_plain_text.md)

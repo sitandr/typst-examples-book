@@ -13,6 +13,7 @@
 ```
 ## Text on box top
 ```
+// author: gaiajack
 #let todo(body) = block(
   above: 2em, stroke: 0.5pt + red,
   width: 100%, inset: 14pt

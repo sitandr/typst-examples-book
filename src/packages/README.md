@@ -1,5 +1,9 @@
 # Packages
 
+Quick examples to make it easier choosing a package that is better suited for your task.
+
+## General
+
 Typst has packages, but, unlike LaTeX, you need to remember:
 
 - You need them only for some specialized tasks, basic formatting _can be totally done without them_.
