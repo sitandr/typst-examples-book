@@ -1,5 +1,4 @@
 # Use with external tools
-
 Currently the best ways to communicate is using
 
 1. Preprocessing. The tool should generate Typst file

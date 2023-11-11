@@ -1,12 +1,10 @@
 # States
-
 Before we start something practical, it is important to understand states in general.
 
 Here is a good explanation of why do we _need_ them: [Official Reference about states](https://typst.app/docs/reference/meta/state/). It is highly recommended to read it first.
 
 So instead of
-
-```no-render
+```typ-norender
 #let x = 0
 #let compute(expr) = {
   // eval evaluates string as Typst code
@@ -25,8 +23,7 @@ So instead of
 **DOES NOT COMPILE:** Variables from outside the function are read-only and cannot be modified
 
 You should write
-
-```
+```typ
 #let s = state("x", 0)
 #let compute(expr) = [
   #s.update(x =>
@@ -53,61 +50,55 @@ The computations will be made _in order_ they are located in the document:
 ```
 
 ## Operations with states
-
 ### Creating new state
-
-```
+```typ
 #let x = state("state-id")
 #let y = state("state-id", 2)
 
 #x, #y
 
-#x.display()\
+#x.display() \
 #y.display(n => "State is " + str(n))
 ```
 
 ### Update
-
 Updating is _a content_ that tells that in this place of document the state _should be updated_.
 
-```
+```typ
 #let x = state("x", 0)
 #x \
 #let _ = x.update(3)
 // nothing happens, we don't put x into the document flow
 #x \
-#repr(x.update(3))\ // this is how that content looks\
+#repr(x.update(3)) \ // this is how that content looks \
 #x.update(3)
 #x // Finally!
 ```
 
 ### ID collision
-
 _You almost never have to worry about colliding state id-s._
 States are described not only by their id-s, but also by their _location in code_.
 
 However, if you write functions or loops that are used several times, _be careful_!
-
-```
+```typ
 #let f(x) = {
-    // return new state…
-    // …but their id-s and code locations are the same!
-    // so it will always be the same state!
-    let y = state("x", 0)
-    y.update(y => y + x)
-    y.display()
+  // return new state…
+  // …but their id-s and code locations are the same!
+  // so it will always be the same state!
+  let y = state("x", 0)
+  y.update(y => y + x)
+  y.display()
 }
 
 #let a = f(2)
 #let b = f(3)
 
-#a, #b\
+#a, #b \
 #repr(a), #repr(b)
 ```
 
 However, this is okay:
-
-```
+```typ
 // locations in code are different!
 #let x = state("state-id")
 #let y = state("state-id", 2)

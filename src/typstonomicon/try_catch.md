@@ -1,6 +1,5 @@
-# Try&Catch
-
-```
+# Try & Catch
+```typ
 // author: laurmaedge
 // Renders an image or a placeholder if it doesn't exist.
 // Don’t try this at home, kids!

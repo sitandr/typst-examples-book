@@ -1,5 +1,4 @@
 # Drawing
-
 ## `cetz`
 
 Cetz is an analogue of LaTeX's `tikz`. Maybe it is not as powerful yet, but certainly easier to learn and use.
@@ -7,8 +6,7 @@ Cetz is an analogue of LaTeX's `tikz`. Maybe it is not as powerful yet, but cert
 It is the best choice in most of cases you want to draw something in Typst.
 
 ### Draw a graph in polar coords
-
-```
+```typ
 #import "@preview/cetz:0.1.2": canvas, plot
 
 #figure(

@@ -1,13 +1,10 @@
 # Special documents
-
 ## Presentations
-
 See [polylux](../../packages/).
 
 ## Forms
-
 ### Form with placeholder
-```
+```typ
 #grid(
   columns: 2,
   rows: 4,
@@ -26,4 +23,3 @@ See [polylux](../../packages/).
 
 ### Interactive
 > Presentation interactive forms are coming! They are currently under heavy work by @tinger.
-

@@ -1,5 +1,4 @@
 # Typstonomicon, or The Code You Should Not Write
-
 Totally cursed examples with lots of quires, measure and other things to hack around current Typst limitations.
 Generally you should use this code only if you really need it.
 

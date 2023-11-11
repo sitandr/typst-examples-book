@@ -1,7 +1,5 @@
 # Breakpoints on broken blocks
-
 **Limitations: works only with one-column layout**
-
 ```typ-norender
 // author: cdata
 #let countBoundaries(loc, fromHeader) = {

@@ -1,15 +1,13 @@
 # Counters
-
 Counters are special states that _count_ elements of some type.
 As with states, you can create your own with identifier strings.
 
 _Important:_ to initiate counters of elements, you need to _set numbering for them_.
 
 ## States methods
-
 Counters are states, so they can do all things states can do.
 
-```
+```typ
 #set heading(numbering: "1.")
 
 = Background
@@ -20,7 +18,7 @@ Counters are states, so they can do all things states can do.
 Current heading number: #counter(heading).display().
 ```
 
-```
+```typ
 #let mine = counter("mycounter")
 #mine.display()
 
@@ -32,7 +30,7 @@ Current heading number: #counter(heading).display().
 ```
 
 ## Displaying counters
-```
+```typ
 #set heading(numbering: "1.")
 
 = Introduction
@@ -48,14 +46,14 @@ Or in roman numerals:
 
 Counters also support displaying _both current and final values_ out-of-box:
 
-```
+```typ
 #set heading(numbering: "1.")
 
 = Introduction
 Some text here.
 
-#counter(heading).display(both: true)\
-#counter(heading).display("1 of 1", both: true)\
+#counter(heading).display(both: true) \
+#counter(heading).display("1 of 1", both: true) \
 #counter(heading).display(
   (num, max) => [#num of #max],
    both: true
@@ -65,11 +63,9 @@ Some text here.
 The current value is: #counter(heading).display()
 ```
 
-== Step
-
+## Step
 That's quite easy, for counters you can increment value using `step`. It works the same way as `update`.
-
-```
+```typ
 #set heading(numbering: "1.")
 
 = Introduction
@@ -84,8 +80,7 @@ At #counter(heading).display().
 ```
 
 ## You can use counters in your functions:
-
-```
+```typ
 #let c = counter("theorem")
 #let theorem(it) = block[
   #c.step()

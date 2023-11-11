@@ -2,7 +2,7 @@
 
 See the book there: https://sitandr.github.io/typst-examples-book/book/
 
-## Highlight&rendering
+## Highlight & rendering
 
 Currently powered by https://github.com/sitandr/mdbook-typst-highlight.
 
