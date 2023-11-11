@@ -70,6 +70,7 @@
   - [Misc]()
   - [External](./packages/external.md)
 - [Typstonomicon, or The Code You Should Not Write](./typstonomicon/index.md)
+  - [Word count](./typstonomicon/word_count.md)
   - [Try & Catch](./typstonomicon/try_catch.md)
   - [Breakpoints on broken blocks](./typstonomicon/block_break.md)
   - [Extracting plain text](./typstonomicon/extract_plain_text.md)
