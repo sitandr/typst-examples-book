@@ -64,7 +64,6 @@ The current value is: #counter(heading).display()
 ```
 
 ## Step
-
 That's quite easy, for counters you can increment value using `step`. It works the same way as `update`.
 ```typ
 #set heading(numbering: "1.")

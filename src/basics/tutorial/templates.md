@@ -20,7 +20,7 @@ can circumvent this in a predictable way:
 This is equivalent to:
 ```typ-norender
 // we can reduce the number of hashes needed here by using scripting mode
-// same as above but we exchanged `[...]` for `{...}` to switch from markdown
+// same as above but we exchanged `[...]` for `{...}` to switch from markup
 // into scripting mode
 #let apply-template(body) = {
   show heading.where(level: 1): emph
