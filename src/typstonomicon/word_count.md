@@ -1,6 +1,7 @@
 # Word count
 
 ```typ
+// original author: jollywatt
 #let count-words(it) = {
     let fn = repr(it.func())
     if fn == "sequence" { it.children.map(count-words).sum() }

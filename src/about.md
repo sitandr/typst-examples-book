@@ -12,9 +12,9 @@ This will greatly help me to stay motivated and continue working on this book!
 ## Navigation
 The book consists of several chapters, each with its own goal:
 
-1. [Typst Basics](./basics/README.md)
+1. [Typst Basics](./basics/index.md)
 2. [Typst Snippets](./snippets/index.md)
-3. [Typst Packages](./packages/README.md)
+3. [Typst Packages](./packages/index.md)
 4. [Typstonomicon](./typstonomicon/index.md)
 
 ## Contributions

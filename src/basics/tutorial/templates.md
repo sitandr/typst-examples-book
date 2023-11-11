@@ -64,6 +64,6 @@ Then, in template file:
 #show: new-template
 ```
 
-Writing templates is fairly easy if you understand [scripting](../scripting/README.md).
+Writing templates is fairly easy if you understand [scripting](../scripting/index.md).
 
 See more information about writing templates in [Official Tutorial](https://typst.app/docs/tutorial/making-a-template/).
