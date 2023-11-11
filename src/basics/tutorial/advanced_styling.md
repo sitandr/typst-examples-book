@@ -88,6 +88,7 @@ It is very easy, see yourself:
 ```
 
 ## Setting spacing
+TODO: explain block spacing for common elements
 
 ## Formatting to get an "article look"
 ```typ

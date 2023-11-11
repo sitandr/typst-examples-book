@@ -12,7 +12,7 @@
   - [Must-know](./basics/must_know/README.md)
     - [Boxing & Blocking](./basics/must_know/box_block.md)
     - [Spacing](./basics/must_know/spacing.md)
-    - [Placing & Moving & Scale & Hide]()
+    - [Placing, Moving, Scale & Hide]()
     - [Align & Padding]()
     - [Tables & Grids]()
   - [Scripting](./basics/scripting/README.md)
@@ -38,7 +38,7 @@
 - [Typst Snippets](./snippets/index.md)
   - [Logos & Figures](./snippets/logos.md)
   - [Labels](./snippets/labels.md)
-  - [Setting chapter headers]()     <!-- - [Bibliography setup]()?-->
+  - [Setting chapter headers]()     <!-- TODO: Bibliography setup?-->
   - [General layout]()
     - [Page setup]()
     - [Hiding](./snippets/hidding.md)
