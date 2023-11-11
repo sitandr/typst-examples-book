@@ -1,5 +1,4 @@
 # Query
-
 > Link [there](https://typst.app/docs/reference/meta/query/)
 
 Query is a thing that allows you getting location by _selector_ (this is the same thing we used in show rules).
@@ -9,7 +8,6 @@ That enables "time travel", getting information about document from its parts an
 It is currently one of the _the darkest magics currently existing in Typst_. It gives you great powers, but with great power comes great responsibility.
 
 ## Time travel
-
 ```typ
 #let s = state("x", 0)
 #let compute(expr) = [
@@ -34,7 +32,6 @@ Value at `<here>` is
 ```
 
 ## Getting nearest chapter
-
 ```typ-norender
 #set page(header: locate(loc => {
   let elems = query(

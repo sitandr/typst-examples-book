@@ -1,7 +1,5 @@
 # Markup language
-
 ## Starting
-
 ```typ
 Starting typing in Typst is easy.
 No including packages or other weird things.
@@ -15,7 +13,6 @@ with no problems by default: ßçœ̃ɛ̃ø∀αβёыა😆…
 ```
 
 ## Markup
-
 ```typ
 = Markup
 
@@ -28,11 +25,10 @@ Markup syntax is generally similar to
 `AsciiDoc` (this was `raw` for monospace text!)
 ```
 
-## New lines&Escaping
-
+## New lines & Escaping
 ```typ
-You can break\
-line anywhere you\
+You can break \
+line anywhere you \
 want using \\ symbol.
 
 Also you can use that symbol to
@@ -41,8 +37,7 @@ if you don't want it to be interpreted as markup
 or other special symbols.
 ```
 
-## Comments&codeblocks
-
+## Comments & codeblocks
 ```````typ
 You can write comments with `//` and `/* comment */`:
 // Like this
@@ -62,7 +57,6 @@ By the way, I'm writing it all in a _fenced code block_ with *syntax highlightin
 ```````
 
 ## Smart quotes
-
 ```typ
 == What else?
 
@@ -72,7 +66,6 @@ I hope you noticed auto-matched "smart quotes" there.
 ```
 
 ## Lists
-
 ```typ
 - Writing lists in a simple way is great.
 - Nothing complex, start your points with `-`
@@ -83,13 +76,12 @@ I hope you noticed auto-matched "smart quotes" there.
 + There is no alternative markup syntax for lists
 + So just remember `-` and `+`, all other symbols
   wouldn't work in an unintended way.
-    + That is a general property of Typst's markup.
-    + Unlike Markdown, there is only one way
-      to write something with it.
+  + That is a general property of Typst's markup.
+  + Unlike Markdown, there is only one way
+    to write something with it.
 ```
 
 **Notice:**
-
 ```typ
 Typst doesn't support markdown-like syntax for lists:
 1. Apple
@@ -98,7 +90,6 @@ Typst doesn't support markdown-like syntax for lists:
 ```
 
 ## Math
-
 ```typ
 I will just mention math ($a + b/c = sum_i x^i$) 
 is possible there and is quite pretty:

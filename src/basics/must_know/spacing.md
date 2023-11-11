@@ -1,5 +1,4 @@
-# Fractional&Ratio length
-
+# Fractional & Ratio length
 ```typ
 Left #h(1fr) Left-ish #h(2fr) Right
 ```

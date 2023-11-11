@@ -1,17 +1,15 @@
 # Basics
-
 ## Variables I
-
 Let's start with _variables_.
-The concept is very simple, just some value you can reuse:
 
+The concept is very simple, just some value you can reuse:
 ```typ
 #let author = "John Doe"
 
 This is a book by #author. #author is a great guy.
 
 #quote(block: true, attribution: author)[
-    \<Some quote\>
+  \<Some quote\>
 ]
 ```
 
@@ -27,7 +25,6 @@ You can store _any_ Typst value in variable:
 ```
 
 ## Functions
-
 We have already seen some "custom" functions
 in [Advanced Styling](../tutorial/advanced_styling.md) chapter.
 
@@ -42,7 +39,6 @@ and output some values:
 ```
 
 ### Alternative syntax
-
 You can write the same shorter:
 
 ```typ

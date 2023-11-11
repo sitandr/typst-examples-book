@@ -1,5 +1,4 @@
 # Scripting
-
 ## Unflatten arrays
 
 ```typ
@@ -17,15 +16,14 @@
 ```
 
 ## Create an abbreviation
-
 ```typ
 #let full-name = "Federal University of Ceará"
 
 #let letts = full-name
-    .split()
-    .map(word => word.at(0))
-    // filter only capital letters
-    .filter(l => upper(l) == l)
-    .join()
+  .split()
+  .map(word => word.at(0))
+  // filter only capital letters
+  .filter(l => upper(l) == l)
+  .join()
 #letts
 ```

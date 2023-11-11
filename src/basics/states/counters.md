@@ -1,12 +1,10 @@
 # Counters
-
 Counters are special states that _count_ elements of some type.
 As with states, you can create your own with identifier strings.
 
 _Important:_ to initiate counters of elements, you need to _set numbering for them_.
 
 ## States methods
-
 Counters are states, so they can do all things states can do.
 
 ```typ
@@ -54,8 +52,8 @@ Counters also support displaying _both current and final values_ out-of-box:
 = Introduction
 Some text here.
 
-#counter(heading).display(both: true)\
-#counter(heading).display("1 of 1", both: true)\
+#counter(heading).display(both: true) \
+#counter(heading).display("1 of 1", both: true) \
 #counter(heading).display(
   (num, max) => [#num of #max],
    both: true
@@ -68,7 +66,6 @@ The current value is: #counter(heading).display()
 == Step
 
 That's quite easy, for counters you can increment value using `step`. It works the same way as `update`.
-
 ```typ
 #set heading(numbering: "1.")
 
@@ -84,7 +81,6 @@ At #counter(heading).display().
 ```
 
 ## You can use counters in your functions:
-
 ```typ
 #let c = counter("theorem")
 #let theorem(it) = block[

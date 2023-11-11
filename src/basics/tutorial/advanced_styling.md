@@ -1,5 +1,4 @@
 # Advanced styling
-
 ## The show rule
 ```typ
 Advanced styling comes with another rule. The _`show` rule_.
@@ -17,7 +16,6 @@ Help, it is holding me hostage.
 ```
 
 ## Now a bit more serious
-
 ```typ
 Show rule is a powerful thing that takes a _selector_
 and what to apply to it. After that it will apply to
@@ -33,9 +31,7 @@ Isn't that cool?
 ```
 
 ## Blocks
-
 One of the most important usages is that you can set up all spacing using blocks. Like every element with text contains text that can be set up, every _block element_ contains blocks:
-
 ```typ
 Text before
 = Heading
@@ -49,7 +45,6 @@ Text after
 ```
 
 ## Selector
-
 ```typ
 So show rule can accept selectors.
 There are lots of different selector types,
@@ -74,7 +69,6 @@ no need to use show rules
 ```
 
 ## Custom formatting
-
 ```typ
 Let's try now writing custom functions. 
 It is very easy, see yourself:
@@ -96,7 +90,6 @@ It is very easy, see yourself:
 ## Setting spacing
 
 ## Formatting to get an "article look"
-
 ```typ
 #set page(
   // Header is that small thing on top
@@ -119,7 +112,7 @@ It is very easy, see yourself:
     #link("mailto:some@mail.edu")
   ],
   align(center)[
-    Another author\
+    Another author \
     Another Institute \
     #link("mailto:another@mail.edu")
   ]

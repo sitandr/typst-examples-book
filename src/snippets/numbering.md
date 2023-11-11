@@ -1,5 +1,4 @@
 # Numbering
-
 ## "Clean" numbering
 ```typ
 // original author: tromboneher
@@ -39,7 +38,7 @@
     if subsections.len() == 0 {
       numbering(section_scheme, section)
     } else if subschemes.len() == 0 {
-        numbering(section_scheme, ..nums.pos())
+      numbering(section_scheme, ..nums.pos())
     }
     else {
       clean_numbering(..subschemes)(..subsections)
@@ -61,5 +60,4 @@
 ```
 
 ## Math numbering
-
 See [there](./math/numbering.md).

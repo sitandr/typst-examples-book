@@ -1,5 +1,4 @@
-# States&Query
-
+# States & Query
 Typst tries to be a _pure language_ as much as possible.
 
 That means, a function can't change anything outside of it. That also means, if you call function, the result should be always the same.

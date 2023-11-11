@@ -1,5 +1,4 @@
 # Typst Basics
-
 This is a chapter that consistently introduces you to the most things you need to know when writing with Typst.
 
 It show much more things than official tutorial, so maybe it will be interesting to read for some of the experienced users too.

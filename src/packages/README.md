@@ -1,9 +1,7 @@
 # Packages
-
 Quick examples to make it easier choosing a package that is better suited for your task.
 
 ## General
-
 Typst has packages, but, unlike LaTeX, you need to remember:
 
 - You need them only for some specialized tasks, basic formatting _can be totally done without them_.
@@ -11,7 +9,6 @@ Typst has packages, but, unlike LaTeX, you need to remember:
 - Packages are just plain Typst files (and sometimes plugins), so you can easily write your own!
 
 To use mighty package, just write, like this:
-
 ```typ
 #import "@preview/cetz:0.1.2": canvas, plot
 
@@ -37,6 +34,5 @@ To use mighty package, just write, like this:
 ```
 
 ## Contributing
-
 If you are author of a package or just want to make a fair overview,
 feel free to make issues/PR-s!
