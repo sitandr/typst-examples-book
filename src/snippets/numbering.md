@@ -1,7 +1,7 @@
 # Numbering
 
 ## "Clean" numbering
-```
+```typ
 // original author: tromboneher
 
 // Number sections according to a number of schemes, omitting previous leading elements.

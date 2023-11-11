@@ -2,7 +2,7 @@
 
 ## Functions
 
-```
+```typ
 Okay, let's now move to more complex things.
 
 First of all, there are *lots of magic* in Typst.
@@ -18,7 +18,7 @@ _That *function* just generated 50 "Lorem Ipsum" words!_
 
 ## More functions
 
-```
+```typ
 #underline[functions can do everything!]
 
 #text(orange)[L]ike #text(size: 0.8em)[Really] #sub[E]verything!
@@ -41,7 +41,7 @@ and #emph[just write] functions everywhere!
 
 ## How to call functions
 
-```
+```typ
 First, start with `#`. Then write a name.
 Finally, write some parentheses and maybe something inside.
 
@@ -56,7 +56,7 @@ in #link("https://typst.app/docs/reference/")[Official Reference].
 
 ## Function arguments
 
-```
+```typ
 There are _two types_ of function arguments:
 
 + *Positional.* Like `50` in `lorem(50)`.
@@ -72,7 +72,7 @@ There are _two types_ of function arguments:
 
 ## Content
 
-```
+```typ
 The most "universal" type in Typst language is *content*.
 Everything you write in the document becomes content.
 
@@ -87,7 +87,7 @@ Everything you write in the document becomes content.
 
 ## Passing content into functions
 
-```
+```typ
 So why do we need square braces?
 
 The main answer is that if you *write content right after
@@ -102,7 +102,7 @@ function, it will be passed as positional argument there*.
 
 ## Passing content, part II
 
-`````
+`````typ
 So, just to make it clear, when I write
 
 ```typ

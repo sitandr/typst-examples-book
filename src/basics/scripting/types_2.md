@@ -15,7 +15,7 @@ However, using them adds complexity.
 Mutable object that stores data with their indices.
 
 ### Working with indices
-```
+```typ
 #let values = (1, 7, 4, -3, 2)
 
 // take value at index 0
@@ -29,7 +29,7 @@ Mutable object that stores data with their indices.
 ```
 
 ### Iterating methods
-```
+```typ
 #let values = (1, 7, 4, -3, 2)
 
 // leave only what is odd
@@ -47,7 +47,7 @@ Mutable object that stores data with their indices.
 
 ### List operations
 
-```
+```typ
 // sum of lists:
 #((1, 2, 3) + (4, 5, 6))
 
@@ -57,7 +57,7 @@ Mutable object that stores data with their indices.
 
 ### Empty list
 
-```
+```typ
 #() \ // this is an empty list
 #(1,)\  // this is a list with one element
 BAD: #(1) // this is just an element, not a list!
@@ -69,7 +69,7 @@ BAD: #(1) // this is just an element, not a list!
 
 Dictionaries are objects that store a string "key" and a value, associated with that key.
 
-```
+```typ
 #let dict = (
   name: "Typst",
   born: 2019,
@@ -87,7 +87,7 @@ Dictionaries are objects that store a string "key" and a value, associated with 
 
 ### Empty dictionary
 
-```
+```typ
 This is an empty list: #() \
 This is an empty dict: #(:)
 ```

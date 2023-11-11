@@ -2,7 +2,7 @@
 
 ## Starting
 
-```
+```typ
 Starting typing in Typst is easy.
 No including packages or other weird things.
 
@@ -16,7 +16,7 @@ with no problems by default: ßçœ̃ɛ̃ø∀αβёыა😆…
 
 ## Markup
 
-```
+```typ
 = Markup
 
 This was a heading. Number of `=` in front of name corresponds to heading level.
@@ -30,7 +30,7 @@ Markup syntax is generally similar to
 
 ## New lines&Escaping
 
-```
+```typ
 You can break\
 line anywhere you\
 want using \\ symbol.
@@ -43,7 +43,7 @@ or other special symbols.
 
 ## Comments&codeblocks
 
-```````
+```````typ
 You can write comments with `//` and `/* comment */`:
 // Like this
 /* Or even like
@@ -63,7 +63,7 @@ By the way, I'm writing it all in a _fenced code block_ with *syntax highlightin
 
 ## Smart quotes
 
-```
+```typ
 == What else?
 
 There are not much things in basic "markup" syntax,
@@ -73,7 +73,7 @@ I hope you noticed auto-matched "smart quotes" there.
 
 ## Lists
 
-```
+```typ
 - Writing lists in a simple way is great.
 - Nothing complex, start your points with `-`
   and this will become a list.
@@ -90,7 +90,7 @@ I hope you noticed auto-matched "smart quotes" there.
 
 **Notice:**
 
-```
+```typ
 Typst doesn't support markdown-like syntax for lists:
 1. Apple
 1. Pair
@@ -99,7 +99,7 @@ Typst doesn't support markdown-like syntax for lists:
 
 ## Math
 
-```
+```typ
 I will just mention math ($a + b/c = sum_i x^i$) 
 is possible there and is quite pretty:
 

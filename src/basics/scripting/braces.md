@@ -3,14 +3,14 @@
 You may remember that square brackets
 convert everything inside to *content*.
 
-```
+```typ
 #let v = [Some text, _markup_ and other #strong[functions]]
 #v
 ```
 
 We may use same for functions bodies:
 
-```
+```typ
 #let f(name) = [Hello, #name]
 #f[World] // also don't forget we can use it to pass content!
 ```
@@ -20,7 +20,7 @@ We may use same for functions bodies:
 ## Braces
 However, we often want to use code inside functions.
 That's when we use `{}`:
-```
+```typ
 #let f(name) = {
     // this is code mode
 
@@ -50,7 +50,7 @@ That's when we use `{}`:
 
 _You can't use variables outside of scopes they are defined (unless it is file root, then you can import them)_. _Set and show rules affect things in their scope only._
 
-```
+```typ
 #{
     let a = 3;
 }
@@ -69,7 +69,7 @@ This is true.
 
 **Important**: by default braces return anything that "returns" into them. For example,
 
-```
+```typ
 #let change_world() = {
     // some code there changing everything in the world
     str(4e7)
@@ -87,7 +87,7 @@ This is true.
 
 To avoid returning everything, return only what you want explicitly, otherwise everything will be joined:
 
-```
+```typ
 #let f() = {
     "Some long text"
     // Crazy numbers
@@ -105,7 +105,7 @@ To avoid returning everything, return only what you want explicitly, otherwise e
 What we made just now was inventing "default values".
 They are very common in styling, so there is a special syntax for them:
 
-```
+```typ
 #let f(name: "anonym") = [Hello, #name!]
 
 #f()

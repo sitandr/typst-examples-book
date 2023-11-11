@@ -1,6 +1,6 @@
 # Horizontally align something with something
 
-```
+```typ
 // author: tabiasgeehuman
 #let inline-with(select, content) = locate(loc => {
   let target = query(

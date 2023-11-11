@@ -6,7 +6,7 @@ Here is a good explanation of why do we _need_ them: [Official Reference about s
 
 So instead of
 
-```no-render
+```typ-norender
 #let x = 0
 #let compute(expr) = {
   // eval evaluates string as Typst code
@@ -26,7 +26,7 @@ So instead of
 
 You should write
 
-```
+```typ
 #let s = state("x", 0)
 #let compute(expr) = [
   #s.update(x =>
@@ -56,7 +56,7 @@ The computations will be made _in order_ they are located in the document:
 
 ### Creating new state
 
-```
+```typ
 #let x = state("state-id")
 #let y = state("state-id", 2)
 
@@ -70,7 +70,7 @@ The computations will be made _in order_ they are located in the document:
 
 Updating is _a content_ that tells that in this place of document the state _should be updated_.
 
-```
+```typ
 #let x = state("x", 0)
 #x \
 #let _ = x.update(3)
@@ -88,7 +88,7 @@ States are described not only by their id-s, but also by their _location in code
 
 However, if you write functions or loops that are used several times, _be careful_!
 
-```
+```typ
 #let f(x) = {
     // return new state…
     // …but their id-s and code locations are the same!
@@ -107,7 +107,7 @@ However, if you write functions or loops that are used several times, _be carefu
 
 However, this is okay:
 
-```
+```typ
 // locations in code are different!
 #let x = state("state-id")
 #let y = state("state-id", 2)

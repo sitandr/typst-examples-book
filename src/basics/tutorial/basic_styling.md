@@ -2,7 +2,7 @@
 
 
 ## Let's start with justifying
-```
+```typ
 #set page(width: 15cm, margin: (left: 4cm, right: 4cm))
 
 Okay, that was great, but using functions everywhere,
@@ -32,7 +32,7 @@ and also increased margins to add blank space on edges.
 
 ## A bit about length units
 
-```
+```typ
 There are several absolute length units in Typst:
 
 #set rect(height: 1em)
@@ -59,7 +59,7 @@ and all their named arguments to make something "default".
 
 For example, let's make all quotes there authored by that book:
 
-```
+```typ
 #set quote(block: true, attribution: [Typst Examples Book])
 
 #quote[
@@ -76,7 +76,7 @@ For example, let's make all quotes there authored by that book:
 
 That allows you to set the defaults for the document in general as you want:
 
-```
+```typ
 #set par(justify: true)
 #set list(indent: 1em)
 #set enum(indent: 1em)
@@ -93,7 +93,7 @@ Don't complain about bad defaults! Set your own.
 
 ## Numbering
 
-```
+```typ
 = Numbering
 Some of elements have a property called "numbering".
 They accept so-called "numbering patterns" and

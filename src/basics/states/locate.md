@@ -13,7 +13,7 @@ and given a _location in the document_, returns some content instead of that `lo
 
 > Link to [reference](https://typst.app/docs/reference/meta/location/)
 
-```
+```typ
 #locate(loc => [
   My location: \
   #loc.position()!
@@ -27,7 +27,7 @@ That allows kind of _time travel_, you can get location at _any place of documen
 
 `state.display` is roughly equivalent to
 
-```
+```typ
 #let display(state) = locate(location => {
     state.at(location)
 })
@@ -45,7 +45,7 @@ Calculates the _final value_ of state.
 The location there is needed to restrict what content will change within recompilations.
 That greatly increases speed and better resolves "conflicts".
 
-```
+```typ
 #let x = state("x", 5)
 x = #x.display()\
 
@@ -64,7 +64,7 @@ x = #x.display()
 
 Sometimes layout _will not converge_. For example, imagine this:
 
-```
+```typ
 #let x = state("x", 5)
 x = #x.display()\
 

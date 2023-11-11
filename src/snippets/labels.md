@@ -2,7 +2,7 @@
 
 ## Get chapter of label
 
-```
+```typ
 #let ref-heading(label) = locate(loc => {
   let elems = query(label, loc)
   if elems.len() != 1 {

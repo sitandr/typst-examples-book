@@ -12,7 +12,7 @@ Typst has packages, but, unlike LaTeX, you need to remember:
 
 To use mighty package, just write, like this:
 
-```
+```typ
 #import "@preview/cetz:0.1.2": canvas, plot
 
 #canvas(length: 1cm, {

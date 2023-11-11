@@ -8,7 +8,7 @@ It is the best choice in most of cases you want to draw something in Typst.
 
 ### Draw a graph in polar coords
 
-```
+```typ
 #import "@preview/cetz:0.1.2": canvas, plot
 
 #figure(

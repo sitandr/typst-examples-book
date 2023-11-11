@@ -9,7 +9,7 @@ _Important:_ to initiate counters of elements, you need to _set numbering for th
 
 Counters are states, so they can do all things states can do.
 
-```
+```typ
 #set heading(numbering: "1.")
 
 = Background
@@ -20,7 +20,7 @@ Counters are states, so they can do all things states can do.
 Current heading number: #counter(heading).display().
 ```
 
-```
+```typ
 #let mine = counter("mycounter")
 #mine.display()
 
@@ -32,7 +32,7 @@ Current heading number: #counter(heading).display().
 ```
 
 ## Displaying counters
-```
+```typ
 #set heading(numbering: "1.")
 
 = Introduction
@@ -48,7 +48,7 @@ Or in roman numerals:
 
 Counters also support displaying _both current and final values_ out-of-box:
 
-```
+```typ
 #set heading(numbering: "1.")
 
 = Introduction
@@ -69,7 +69,7 @@ The current value is: #counter(heading).display()
 
 That's quite easy, for counters you can increment value using `step`. It works the same way as `update`.
 
-```
+```typ
 #set heading(numbering: "1.")
 
 = Introduction
@@ -85,7 +85,7 @@ At #counter(heading).display().
 
 ## You can use counters in your functions:
 
-```
+```typ
 #let c = counter("theorem")
 #let theorem(it) = block[
   #c.step()

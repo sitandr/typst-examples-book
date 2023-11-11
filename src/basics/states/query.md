@@ -10,7 +10,7 @@ It is currently one of the _the darkest magics currently existing in Typst_. It 
 
 ## Time travel
 
-```
+```typ
 #let s = state("x", 0)
 #let compute(expr) = [
   #s.update(x =>
@@ -35,7 +35,7 @@ Value at `<here>` is
 
 ## Getting nearest chapter
 
-```no-render
+```typ-norender
 #set page(header: locate(loc => {
   let elems = query(
     selector(heading).before(loc),

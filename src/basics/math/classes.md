@@ -2,7 +2,7 @@
 
 ## Setting class for symbol
 
-```
+```typ
 
 Default: \
 $a circle square(a_pi <-> a_pi')$

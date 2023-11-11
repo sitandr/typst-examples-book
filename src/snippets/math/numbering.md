@@ -4,7 +4,7 @@
 
 ### Simple code
 
-```
+```typ
 // author: shampoohere
 #show math.equation:it => {
     if it.fields().keys().contains("label"){
@@ -22,7 +22,7 @@ $ dif/(dif x)(A(t)+B(x))=dif/(dif x)A(t)+dif/(dif x)B(t) $ <ep-3>
 ```
 
 ### Make the hacked references clickable again
-```
+```typ
 // author: gijsleb
 #show math.equation:it => {
     if it.has("label"){

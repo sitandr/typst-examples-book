@@ -1,6 +1,6 @@
 # Boxing&Blocking
 
-```
+```typ
 You can use boxes to wrap anything
 into text: #box(image("../tiger.jpg", height: 2em)).
 
@@ -10,7 +10,7 @@ They will not fit into a text: #block(image("../tiger.jpg", height: 2em))
 
 Both have similar useful properties:
 
-```
+```typ
 #box(stroke: red, inset: 1em)[Box text]
 #block(stroke: red, inset: 1em)[Block text]
 ```
@@ -19,6 +19,6 @@ Both have similar useful properties:
 
 There is also `rect` that works like `block`, but has useful default inset and stroke:
 
-```
+```typ
 #rect[Block text]
 ```

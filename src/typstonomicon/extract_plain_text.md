@@ -1,6 +1,6 @@
 # Extracting plain text
 
-```
+```typ
 // author: laurmaedge
 #let plain-text(it) = {
   if it == [ ] {

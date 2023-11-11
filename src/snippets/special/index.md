@@ -7,7 +7,7 @@ See [polylux](../../packages/).
 ## Forms
 
 ### Form with placeholder
-```
+```typ
 #grid(
   columns: 2,
   rows: 4,

@@ -1,7 +1,7 @@
 # Advanced styling
 
 ## The show rule
-```
+```typ
 Advanced styling comes with another rule. The _`show` rule_.
 
 #show "Be careful": strong[Play]
@@ -18,7 +18,7 @@ Help, it is holding me hostage.
 
 ## Now a bit more serious
 
-```
+```typ
 Show rule is a powerful thing that takes a _selector_
 and what to apply to it. After that it will apply to
 all elements it can find.
@@ -36,7 +36,7 @@ Isn't that cool?
 
 One of the most important usages is that you can set up all spacing using blocks. Like every element with text contains text that can be set up, every _block element_ contains blocks:
 
-```
+```typ
 Text before
 = Heading
 Text after
@@ -50,7 +50,7 @@ Text after
 
 ## Selector
 
-```
+```typ
 So show rule can accept selectors.
 There are lots of different selector types,
 for example
@@ -75,7 +75,7 @@ no need to use show rules
 
 ## Custom formatting
 
-```
+```typ
 Let's try now writing custom functions. 
 It is very easy, see yourself:
 
@@ -97,7 +97,7 @@ It is very easy, see yourself:
 
 ## Formatting to get an "article look"
 
-```
+```typ
 #set page(
   // Header is that small thing on top
   header: align(

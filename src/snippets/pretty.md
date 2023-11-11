@@ -3,7 +3,7 @@
 ## Set bar to the text's left
 (also known as quote formatting)
 
-```
+```typ
 + #lorem(10)\
   #rect(fill: luma(240), stroke: (left: 0.25em))[
     *Solution:* #lorem(10)
@@ -12,7 +12,7 @@
   ]
 ```
 ## Text on box top
-```
+```typ
 // author: gaiajack
 #let todo(body) = block(
   above: 2em, stroke: 0.5pt + red,

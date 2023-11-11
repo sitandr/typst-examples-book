@@ -2,7 +2,7 @@
 
 ## Unflatten arrays
 
-```
+```typ
 // author: PgSuper
 #let unflatten(arr, n) = {
   let columns = range(0, n).map(_ => ())
@@ -18,7 +18,7 @@
 
 ## Create an abbreviation
 
-```
+```typ
 #let full-name = "Federal University of Ceará"
 
 #let letts = full-name
