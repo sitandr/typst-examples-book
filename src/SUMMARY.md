@@ -38,7 +38,10 @@
 - [Typst Snippets](./snippets/index.md)
     - [Logos&Figures](./snippets/logos.md)
     - [Labels](./snippets/labels.md)
-    - [Setting chapter headers]()     <!-- - [Bibliography setup]()?-->
+    - [Chapters]()     <!-- - [Bibliography setup]()?-->
+      - [Headings]()
+      - [Outlines](./snippets/chapters/outlines.md)
+      - [Bibliography]()
     - [General layout]()
       - [Page setup]()
       - [Hiding](./snippets/hidding.md)
