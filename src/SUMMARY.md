@@ -45,7 +45,7 @@
     - [General layout]()
       - [Page setup]()
       - [Hiding](./snippets/hidding.md)
-    - [Code formatting]()
+    - [Code formatting](./snippets/code.md)
     - [Hyphenation]()
     - [Scripting](./snippets/scripting/index.md)
     - [Math]()
