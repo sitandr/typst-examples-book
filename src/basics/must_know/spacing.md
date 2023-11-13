@@ -5,7 +5,7 @@ They are usually called like `width, length, in(out)set, spacing` and so on.
 Like in CSS, one of the ways to set up spacing in Typst is setting margins and padding of elements.
 However, you can also insert spacing directly using functions `h` (horizontal spacing) and `v` (vertical spacing).
 
-> Links to reference [h](https://typst.app/docs/reference/layout/h/), [v](https://typst.app/docs/reference/layout/v/).
+> Links to reference: [h](https://typst.app/docs/reference/layout/h/), [v](https://typst.app/docs/reference/layout/v/).
 
 ```typ
 Horizontal #h(1cm) spacing.

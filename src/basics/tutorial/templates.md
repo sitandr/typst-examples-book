@@ -67,3 +67,5 @@ Then, in template file:
 Writing templates is fairly easy if you understand [scripting](../scripting/index.md).
 
 See more information about writing templates in [Official Tutorial](https://typst.app/docs/tutorial/making-a-template/).
+
+There is no official repository for templates yet, but there are a plenty community ones in [awesome-typst](https://github.com/qjcg/awesome-typst?ysclid=lj8pur1am7431908794#general).

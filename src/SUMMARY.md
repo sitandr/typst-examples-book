@@ -12,7 +12,7 @@
   - [Must-know](./basics/must_know/index.md)
     - [Boxing & Blocking](./basics/must_know/box_block.md)
     - [Spacing](./basics/must_know/spacing.md)
-    - [Placing, Moving, Scale & Hide]()
+    - [Placing, Moving, Scale & Hide](./basics/must_know/place.md)
     - [Align & Padding]()
     - [Tables & Grids]()
   - [Scripting](./basics/scripting/index.md)
