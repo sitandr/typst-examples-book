@@ -73,6 +73,7 @@
   - [Misc]()
   - [External](./packages/external.md)
 - [Typstonomicon, or The Code You Should Not Write](./typstonomicon/index.md)
+  - [Image with original size](./typstonomicon/original_image.md)
   - [Word count](./typstonomicon/word_count.md)
   - [Try & Catch](./typstonomicon/try_catch.md)
   - [Breakpoints on broken blocks](./typstonomicon/block_break.md)
