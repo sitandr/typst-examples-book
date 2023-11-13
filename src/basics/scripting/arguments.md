@@ -22,3 +22,33 @@ The same idea works with key arguments:
 
 Some #text(..text-params)[text].
 ```
+
+# Managing arbitrary arguments
+Typst allows taking as many arbitrary positional and key arguments as you want.
+In that case function is given special `arguments` object that stores in it
+positional and named arguments.
+
+> Link to [reference](https://typst.app/docs/reference/foundations/arguments/)
+
+```typ
+#let f(..args) = [
+  #args.pos()\
+  #args.named()
+]
+
+#f(1, "a", width: 50%, block: false)
+```
+
+You can combine them with other arguments. Spreading operator will "eat" all remaining arguments:
+
+```typ
+#let format(title, ..authors) = {
+  let by = authors
+    .pos()
+    .join(", ", last: " and ")
+
+  [*#title* \ _Written by #by;_]
+}
+
+#format("ArtosFlow", "Jane", "Joe")
+```
