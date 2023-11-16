@@ -7,6 +7,9 @@ TODO: WIP, add text and better examples
 
 # Place
 
+_Ignore layout_, just put some object somehow relative to parent and current position.
+The placed object _will not_ affect layouting
+
 > Link to [reference](https://typst.app/docs/reference/layout/place/)
 
 ```typ
@@ -14,7 +17,7 @@ TODO: WIP, add text and better examples
 Hello, world!
 
 #place(
-  top + right,
+  top + right, // place at the page right and top
   square(
     width: 20pt,
     stroke: 2pt + blue
@@ -22,7 +25,7 @@ Hello, world!
 )
 ```
 
-### Basic floating for place
+### Basic floating with place
 ```typ-norender
 #set page(height: 150pt)
 #let note(where, body) = place(
@@ -40,7 +43,9 @@ Hello, world!
 #lorem(10)
 ```
 
-### dx
+### dx, dy
+Manually change position by `(dx, dy)` relative to intended.
+
 ```typ
 #set page(height: 100pt)
 #for i in range(16) {
@@ -65,6 +70,9 @@ Hello, world!
 ```
 
 # Scale
+
+Scale content _without affecting the layout_.
+
 > Link to [reference](https://typst.app/docs/reference/layout/scale/)
 
 ```typ
@@ -77,6 +85,9 @@ B#box(scale(75%, origin: bottom + left)[B])B
 ```
 
 # Hide
+
+Don't show content, but leave empty space there.
+
 > Link to [reference](https://typst.app/docs/reference/layout/hide/)
 
 ```
