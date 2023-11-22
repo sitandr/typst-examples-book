@@ -31,6 +31,7 @@ Typst is not that hard to learn when you know #TeX and #LaTeX.
 
 <!--TODO: Make scrollable-->
 ```typ
+// author: fenjalien
 #import "@preview/cetz:0.1.2": *
 
 #set page(width: auto, height: auto)
