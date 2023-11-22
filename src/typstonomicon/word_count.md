@@ -1,6 +1,25 @@
 # Word count
 
+## Just count _all_ words in document
 ```typ
+// original author: laurmaedje
+#let words = counter("words")
+#show regex("\p{L}+"): it => it + words.step()
+
+== A heading
+#lorem(50)
+
+=== Strong chapter
+#strong(lorem(25))
+
+// it is ignoring comments
+
+#align(right)[(#words.display() words)]
+```
+
+## Count only some elements, ignore others
+
+```
 // original author: jollywatt
 #let count-words(it) = {
     let fn = repr(it.func())

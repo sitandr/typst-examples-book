@@ -48,7 +48,10 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
       - name: Build with mdBook
-        run: mdbook build
+        run: |
+          mdbook build
+          mdbook build 
+        # building two times to prevent any packages from interfering, hopefully can remove in future
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
