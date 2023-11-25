@@ -37,6 +37,7 @@
     - [Semicolon syntax]()
     - [Classes](./basics/math/classes.md)
 - [Typst Snippets](./snippets/index.md)
+  - [Demos]()
   - [Logos & Figures](./snippets/logos.md)
   - [Labels](./snippets/labels.md)
   - [Chapters]()
@@ -69,7 +70,7 @@
   - [Custom boxes](./packages/boxes.md) <!--TODO: add note "for theorems look into math"-->
   - [Math]()
   - [Tables]()
-  - [Code]()
+  - [Code](./packages/code.md)
   - [Presentations]()
   - [Themes]()
   - [Layout](./packages/layout.md)
