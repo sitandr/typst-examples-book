@@ -76,14 +76,15 @@ Updating is _a content_ that tells that in this place of document the state _sho
 ```
 
 ### ID collision
-_You almost never have to worry about colliding state id-s._
-States are described not only by their id-s, but also by their _location in code_.
+_TLDR; **Never allow colliding states.**_
 
-However, if you write functions or loops that are used several times, _be careful_!
+States are described by their id-s, if they are the same, the code will break.
+
+So, if you write functions or loops that are used several times, _be careful_!
 ```typ
 #let f(x) = {
   // return new state…
-  // …but their id-s and code locations are the same!
+  // …but their id-s are the same!
   // so it will always be the same state!
   let y = state("x", 0)
   y.update(y => y + x)
@@ -97,11 +98,24 @@ However, if you write functions or loops that are used several times, _be carefu
 #repr(a), #repr(b)
 ```
 
-However, this is okay:
+However, this _may seem_ okay:
 ```typ
 // locations in code are different!
 #let x = state("state-id")
 #let y = state("state-id", 2)
 
 #x, #y
+```
+
+But in fact, it _isn't_:
+
+```typ
+#let x = state("state-id")
+#let y = state("state-id", 2)
+
+#x.display(), #y.display()
+
+#x.update(3)
+
+#x.display(), #y.display()
 ```
