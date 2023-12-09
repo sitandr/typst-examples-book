@@ -134,6 +134,48 @@ What about absolutely positioning something regardless of margin and relative lo
 The "rule-grid" also supports absolute placement at the top-left of the page by passing `relative: false`. This is helpful for "rule"-ing the whole page.
 ```````
 
+## Dropped capitals
+
+> Get more info [here](https://github.com/EpicEricEE/typst-plugins/tree/master/droplet)
+
+### Basic usage
+
+```typ
+#import "@preview/droplet:0.1.0": dropcap
+
+#dropcap(gap: -2pt, hanging-indent: 8pt)[
+  #lorem(42)
+]
+```
+
+### Extended styling
+
+```typ
+#import "@preview/droplet:0.1.0": dropcap
+
+#dropcap(
+  height: 2,
+  justify: true,
+  gap: 6pt,
+  transform: letter => style(styles => {
+    let height = measure(letter, styles).height
+
+    grid(columns: 2, gutter: 6pt,
+      align(center + horizon, text(blue, letter)),
+      // Use "place" to ignore the line's height when
+      // the font size is calculated later on.
+      place(horizon, line(
+        angle: 90deg,
+        length: height + 6pt,
+        stroke: blue.lighten(40%) + 1pt
+      )),
+    )
+  })
+)[
+  #lorem(42)
+]
+```
+
 ## Headings for actual current chapter
 
 See [hydra](https://github.com/tingerrr/hydra)
