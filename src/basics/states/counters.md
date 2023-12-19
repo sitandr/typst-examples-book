@@ -72,7 +72,7 @@ That's quite easy, for counters you can increment value using `step`. It works t
 #counter(heading).step()
 
 = Analysis
-Let's skip 7.1.
+Let's skip 3.1.
 #counter(heading).step(level: 2)
 
 == Analysis
