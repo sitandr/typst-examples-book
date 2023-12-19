@@ -71,7 +71,7 @@ x = #x.display() \
 
 **WARNING**: layout did not converge within 5 attempts
 
-It is impossible to resolve that layout, so Typst gives up and gives you are warning.
+It is impossible to resolve that layout, so Typst gives up and gives you a warning.
 
 That means you _should be careful_ with states!
 
