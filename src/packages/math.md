@@ -16,7 +16,7 @@ provides a full set of demonstrations of how the package could be helpful.
 |[Dirac braket notations](#dirac-braket-notations)|[Reduced Planck constant (hbar)](#reduced-planck-constant-hbar)|
 |[Tensors](#tensors)|[Braces](#braces)|
 |[Matrix transpose](#matrix-transpose)|[Matrix dagger](#matrix-dagger-conjugate-transpose)|
-|[Isotopes](#isotope)|[Taylor expansion](#taylor-expansion)|
+|[Isotopes](#isotopes)|[Taylor expansion](#taylor-expansion)|
 
 ### Differentials
 
@@ -315,7 +315,7 @@ $ tensor(T,+a,-b,-c) != tensor(T,+a,+b,-c) != tensor(T,-a,+b,-c) wide
 ### Braces
 
 In addition to Typst's built-in absolute value `abs` and norm `norm`, physica
-defines several other braces frequently used in scentific writing.
+defines several other braces frequently used in scientific writing.
 
 ```typ
 #import "@preview/physica:0.9.1": order, Set, eval, expval

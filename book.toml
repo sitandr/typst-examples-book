@@ -9,3 +9,6 @@ title = "Typst Examples Book"
 #disable_inline = true
 typst_default = true
 render = true
+
+[output.html.redirect]
+"/snippets/hidding.html" = "./hiding.html"
