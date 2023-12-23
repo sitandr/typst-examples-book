@@ -89,7 +89,7 @@
     thickness: (left: 1pt),
     radius: 0pt
   ),
-  title: "Carnot cycle's efficency"
+  title: "Carnot cycle's efficiency"
 )[
   Inside a Carnot cycle, the efficiency $eta$ is defined to be:
 
@@ -108,7 +108,7 @@
   ),
   title: "Divergence theorem",
   footer: [
-    In the case of $n=3$, $V$ represents a volumne in three-dimensional space, and $diff V = S$ its surface
+    In the case of $n=3$, $V$ represents a volume in three-dimensional space, and $diff V = S$ its surface
   ]
 )[
   Suppose $V$ is a subset of $RR^n$ which is compact and has a piecewise smooth boundary $S$ (also indicated with $diff V = S$). If $bold(F)$ is a continuously differentiable vector field defined on a neighborhood of $V$, then:

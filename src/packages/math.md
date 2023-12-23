@@ -18,7 +18,7 @@ provides a full set of demonstrations of how the package could be helpful.
 * [Tensors](#tensors)
 * [Matrix transpose](#matrix-transpose)
 * [Matrix dagger (conjugate transpose)](#matrix-dagger-conjugate-transpose)
-* [Isotopes](#isotope)
+* [Isotopes](#isotopes)
 * [Taylor expansion](#taylor-expansion)
 * [Braces](#braces)
 
@@ -345,7 +345,7 @@ With physica's `tensor` function, you may use `+` to denote an upper index and
 #import "@preview/physica:0.9.0": tensor, grad
 #set math.equation(numbering: "(1)")
 
-// The position of the indicies matters.
+// The position of the indices matters.
 $ tensor(T,+a,-b) != tensor(T,-a,+b) $ // (1)
 
 // The spacing is flexible.
@@ -497,7 +497,7 @@ $ // ...and so can the order.
 ### Braces
 
 In addition to Typst's built-in absolute value `abs` and norm `norm`, physica
-defines several other braces frequently used in scentific writing.
+defines several other braces frequently used in scientific writing.
 
 ```typ
 #import "@preview/physica:0.9.0": order, Set, eval, expval
