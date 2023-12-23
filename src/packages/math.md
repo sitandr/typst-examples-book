@@ -8,19 +8,15 @@ otherwise complex and repetitive mathematical expressions in natural sciences.
 Its [manual](https://github.com/Leedehai/typst-physics/blob/master/physica-manual.pdf)
 provides a full set of demonstrations of how the package could be helpful.
 
-* [Differentials](#differentials)
-* [Ordinary derivatives](#ordinary-derivatives)
-* [Partial derivatives](#partial-derivatives)
-* [Vectors and vector fields](#vectors-and-vector-fields)
-* [Matrices](#matrices)
-* [Dirac braket notations](#dirac-braket-notations)
-* [Reduced Planck constant (hbar)](#reduced-planck-constant-hbar)
-* [Tensors](#tensors)
-* [Matrix transpose](#matrix-transpose)
-* [Matrix dagger (conjugate transpose)](#matrix-dagger-conjugate-transpose)
-* [Isotopes](#isotopes)
-* [Taylor expansion](#taylor-expansion)
-* [Braces](#braces)
+| | |
+|:--|:--|
+|[Differentials](#differentials)| |
+|[Ordinary derivatives](#ordinary-derivatives)|[Partial derivatives](#partial-derivatives)|
+|[Vectors and vector fields](#vectors-and-vector-fields)|[Matrices](#matrices)|
+|[Dirac braket notations](#dirac-braket-notations)|[Reduced Planck constant (hbar)](#reduced-planck-constant-hbar)|
+|[Tensors](#tensors)|[Braces](#braces)|
+|[Matrix transpose](#matrix-transpose)|[Matrix dagger](#matrix-dagger-conjugate-transpose)|
+|[Isotopes](#isotopes)|[Taylor expansion](#taylor-expansion)|
 
 ### Differentials
 
@@ -40,13 +36,11 @@ differentials.
     differential.
 
 ```typ
-#import "@preview/physica:0.9.0": dd, vb
+#import "@preview/physica:0.9.1": dd, vb
 #set math.equation(numbering: "(1)")
 
 #table(
-  columns: (auto, auto),
-  align: horizon,
-  stroke: none,
+  columns: (auto, auto), align: horizon, stroke: none,
 
 [$ dd(f) quad dd(f,2) quad dd(x,y,2) quad dd(vb(x),t,[3,]) $], // (1)
 
@@ -72,9 +66,9 @@ $], // (5)
 ```
 
 Variations `var` (or `variation`), and difference `difference`. They are
-shorthand notations of `dd(..., d:delta)` and `dd(..., d:Delta)`, respectively.
+shorthands for `dd(..., d:delta)` and `dd(..., d:Delta)`, respectively.
 ```typ
-#import "@preview/physica:0.9.0": var, difference
+#import "@preview/physica:0.9.1": var, difference
 
 $ var(f), var(x, y), difference(f), difference(x, y) $
 ```
@@ -95,13 +89,11 @@ ease.
     inline.
 
 ```typ
-#import "@preview/physica:0.9.0": dv, vb
+#import "@preview/physica:0.9.1": dv, vb
 #set math.equation(numbering: "(1)")
 
 #table(
-  columns: (auto, auto),
-  align: horizon,
-  stroke: none,
+  columns: (auto, auto), align: horizon, stroke: none,
 
   [$ dv(,x), dv(,x, 2), dv(f,x, k+1) $], // (1)
   [$ dv(,vb(r)), dv((f+g),vb(r)_e, 2) $], // (2)
@@ -134,13 +126,11 @@ user.
     override it with `total` if necessary.
 
 ```typ
-#import "@preview/physica:0.9.0": pdv, vb
+#import "@preview/physica:0.9.1": pdv, vb
 #set math.equation(numbering: "(1)")
 
 #table(
-  columns: (auto, auto, auto),
-  align: horizon,
-  stroke: none,
+  columns: (auto, auto, auto), align: horizon, stroke: none,
 
   [$ pdv(,x), pdv(,t, 2), pdv(,xi,[k]) $], // (1)
   [$ pdv(f,vb(r)), pdv(phi,vb(r)_e, 2) $], // (2)
@@ -158,7 +148,7 @@ user.
   // Use "s" to render a slash.
   [$ pdv(f,x,y, s:slash) $], // (6)
 
-  // The automatic calculation can handle symbols with best effort.
+  // The monotonic adder can handle symbols with best effort.
   [$ pdv(,x,y,z,t, [1, xi, 2, eta+2]) $], // (7)
 
   // Override the automatic addition with "total".
@@ -173,29 +163,24 @@ In addition to Typst's built-in `vec()` for column vectors, physica provides
 `vu()`, `va()` to typset vectors.
 
 ```typ
-#import "@preview/physica:0.9.0": vecrow, vb, vu, va
+#import "@preview/physica:0.9.1": vecrow, vb, vu, va
 
-$ "row vector":        & vecrow(alpha, b) \
-  "bold vector":       & vb(a), vb(mu_1) \
-  "unit vector":       & vu(a), vu(mu_1) \
-  "vector with arrow": & va(a), va(mu_1) // Not bold, per ISO 80000-2:2019
-$
+$ vecrow(alpha, b) quad vb(a), vb(mu_1) quad vu(a), vu(mu_1) quad va(a), va(mu_1) $
 ```
 
 Operators in vector fields: gradient `grad`, divergence `div`, curl `curl`, and
 Laplacian `laplacian`.
 
 ```typ
-#import "@preview/physica:0.9.0": grad, div, curl, laplacian, vb
+#import "@preview/physica:0.9.1": grad, div, curl, laplacian, vb
 
-$ grad phi,  div vb(E), curl vb(B) \
-  diaer(u) = c^2 laplacian u       "  Typst's laplace": laplace $
+$ grad phi, div vb(E), curl vb(B), diaer(u) = c^2 laplacian u =: c^2 laplace u $
 ```
 
 Dot product `dprod`, cross product `cprod`, and inner product `iprod`.
 
 ```typ
-#import "@preview/physica:0.9.0": dprod, cprod, iprod
+#import "@preview/physica:0.9.1": dprod, cprod, iprod
 
 $ a dprod b, a cprod b, a iprod b $
 ```
@@ -206,57 +191,46 @@ In addition to Typst's built-in `mat()` to write a matrix, physica provides a
 number of handy tools to make it even easier.
 
 ```typ
-#import "@preview/physica:0.9.0": TT, mdet
+#import "@preview/physica:0.9.1": TT, mdet
 
+$
 // Matrix transpose with "TT", though it is recommended to
 // use super-T-as-transpose so that "A^T" also works (more on that later).
-$ A^TT $
-
+A^TT,
 // Determinant with "mdet(...)".
-$ det mat(a, b; c, d) := mdet(a, b; c, d) $
+det mat(a, b; c, d) := mdet(a, b; c, d)
+$
 ```
 
 Diagonal matrix `dmat(...)` and antidiagonal matrix `admat(...)`.
 ```typ
-#import "@preview/physica:0.9.0": dmat, admat
+#import "@preview/physica:0.9.1": dmat, admat
 
-// The positional arguments are spread along the (anti-)diagonal of the matrix.
-// Further customization with optional named arguments "delim" and "fill".
-$ dmat(1, 2)  & dmat(1, a_1, xi, delim:"[", fill:0) \
-  admat(1, 2) & admat(1, a_1, xi, fill:dot) $
+$ dmat(1, 2) dmat(1, a_1, xi, delim:"[", fill:0) quad
+  admat(1, 2) admat(1, a_1, xi, fill:dot) $
 ```
 
 Identity matrix `imat(n)` and zero matrix `zmat(n)`.
 ```typ
-#import "@preview/physica:0.9.0": imat, zmat
+#import "@preview/physica:0.9.1": imat, zmat
 
-// Further customization with optional named arguments "delim" and "fill".
-$ imat(2) & imat(3,delim:"[",fill:*) \
-  zmat(2) & zmat(3,delim:"[") $
+$ imat(2) imat(3,delim:"[",fill:*) quad zmat(2) zmat(3,delim:"[") $
 ```
 
 Jacobian matrix with `jmat(func; ...)` or the longer name `jacobianmatrix`.
 ```typ
-#import "@preview/physica:0.9.0": jmat
+#import "@preview/physica:0.9.1": jmat
 
-// Typst (like LaTeX) cramps fractions in a matrix...
-$ jmat(f_1,f_2; x,y) quad jmat(f,g; x,y,z; delim:"[") $  // (1)
-
-// TODO wait for merging 0.9.1 on https://github.com/typst/packages
-// ...but you can uncramp them using argument "big:#true"
-// $ jmat(f_1,f_2;x,y;big:#true) quad jmat(f,g;x,y,z;delim:"|",big:#true) $
+$ jmat(f_1,f_2; x,y) quad jmat(f,g; x,y,z; delim:"[") quad
+  jmat(f,g;x,y,z;delim:"{",big:#true) $
 ```
 
 Hessian matrix with `hmat(func; ...)` or the longer name `hessianmatrix`.
 ```typ
-#import "@preview/physica:0.9.0": hmat
+#import "@preview/physica:0.9.1": hmat
 
-// Typst (like LaTeX) cramps fractions in a matrix...
-$ hmat(f; x,y) quad hmat(; x,y,z; delim:"[") $  // (1)
-
-// TODO wait for merging 0.9.1 on https://github.com/typst/packages
-// ...but you can uncramp them using argument "big:#true"
-// $ hmat(f; x,y;big:#true) quad hmat(;x,y,z;delim:"|",big:#true) $
+$ hmat(f; x,y) quad hmat(; x,y,z; delim:"[") quad
+  hmat(;x,y,z;big:#true,delim:"{") $
 ```
 
 Finally, `xmat(row, col, func)` (or its longer name `xmatrix`) helps you to
@@ -264,7 +238,7 @@ build a matrix with a function. That function takes two numbers (row and column)
 and returns an equation snippet `$...$`.
 
 ```
-#import "@preview/physica:0.9.0": xmat
+#import "@preview/physica:0.9.1": xmat
 $
 // Define a function and pass it to xmat(...)
 #let element = (i,j) => $g^(#(i - 1)#(j - 1))$
@@ -282,12 +256,12 @@ $
 Physica provides `bra`, `ket`, `braket`, `ketbra`, and `mel`.
 
 ```typ
-#import "@preview/physica:0.9.0": bra, ket, braket, ketbra, mel
+#import "@preview/physica:0.9.1": bra, ket, braket, ketbra, mel
 #set math.equation(numbering: "(1)")
 
 $ bra(u) quad ket(v) \
   braket(u) quad braket(u, v) quad ketbra(u) quad ketbra(u, v) \
-  bra(psi)(A ket(phi)) = (bra(psi)A)ket(phi) =^"def" mel(psi, A, phi) $ // (1)
+  mel(psi, A, phi) =^"def" bra(psi)(A ket(phi)) = (bra(psi)A)ket(phi) $ // (1)
 
 // The brakets are automatically scaled up.
 $ braket(sum_(i=0)^n phi_n, psi)
@@ -308,24 +282,13 @@ symbol's colloquial name "h-bar". This package offers `hbar` to render the
 symbol in the familiar form⁠. Contrast:
 
 ```typ
-#import "@preview/physica:0.9.0": hbar, laplacian, pdv
+#import "@preview/physica:0.9.1": hbar
 
 #table(
-  columns: (auto, auto, auto, auto, auto),
-  align: horizon,
-  stroke: none,
+  columns: (auto, auto), align: horizon, stroke: none,
 
-  [`planck.reduce`],
-  [$ E = planck.reduce omega $],
-  [$ (pi G^2) / (planck.reduce c^4) $],
-  [$ A e^(frac(i(p x - E t), planck.reduce)) $],
-  [$ i planck.reduce pdv(,t) psi = -frac(planck.reduce^2, 2m) laplacian psi $],
-
-  [physica `hbar`],
-  [$ E = hbar omega $],
-  [$ (pi G^2) / (hbar c^4) $],
-  [$ A e^(frac(i(p x - E t), hbar)) $],
-  [$ i hbar pdv(,t) psi = -frac(hbar^2, 2m) laplacian psi $],
+  [`planck.reduce`], [$ E = planck.reduce omega wide frac(planck.reduce^2, 2m) $],
+  [physica `hbar`],  [$ E = hbar omega wide frac(hbar^2, 2m) $],
 )
 ```
 
@@ -342,157 +305,12 @@ With physica's `tensor` function, you may use `+` to denote an upper index and
 `-` to denote a lower index.
 
 ```typ
-#import "@preview/physica:0.9.0": tensor, grad
-#set math.equation(numbering: "(1)")
+#import "@preview/physica:0.9.1": tensor, grad
 
-// The position of the indices matters.
-$ tensor(T,+a,-b) != tensor(T,-a,+b) $ // (1)
-
-// The spacing is flexible.
-$ tensor(T, -i, +w, -j), wide tensor(T,+1,-I(1,-1),+a_bot,-+,+-) $ // (2)
-
-// Writing a tensor in an equation.
-$ grad_mu A^nu = diff_mu A^nu + tensor(Gamma,+nu,-mu,-lambda) A^lambda $ // (3)
+// Position matters. The spacing is flexible, so don't worry about wide symbols.
+$ tensor(T,+a,-b,-c) != tensor(T,+a,+b,-c) != tensor(T,-a,+b,-c) wide
+  tensor(T,-a_42,+b_12306,-c) $
 ```
-
-### Matrix transpose
-
-The transpose of a matrix often appears in equations. Physica provides a show
-rule that enables users to write single superscript letter "T" as the transpose
-operator, just like handwriting.
-
-The show rule will convert single superscript letter "T" into a properly
-formatted transpose operator. The conversion is off if this superscript is
-attached to
-- a `limits(...)` or `scripts(...)` element, or
-- an integration symbol or a vertical bar, or
-- an equation or `lr(...)` element whose last child is one of the above.
-
-To enable this feature, you need to invoke it first:
-`#show: super-T-as-transpose`. Alternatively, if you only want this feature
-inside a content block's scope, you may do:
-```typ-norender
-#[
-    #show: super-T-as-transpose // Only enabled inside this block.
-    ...
-]
-```
-
-// TODO wait for merging 0.9.1 on https://github.com/typst/packages
-<!--
-```typ
-#import "@preview/physica:0.9.0": super-T-as-transpose, eval, TT
-#set math.equation(numbering: "(1)")
-
-#show: super-T-as-transpose
-
-$ (U V_n W')^T = W'^T V_n^T U^T, wide (a, b)^T, mat(a, b; c, d)^T $ // (1)
-
-// If the superscript "T" is attached to a limits() or a scripts(), it
-// won't be rendered as a transpose operator.
-$ limits(sum)^T_(t=0) a_t, wide scripts(e)^T $ // (2)
-
-// The superscript "T" won't become a transpose operator with integrals
-// and vertical bars.
-$ abs(a)^T, wide integral_0^T f(t) dd(t) = eval(F(t))^T_0 $ // (3)
-
-// Overrides: to print a transpose operator explicitly, use "TT"; to print
-// an as-is superscript letter T, use "scripts(T)".
-$ A^TT, 2^scripts(T) $ // (4)
-```
--->
-
-### Matrix dagger (conjugate transpose)
-
-The conjugate transpose, also known as the Hermitian transpose, transjugate, or
-adjoint, of a complex matrix is performed by first transposing and then
-complex-conjugating each matrix element.
-
-Physica provides a show rule that enables users to write single superscript plus
-sign "+" as the conjugate transpose operator (i.e. dagger), just like
-handwriting, so that the word `dagger` would not visually clutter the source
-code of the equation.
-
-The show rule will convert single superscript letter "T" into a properly
-formatted transpose operator. The conversion is off if this superscript is
-attached to
-- a `limits(...)` or `scripts(...)` element, or
-- an equation or `lr(...)` element whose last child is one of the above.
-
-To enable this feature, you need to invoke it first:
-`#show: super-plus-as-dagger`. Alternatively, if you only want this feature
-inside a content block's scope (say, to allow writing ions or Moore–Penrose
-inverse elsewhere), you may do:
-```typ-norender
-#[
-    #show: super-plus-as-dagger // Only enabled inside this block.
-    ...
-]
-```
-
-// TODO wait for merging 0.9.1 on https://github.com/typst/packages
-<!--
-```typ
-#import "@preview/physica:0.9.0": super-plus-as-dagger
-#set math.equation(numbering: "(1)")
-
-#show: super-plus-as-dagger
-
-$ U^+U = U U^+ = I $ // (1)
-
-// If the superscript "+" is attached to a limits() or a scripts(), it
-// won't be rendered as a dagger.
-$ limits(sum)^T_(t=0) a_t, wide scripts(e)^T $ // (2)
-
-// Overrides: to print a dagger explicitly, use the normal "dagger"; to
-// print an as-is superscript plus, use "scripts(+)".
-$ A^dagger, A^scripts(+) $ // (4)
-```
--->
-
-### Isotopes
-
-To render a chemical isotope symbol, you may use the `isotope` function.
-
-```typ
-#import "@preview/physica:0.9.0": isotope
-
-// a: mass number A
-// z: the atomic number Z
-$
-isotope(I, a:127), wide isotope("Fe", z:26) \
-isotope("Bi",a:211,z:83) --> isotope("Tl",a:207,z:81) + isotope("He",a:4,z:2) \
-isotope("Tl",a:207,z:81) --> isotope("Pb",a:207,z:82) + isotope(e,a:0,z:-1)
-$
-```
-
-
-### Taylor expansion
-
-Taylor expansion is a frequent guest in the study of nature, so Physica provides
-a way to write each n-th term more efficiently.
-
-// TODO wait for merging 0.9.1 on https://github.com/typst/packages
-<!--
-```typ
-#import "@preview/physica:0.9.0": taylorterm
-#set math.equation(numbering: "(1)")
-
-$ taylorterm(f,x,x_0,0) \
-  taylorterm(f,x,x_0,1) \
-  taylorterm(f,x,x_0,5) $ // (1)
-
-$ // n-th order? No problem.
-  taylorterm(f,x,x_0,n) $ // (2)
-
-$ // The expansion point can be more complex. Physica merges the
-  // parenthesis when appropriate.
-  taylorterm(f,x,(1+a/2),2), wide taylorterm(F,x^nu,x^nu_0,n) $ // (3)
-
-$ // ...and so can the order.
-  taylorterm(f,x,x_0,(n+1)) $ // (4)
-```
--->
 
 ### Braces
 
@@ -500,13 +318,11 @@ In addition to Typst's built-in absolute value `abs` and norm `norm`, physica
 defines several other braces frequently used in scientific writing.
 
 ```typ
-#import "@preview/physica:0.9.0": order, Set, eval, expval
+#import "@preview/physica:0.9.1": order, Set, eval, expval
 #set math.equation(numbering: "(1)")
 
 #table(
-  columns: (auto, auto),
-  align: horizon,
-  stroke: none,
+  columns: (auto, auto), align: horizon, stroke: none,
 
   // Absolute and norm values (Typst built-in)
   [$ abs(phi), abs(phi/2), norm(phi), norm(phi/2) $], // (1)
@@ -526,17 +342,95 @@ defines several other braces frequently used in scientific writing.
 )
 ```
 
-### Internal: symbolic addition
+### Matrix transpose
 
-The package implements a very rudimentary, bare-minimum-effort symbolic
-monotonic adder. This should suffice for most use cases in partial derivatives.
+Physica provides a show rule that enables users to write single superscript
+letter "T" as the transpose operator, just like handwriting.
+
+To enable this feature, you need to invoke it first:
+`#show: super-T-as-transpose`. Alternatively, if you only want this feature
+inside a paragraph, you may put it inside a `#[...]` content block.
 
 ```typ
-#import "@preview/physica:0.9.0": BMEsymadd
+#import "@preview/physica:0.9.1": super-T-as-transpose, eval, TT, dd
+#set math.equation(numbering: "(1)")
 
-`BMEsymadd([2, 3])` \ #h(1em) $=> BMEsymadd([2, 3])$ \
-`BMEsymadd([a, b^2, 1])` \ #h(1em) $=> BMEsymadd([a, b^2, 1])$ \
-`BMEsymadd([a+1,2c,b,2,b])` \ #h(1em) $=> BMEsymadd([a+1,2c,b,2,b])$ \
-`BMEsymadd([a+1,2(b+1),1,b+1,15])` \ #h(1em) $=> BMEsymadd([a+1,2(b+1),1,b+1,15])$ \
-`BMEsymadd([a+1,2(b+1),1,(b+1),15])` \ #h(1em) $=> BMEsymadd([a+1,2(b+1),1,(b+1),15])$
+#show: super-T-as-transpose
+
+#table(
+  columns: (auto, auto), align: horizon, stroke: none,
+
+  [$ (U V_n W')^T = W'^T V_n^T U^T, mat(a; b)^T $], // (1)
+  // If the superscript "T" is attached to a limits() or a scripts(), it
+  // won't be rendered as a transpose operator.
+  [$ limits(sum)^T_(t=0) a_t, scripts(e)^T $], // (2)
+  // The superscript "T" won't become a transpose operator with integrals
+  // and vertical bars.
+  [$ abs(a)^T, integral_0^T f(t) dd(t) = eval(F(t))^T_0 $], // (3)
+  // Overrides: to print a transpose operator explicitly, use "TT"; to print
+  // an as-is superscript letter T, use "scripts(T)".
+  [$ A^TT, 2^scripts(T) $], // (4)
+)
+```
+
+### Matrix dagger (conjugate transpose)
+
+Physica provides a show rule that enables users to write single superscript plus
+sign "+" as the conjugate transpose operator (i.e. dagger), just like
+handwriting, so that the word `dagger` would not visually clutter the source
+code of the equation.
+
+To enable this feature, you need to invoke it first:
+`#show: super-plus-as-dagger`. Alternatively, if you only want this feature
+inside a paragraph, you may put it inside a `#[...]` content block.
+
+```typ
+#import "@preview/physica:0.9.1": super-plus-as-dagger
+#set math.equation(numbering: "(1)")
+
+#show: super-plus-as-dagger
+
+#table(
+  columns: (auto, auto, auto, auto, auto), align: horizon, stroke: none,
+
+  [$ U^+U = U U^+ = I $], // (1)
+  // If the superscript "+" is attached to a limits() or a scripts(), it
+  // won't be rendered as a dagger.
+  [$ limits(sum)^T_(t=0) a_t, scripts(e)^T $], // (2)
+  // Overrides: to print a dagger explicitly, use the normal "dagger"; to
+  // print an as-is superscript plus, use "scripts(+)".
+  [$ A^dagger, A^scripts(+) $], // (3)
+)
+```
+
+### Isotopes
+
+To render a chemical isotope symbol, you may use the `isotope` function.
+
+```typ
+#import "@preview/physica:0.9.1": isotope
+
+// a: mass number A
+// z: the atomic number Z
+$
+isotope(I, a:127), quad isotope("Fe", z:26), quad
+isotope("Tl",a:207,z:81) --> isotope("Pb",a:207,z:82) + isotope(e,a:0,z:-1)
+$
+```
+
+
+### Taylor expansion
+
+Taylor expansion is a frequent guest in the study of nature, so Physica provides
+a way to write each n-th term more efficiently.
+
+```typ
+#import "@preview/physica:0.9.1": taylorterm
+#set math.equation(numbering: "(1)")
+
+$ taylorterm(f,x,a,0), wide taylorterm(f,x,a,1), wide taylorterm(f,x,a,n) $ // (1)
+
+// The expansion point can be more complex. Physica merges the
+// parenthesis when appropriate.
+$ taylorterm(f,x,(1+xi),2), wide taylorterm(f,x,x_0,(n+1)) $ // (2)
 ```
