@@ -41,7 +41,7 @@ jobs:
           curl -sSL https://github.com/sitandr/mdbook-typst-highlight/releases/download/v0.2.1/mdbook-typst-highlight-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=.
       - name: Install typst
         run: |
-          curl -sSL https://github.com/typst/typst/releases/download/v0.9.0/typst-x86_64-unknown-linux-musl.tar.xz | tar -xJ --directory=.
+          curl -sSL https://github.com/typst/typst/releases/download/v0.10.0/typst-x86_64-unknown-linux-musl.tar.xz | tar -xJ --directory=.
           mv typst-x86_64-unknown-linux-musl/typst .
           echo `pwd` >> $GITHUB_PATH
       - name: Setup Pages
