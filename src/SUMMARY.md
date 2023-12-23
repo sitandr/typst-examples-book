@@ -46,7 +46,7 @@
       - [Bibliography]()
   - [General layout]()
     - [Page setup]()
-    - [Hiding](./snippets/hidding.md)
+    - [Hiding](./snippets/hiding.md)
   - [Code formatting](./snippets/code.md)
   - [Hyphenation]()
   - [Scripting](./snippets/scripting/index.md)
