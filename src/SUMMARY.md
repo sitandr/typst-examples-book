@@ -68,7 +68,8 @@
   - [Drawing](./packages/drawing.md)
   - [Graphs](./packages/graphs.md)
   - [Custom boxes](./packages/boxes.md) <!--TODO: add note "for theorems look into math"-->
-  - [Math]()
+  - [Math](./packages/math.md)
+  - [Physics](./packages/physics.md)
   - [Tables]()
   - [Code](./packages/code.md)
   - [Presentations]()
