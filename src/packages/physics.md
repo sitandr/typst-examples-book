@@ -10,54 +10,19 @@ provides a full set of demonstrations of how the package could be helpful.
 
 ### Mathematical physics
 
-The [packages/math.md](./math.md) page has more examples on its math
-capabilities. Below is a partial preview that may be of particular interest in
-the domain of physics: differential, ordinary and partial derivatives (with
-overridable total order calculation), vector fields, Taylor expansion,
-Dirac brakets, tensors.
-
-```typ
-#import "@preview/physica:0.9.1": * // Symbol names annotated below
-
-#table(
-  columns: (auto, auto, auto, auto), align: horizon, stroke: none,
-
-  // dd (differential), var (variation), difference
-  [$ dd(f), var(f), difference(f) $],
-  // Differential, with order numbers
-  [$ dd(x,y), dd(x,y,2), \ dd(x,y,[k,]), dd(vb(x),t,[3,1]) $],
-  // Differential with custom "d" symbol and joiner
-  [$ dd(x,y,z, d:Delta, p:and) \ dd(x,y,z, [a,b,c], d:d) $],
-  // dv (ordinary derivative), with optional function name and order
-  [$ dv(,t) (dv(x,t)) = dv(x,t,2) $],
-
-  // pdv, with optional function name and order, and overridable total
-  [$ pdv(,x,y,[1,i+1]) f = pdv(f,y,x,[i+1,1],total:2+i) $],
-  // grad, curl, vb (vector bold)
-  [$ curl vb(A) - grad phi $],
-  // dv, pdv, grad
-  [$ dv(phi,t,d:DD) = pdv(phi,t) + u grad phi $],
-  // tensor
-  [$ tensor(T,+a,+b,-c) != tensor(T,-c,+a,+b) $],
-
-  // taylorterm (Taylor expansion), va (vector arrow)
-  [$ taylorterm(f,va(x),va(x_0),n) $],
-  // expval, mel (as a Dirac braket)
-  [$ expval(p) = mel(phi, hat(p), phi) $],
-  // Dirac brakets
-  [$
-    bra(u), braket(u), braket(u,v),\ ket(u), ketbra(u), ketbra(u, v)
-  $],
-  // Superscript show rules that need to be enabled explicitly.
-  // If put in a content block, they only control that block's scope.
-  [
-    #show: super-T-as-transpose
-    #show: super-plus-as-dagger
-    $ op("conj")A^T =^"def" A^+ \
-      e^scripts(T), e^scripts(+) $  // override with scripts()
-  ],
-)
-```
+The [packages/math.md](./math.md#common-notations) page has more examples on its
+math capabilities. Below is a preview that may be of particular interest in the
+domain of physics:
+* Calculus: differential, ordinary and partial derivatives
+  * Optional function name,
+  * Optional order number or array of order numbers,
+  * Customizable "d" symbol and product joiner (say, exterior product),
+  * Overridable total order calculation,
+* Vectors and vector fields,
+* Taylor expansion,
+* Dirac braket notations,
+* Tensors with abstract index notations,
+* Matrix transpose and dagger (conjugate transpose).
 
 ### Isotopes
 
