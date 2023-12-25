@@ -27,13 +27,13 @@ Below is a preview of those notations.
 #import "@preview/physica:0.9.1": * // Symbol names annotated below
 
 #table(
-  columns: (auto, auto, auto, auto), align: horizon, stroke: none, gutter: 1em,
+  columns: 4, align: horizon, stroke: none, gutter: 1em,
 
   // Row 1.
   // vectors: bold, unit, arrow
   [$ vb(a), vb(e_i), vu(a), vu(e_i), va(a), va(e_i) $],
   // dprod (dot product), cprod (cross product), iprod (innerproduct)
-  [$ a dprod b, a cprod b $],
+  [$ a dprod b, a cprod b $, $iprod(a, b)$],
   // laplacian (different from built-in laplace)
   [$ dot.double(u) = laplacian u =: laplace u $],
   // grad, div, curl (vector fields)
@@ -48,8 +48,14 @@ Below is a preview of those notations.
   [$ dd(x,y,p:and), dd(x,y,d:Delta), \ dd(x,y,z,[1,1,n+1],d:d,p:dot) $],
   // tensor
   [$ tensor(T,+a,-b,-c) != tensor(T,-b,-c,+a) != tensor(T,+a',-b,-c) $],
+)
+```
 
-  // Row 3.
+```typ
+#import "@preview/physica:0.9.1": * // Symbol names annotated below
+#table(
+  columns: 4, align: horizon, stroke: none, gutter: 1em,
+  // Row 1.
   // dv (ordinary derivative), with optional function name and order
   [$ dv(,t) (dv(x,t)) = dv(x,t,2) $],
   // pdv (partial derivative), without optional function name,
@@ -61,7 +67,7 @@ Below is a preview of those notations.
   [$ Set(u, pdv(u,x,y,2,s:slash) < 1) $],
 
 
-  // Row 4.
+  // Row 2.
   // taylorterm (Taylor expansion) can smartly remove (..)
   [$ taylorterm(f,x,x_0,1) \ taylorterm(f,x,x_0,(n+1)) $],
   // expval (mean/expectation value), eval (evaluation boundary)
