@@ -29,47 +29,64 @@ Below is a preview of those notations.
 #table(
   columns: 4, align: horizon, stroke: none, gutter: 1em,
 
-  // Row 1.
   // vectors: bold, unit, arrow
   [$ vb(a), vb(e_i), vu(a), vu(e_i), va(a), va(e_i) $],
   // dprod (dot product), cprod (cross product), iprod (innerproduct)
-  [$ a dprod b, a cprod b $, $iprod(a, b)$],
+  [$ a dprod b, a cprod b, iprod(a, b) $],
   // laplacian (different from built-in laplace)
   [$ dot.double(u) = laplacian u =: laplace u $],
   // grad, div, curl (vector fields)
   [$ grad phi, div vb(E), \ curl vb(B) $],
-
-  // Row 2.
-  // dd (differential), var (variation), difference
-  [$ dd(f), var(f), difference(f) $],
-  // Differential, with an order number or an array thereof
-  [$ dd(x,y), dd(x,y,2), \ dd(x,y,[1,n]), dd(vb(x),t,[3,]) $],
-  // Differential with custom "d" symbol and joiner
-  [$ dd(x,y,p:and), dd(x,y,d:Delta), \ dd(x,y,z,[1,1,n+1],d:d,p:dot) $],
-  // tensor
-  [$ tensor(T,+a,-b,-c) != tensor(T,-b,-c,+a) != tensor(T,+a',-b,-c) $],
 )
 ```
 
-```typ
+```
 #import "@preview/physica:0.9.1": * // Symbol names annotated below
+
 #table(
   columns: 4, align: horizon, stroke: none, gutter: 1em,
-  // Row 1.
-  // dv (ordinary derivative), with optional function name and order
-  [$ dv(,t) (dv(x,t)) = dv(x,t,2) $],
-  // pdv (partial derivative), without optional function name,
-  // with optional order array, auto-calculated overridable total
-  [$ pdv(,x,y,[1,i+1]), pdv(,y,x,[i+1,1],total:2+i) $],
-  // dv, pdv
-  [$ dv(phi,t,d:Delta), dv(phi,t,d:upright(D)), pdv(phi,t) $],
-  // Set builder notation, pdv
-  [$ Set(u, pdv(u,x,y,2,s:slash) < 1) $],
 
+  // Row 1.
+  // dd (differential), var (variation), difference
+  [$ dd(f), var(f), difference(f) $],
+  // dd, with an order number or an array thereof
+  [$ dd(x,y), dd(x,y,2), \ dd(x,y,[1,n]), dd(vb(x),t,[3,]) $],
+  // dd, with custom "d" symbol and joiner
+  [$ dd(x,y,p:and), dd(x,y,d:Delta), \ dd(x,y,z,[1,1,n+1],d:d,p:dot) $],
+  // dv (ordinary derivative), with custom "d" symbol and joiner
+  [$ dv(phi,t,d:Delta), dv(phi,t,d:upright(D)), dv(phi,t,d:delta) $],
 
   // Row 2.
-  // taylorterm (Taylor expansion) can smartly remove (..)
+  // dv, with optional function name and order
+  [$ dv(,t) (dv(x,t)) = dv(x,t,2) $],
+  // pdv (partial derivative)
+  [$ pdv(f,x,y,2), pdv(,x,y,[k,]) $],
+  // pdv, with auto-added overridable total
+  [$ pdv(,x,y,[i+2,i+1]), pdv(,y,x,[i+1,i+2],total:3+2i) $],
+  // In a flat form
+  [$ dv(u,x,s:slash), \ pdv(u,x,y,2,s:slash) $],
+)
+```
+
+<!--
+// TODO Add Order/order once physica:0.9.2 is merged.
+// TODO Demo expval(A, phi) once physica:0.9.2 is merged.
+-->
+```
+#import "@preview/physica:0.9.1": * // Symbol names annotated below
+
+#table(
+  columns: 3, align: horizon, stroke: none, gutter: 1em,
+
+  // Row 1.
+  // tensor
+  [$ tensor(T,+a,-b,-c) != tensor(T,-b,-c,+a) != tensor(T,+a',-b,-c) $],
+  // Set builder notation
+  [$ Set(p, {q^*, p} = 1) $],
+  // taylorterm (Taylor series term)
   [$ taylorterm(f,x,x_0,1) \ taylorterm(f,x,x_0,(n+1)) $],
+
+  // Row 2.
   // expval (mean/expectation value), eval (evaluation boundary)
   [$ expval(X) = eval(f(x)/g(x))^oo_1 $],
   // Dirac braket notations
@@ -130,4 +147,4 @@ xmat(2, 2, #elem-ij)
 $
 ```
 
-Coming: 2D and 3D rotation matrices, Gram matrix
+<!-- Coming in physica:0.9.2: 2D and 3D rotation matrices, Gram matrix -->
