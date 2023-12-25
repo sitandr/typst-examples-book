@@ -23,6 +23,8 @@ domain of physics:
 * Dirac braket notations,
 * Tensors with abstract index notations,
 * Matrix transpose and dagger (conjugate transpose).
+* Special matrices: determinant, (anti-)diagonal, identity, zero, Jacobian,
+Hessian, etc. <!-- TODO Add rotation and gram matrices in physica:0.9.2 -->
 
 ### Isotopes
 

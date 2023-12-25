@@ -20,6 +20,8 @@ provides a full set of demonstrations of how the package could be helpful.
 * Dirac braket notations,
 * Tensors with abstract index notations,
 * Matrix transpose and dagger (conjugate transpose).
+* Special matrices: determinant, (anti-)diagonal, identity, zero, Jacobian,
+Hessian, etc. <!-- TODO Add rotation and gram matrices in physica:0.9.2 -->
 
 Below is a preview of those notations.
 
@@ -40,7 +42,7 @@ Below is a preview of those notations.
 )
 ```
 
-```
+```typ
 #import "@preview/physica:0.9.1": * // Symbol names annotated below
 
 #table(
@@ -72,21 +74,26 @@ Below is a preview of those notations.
 // TODO Add Order/order once physica:0.9.2 is merged.
 // TODO Demo expval(A, phi) once physica:0.9.2 is merged.
 -->
-```
+```typ
 #import "@preview/physica:0.9.1": * // Symbol names annotated below
 
 #table(
   columns: 3, align: horizon, stroke: none, gutter: 1em,
 
-  // Row 1.
   // tensor
   [$ tensor(T,+a,-b,-c) != tensor(T,-b,-c,+a) != tensor(T,+a',-b,-c) $],
   // Set builder notation
   [$ Set(p, {q^*, p} = 1) $],
   // taylorterm (Taylor series term)
   [$ taylorterm(f,x,x_0,1) \ taylorterm(f,x,x_0,(n+1)) $],
+)
+```
+```typ
+#import "@preview/physica:0.9.1": * // Symbol names annotated below
 
-  // Row 2.
+#table(
+  columns: 3, align: horizon, stroke: none, gutter: 1em,
+
   // expval (mean/expectation value), eval (evaluation boundary)
   [$ expval(X) = eval(f(x)/g(x))^oo_1 $],
   // Dirac braket notations
@@ -126,10 +133,10 @@ identity matrix `imat(n)`, and zero matrix `zmat(n)`.
 ```typ
 #import "@preview/physica:0.9.1": dmat, admat, imat, zmat
 
-$ dmat(1, 2) dmat(1, a_1, xi, fill:0) quad
+$ dmat(1, 2)  dmat(1, a_1, xi, fill:0)               quad
   admat(1, 2) admat(1, a_1, xi, fill:dot, delim:"[") quad
-  imat(2) imat(3, delim:"{",fill:*) quad
-  zmat(2) zmat(3, delim:"|") $
+  imat(2)     imat(3, delim:"{",fill:*) quad
+  zmat(2)     zmat(3, delim:"|") $
 ```
 
 Jacobian matrix with `jmat(func; ...)` or the longer name `jacobianmatrix`,
@@ -140,11 +147,9 @@ finally `xmat(row, col, func)` to build a matrix.
 
 $
 jmat(f_1,f_2; x,y) jmat(f,g; x,y,z; delim:"[") quad
-hmat(f; x,y)       hmat(; x,y; big:#true) quad
+hmat(f; x,y)       hmat(; x,y; big:#true)      quad
 
 #let elem-ij = (i,j) => $g^(#(i - 1)#(j - 1)) = #calc.pow(i,j)$
 xmat(2, 2, #elem-ij)
 $
 ```
-
-<!-- Coming in physica:0.9.2: 2D and 3D rotation matrices, Gram matrix -->
