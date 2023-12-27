@@ -18,13 +18,25 @@ domain of physics:
   * Optional order number or array of order numbers,
   * Customizable "d" symbol and product joiner (say, exterior product),
   * Overridable total order calculation,
-* Vectors and vector fields,
+* Vectors and vector fields: div, grad, curl,
 * Taylor expansion,
 * Dirac braket notations,
 * Tensors with abstract index notations,
 * Matrix transpose and dagger (conjugate transpose).
 * Special matrices: determinant, (anti-)diagonal, identity, zero, Jacobian,
 Hessian, etc. <!-- TODO Add rotation and gram matrices in physica:0.9.2 -->
+
+A partial glimpse:
+
+```typ
+#import "@preview/physica:0.9.1": *
+#show: super-T-as-transpose // put in a #[...] to limit its scope...
+#show: super-plus-as-dagger // ...or use scripts() to manually override
+
+$ dd(x,y,2) quad dv(f,x,d:Delta)      quad pdv(,x,y,[2i+1,2+i]) quad
+  vb(a) va(a) vu(a_i)  quad mat(laplacian, div; grad, curl)     quad
+  tensor(T,+a,-b,+c)   quad ket(phi)  quad A^+ e^scripts(+) A^T integral^T $
+```
 
 ### Isotopes
 
