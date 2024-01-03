@@ -19,7 +19,7 @@
 
 ## Count only some elements, ignore others
 
-```
+```typ
 // original author: jollywatt
 #let count-words(it) = {
     let fn = repr(it.func())

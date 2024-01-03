@@ -20,7 +20,7 @@
 ```
 
 // Still formatted!
-```
+```rust
 pub fn main() {
     println!("Hello, world!");
 }

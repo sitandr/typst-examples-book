@@ -6,7 +6,7 @@
 
 ## Table of contents
 
-```
+```typ
 #outline()
 
 = Introduction
@@ -18,7 +18,7 @@
 
 ## Outline of figures
 
-```
+```typ
 #outline(
   title: [List of Figures],
   target: figure.where(kind: table),
@@ -40,7 +40,7 @@ You can use arbitrary selector there, so you can do any crazy things.
 
 ## Ignore low-level headings
 
-```
+```typ
 #set heading(numbering: "1.")
 #outline(depth: 2)
 
@@ -56,7 +56,7 @@ Not included.
 
 ## Set indentation
 
-```
+```typ
 #set heading(numbering: "1.a.")
 
 #outline(
@@ -85,7 +85,7 @@ Not included.
 
 ## Replace default dots
 
-```
+```typ
 #outline(fill: line(length: 100%), indent: 2em)
 
 = First level
@@ -94,7 +94,7 @@ Not included.
 
 ## Make different outline levels look different
 
-```
+```typ
 #set heading(numbering: "1.")
 
 #show outline.entry.where(

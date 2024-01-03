@@ -1,6 +1,15 @@
 # Special documents
+## Signature places
+```typ
+#block(width: 150pt)[
+  #line(length: 100%)
+  #align(center)[Signature]
+]
+```
+
 ## Presentations
 See [polylux](../../packages/).
+
 
 ## Forms
 ### Form with placeholder

@@ -90,7 +90,7 @@ Don't show content, but leave empty space there.
 
 > Link to [reference](https://typst.app/docs/reference/layout/hide/)
 
-```
+```typ
 Hello Jane \
 #hide[Hello] Joe
 ```

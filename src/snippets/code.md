@@ -2,7 +2,7 @@
 
 ## Inline highlighting
 
-```
+```typ
 #let r = raw.with(lang: "r")
 
 This can then be used like: #r("x <- c(10, 42)")
@@ -10,7 +10,7 @@ This can then be used like: #r("x <- c(10, 42)")
 
 ## Tab size
 
-```````
+```````typ
 #set raw(tab-size: 8)
 ```tsv
 Year	Month	Day
@@ -26,7 +26,7 @@ See [reference](https://typst.app/docs/reference/text/raw/#parameters-theme)
 
 ## Enable ligatures for code
 
-```
+```typ
 #show raw: set text(ligatures: true, font: "Cascadia Code")
 
 Then the code becomes `x <- a`

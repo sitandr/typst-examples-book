@@ -28,15 +28,15 @@ If the caption is multiline, it makes it left-aligned.
 }
 
 #figure(caption: lorem(6))[
-    ```
+    ```rust
     pub fn main() {
         println!("Hello, world!");
     }
     ```
 ]
 
-#figure(caption: lorem(20))[ // TODO: fix engine to be able to put rust
-    ```
+#figure(caption: lorem(20))[
+    ```rust
     pub fn main() {
         println!("Hello, world!");
     }

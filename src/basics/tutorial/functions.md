@@ -79,6 +79,21 @@ Everything you write in the document becomes content.
 ]
 ```
 
+## Markup and code modes
+```typ
+When you use `#`, you are "switching" to code mode.
+When you use `[]`, you turn back:
+
+// +-- going from markup (the default mode) to scripting for that function
+// |                 +-- scripting mode: calling `text`, the last argument is markup
+// |     first arg   |
+// v     vvvvvvvvv   vvvv
+   #rect(width: 5cm, text(red)[hello *world*])
+//  ^^^^                       ^^^^^^^^^^^^^ just a markup argument for `text`
+//  |
+//  +-- calling `rect` in scripting mode, with two arguments: width and other content
+```
+
 ## Passing content into functions
 ```typ
 So why do we need square braces?

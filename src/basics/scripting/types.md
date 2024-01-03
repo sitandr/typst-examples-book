@@ -109,13 +109,13 @@ However, precision may be lost.
 #type(n) 
 ```
 
-```
+```typ
 #3.14 \
 #1e4 \
 #(10 / 4)
 ```
 
-```
+```typ
 #float(40%) \
 #float("2.7") \
 #float("1e5")
