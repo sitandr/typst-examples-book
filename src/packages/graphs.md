@@ -136,28 +136,13 @@ canvas(length: 1cm, {
 ```
 
 ## `diagraph`
+### Test
 
 ```````typ
 #import "@preview/diagraph:0.1.2": *
+#let renderc(code) = render(code.text)
 
-#set heading(numbering: (..nums) => [Graph #numbering("1", ..nums):])
-
-#let render-example(dot, ..args) = style(styles => {
-  let code = raw(dot.text, lang: "dot")
-  let graph = render(dot.text, ..args)
-  let side-by-side = measure(code, styles).width + measure(graph, styles).width < 20cm
-  let columns = if side-by-side { (auto, auto) } else { (auto,) }
-  grid(
-    columns: columns,
-    gutter: 1cm,
-    raw(dot.text, lang: "dot"),
-    render(dot.text, ..args),
-  )
-})
-
-= Test
-
-#render-example(
+#renderc(
   ```
   digraph {
     rankdir=LR;
@@ -171,11 +156,15 @@ canvas(length: 1cm, {
   }
   ```
 )
+```````
 
+### Eating
 
-= Eating
+```````typ
+#import "@preview/diagraph:0.1.2": *
+#let renderc(code) = render(code.text)
 
-#render-example(
+#renderc(
   ```
   digraph {
     orange -> fruit
@@ -188,13 +177,17 @@ canvas(length: 1cm, {
   }
   ```
 )
+```````
 
-
-= FFT
+### FFT
 
 Labels are overridden manually.
 
-#render-example(
+```````typ
+#import "@preview/diagraph:0.1.2": *
+#let renderc(code) = render(code.text)
+
+#renderc(
   ```
   digraph {
     node [shape=none]
@@ -213,11 +206,16 @@ Labels are overridden manually.
   }
   ```
 )
+```````
 
+### State Machine
 
-= State Machine
+```````typ
+#import "@preview/diagraph:0.1.2": *
+#set page(width: auto)
+#let renderc(code) = render(code.text)
 
-#render-example(
+#renderc(
   ```
   digraph finite_state_machine {
     rankdir=LR
@@ -247,13 +245,17 @@ Labels are overridden manually.
   }
   ```
 )
+```````
 
+### Clustering
 
-= Clustering
+> See [docs](http://www.graphviz.org/content/cluster).
 
-See http://www.graphviz.org/content/cluster.
+```````typ
+#import "@preview/diagraph:0.1.2": *
+#let renderc(code) = render(code.text)
 
-#render-example(
+#renderc(
   ```
   digraph G {
 
@@ -285,11 +287,15 @@ See http://www.graphviz.org/content/cluster.
   }
   ```
 )
+```````
 
+### HTML
 
-= HTML
+```````typ
+#import "@preview/diagraph:0.1.2": *
+#let renderc(code) = render(code.text)
 
-#render-example(
+#renderc(
   ```
   digraph structs {
       node [shape=plaintext]
@@ -321,22 +327,14 @@ See http://www.graphviz.org/content/cluster.
   }
   ```
 )
+```````
 
-
-= Overridden labels
+### Overridden labels
 
 Labels for nodes `big` and `sum` are overridden.
 
-```dot
-digraph {
-	rankdir=LR
-	node[shape=circle]
-	Hmm -> a_0
-	Hmm -> big
-	a_0 -> "a'" -> big [style="dashed"]
-	big -> sum
-}
-```
+```````typ
+#import "@preview/diagraph:0.1.2": *
 
 #raw-render(
   ```
@@ -348,13 +346,18 @@ digraph {
     a_0 -> "a'" -> big [style="dashed"]
     big -> sum
   }
-  ```
+  ```,
+  // TODO: add this when diagraph package is fixed
+  /* labels: (:
+    big: [_some_#text(2em)[ big ]*text*],
+    sum: $ sum_(i=0)^n 1/i $,
+  ), */
 )
 ```````
 
 ## `bob-draw`
 
-Draw easily with ASCII, WASM plugin for [svgbob](https://github.com/ivanceras/svgbob).
+ WASM plugin for [svgbob](https://github.com/ivanceras/svgbob) to draw easily with ASCII,.
 
 `````typ
 #import "@preview/bob-draw:0.1.0": *
