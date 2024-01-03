@@ -139,7 +139,7 @@ canvas(length: 1cm, {
 ### Test
 
 ```````typ
-#import "@preview/diagraph:0.1.2": *
+#import "@preview/diagraph:0.2.0": *
 #let renderc(code) = render(code.text)
 
 #renderc(
@@ -161,7 +161,7 @@ canvas(length: 1cm, {
 ### Eating
 
 ```````typ
-#import "@preview/diagraph:0.1.2": *
+#import "@preview/diagraph:0.2.0": *
 #let renderc(code) = render(code.text)
 
 #renderc(
@@ -184,7 +184,7 @@ canvas(length: 1cm, {
 Labels are overridden manually.
 
 ```````typ
-#import "@preview/diagraph:0.1.2": *
+#import "@preview/diagraph:0.2.0": *
 #let renderc(code) = render(code.text)
 
 #renderc(
@@ -211,7 +211,7 @@ Labels are overridden manually.
 ### State Machine
 
 ```````typ
-#import "@preview/diagraph:0.1.2": *
+#import "@preview/diagraph:0.2.0": *
 #set page(width: auto)
 #let renderc(code) = render(code.text)
 
@@ -252,7 +252,7 @@ Labels are overridden manually.
 > See [docs](http://www.graphviz.org/content/cluster).
 
 ```````typ
-#import "@preview/diagraph:0.1.2": *
+#import "@preview/diagraph:0.2.0": *
 #let renderc(code) = render(code.text)
 
 #renderc(
@@ -292,7 +292,7 @@ Labels are overridden manually.
 ### HTML
 
 ```````typ
-#import "@preview/diagraph:0.1.2": *
+#import "@preview/diagraph:0.2.0": *
 #let renderc(code) = render(code.text)
 
 #renderc(
@@ -334,7 +334,8 @@ Labels are overridden manually.
 Labels for nodes `big` and `sum` are overridden.
 
 ```````typ
-#import "@preview/diagraph:0.1.2": *
+#import "@preview/diagraph:0.2.0": *
+#set page(width: auto)
 
 #raw-render(
   ```
@@ -347,11 +348,10 @@ Labels for nodes `big` and `sum` are overridden.
     big -> sum
   }
   ```,
-  // TODO: add this when diagraph package is fixed
-  /* labels: (:
+  labels: (:
     big: [_some_#text(2em)[ big ]*text*],
     sum: $ sum_(i=0)^n 1/i $,
-  ), */
+  ),
 )
 ```````
 
