@@ -1,4 +1,6 @@
-# Text shadows
+# Fake italic & Text shadows
+
+## Skew
 
 ```typ
 // author: Enivex
@@ -18,18 +20,16 @@
   let a2 = calc.atan2(E,H)
   let theta = (a2 - a1) /2
   let phi = (a2 + a1)/2
-  
+
   set rotate(origin: bottom+center)
   set scale(origin: bottom+center)
-  
+
   rotate(phi,scale(x: sx*100%, y: sy*100%,rotate(theta,body)))
 }
 
 #let fake-italic(body) = skew(-12deg,body)
-
-#let shadowed(body) = box(place(skew(-50deg, vscale: 0.8, text(fill:luma(200),body)))+place(body))
-
 #fake-italic[This is fake italic text]
 
+#let shadowed(body) = box(place(skew(-50deg, vscale: 0.8, text(fill:luma(200),body)))+place(body))
 #shadowed[This is some fancy text with a shadow]
 ```
