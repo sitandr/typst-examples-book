@@ -1,4 +1,34 @@
 # Numbering
+## Number by current heading
+
+> See also built-in numbering in [ctheorems](../../packages/math.md#ctheorem) and [lemmify](../../packages/math.md#lemmify)
+
+```typ
+#set heading(numbering: "1.")
+#show heading: it => {
+  counter(math.equation).update(0)
+  it
+}
+
+#set math.equation(numbering: it => {
+  locate(loc => {
+    let count = counter(heading.where(level:1)).at(loc).last()
+    numbering("(1.1)", count, it)
+    }
+  )
+})
+
+= Section
+
+$ 5 + 3 = 8 $
+$ 5 + 3 = 8 $
+
+= New Section
+
+$ 5 + 3 = 8 $
+$ 5 + 3 = 8 $
+```
+
 ## Number only labeled equations
 ### Simple code
 ```typ

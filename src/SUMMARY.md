@@ -47,6 +47,7 @@
   - [General layout]()
     - [Page setup]()
     - [Hiding](./snippets/hiding.md)
+    - [Multiline detection](./snippets/multiline_detect.md)
   - [Code formatting](./snippets/code.md)
   - [Hyphenation]()
   - [Scripting](./snippets/scripting/index.md)
