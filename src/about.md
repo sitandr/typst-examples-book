@@ -1,7 +1,11 @@
 # Typst Examples Book
 This book provides an extended _tutorial_ and lots of [Typst](https://github.com/typst/typst) snippets that can help you to write better Typst code.
 
-This is an unofficial book. Some snippets & suggestions here may be outdated or useless (please let me know if you find some). However, _all of them should compile on last version of Typst[^1]_.
+<div class="warning">
+    This is an unofficial book. Some snippets & suggestions here may be outdated or useless (please let me know if you find some).
+</div>
+
+However, _all of them should compile on last version of Typst[^1]_.
 
 **CAUTION:** currently the book is a **WIP**, so don't rely on it.
 

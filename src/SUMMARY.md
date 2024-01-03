@@ -36,6 +36,7 @@
     - [Location and sizes]()
     - [Semicolon syntax]()
     - [Classes](./basics/math/classes.md)
+  - [Extra](./basics/extra.md)
 - [Typst Snippets](./snippets/index.md)
   - [Demos]()
   - [Logos & Figures](./snippets/logos.md)
