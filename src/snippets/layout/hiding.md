@@ -1,4 +1,5 @@
 # Hiding things
+
 ```typ
 // author: GeorgeMuscat
 #let redact(text, fill: black, height: 1em) = {

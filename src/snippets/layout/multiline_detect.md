@@ -4,7 +4,9 @@ Detects if figure caption (may be any other element) _has more than one line_.
 
 If the caption is multiline, it makes it left-aligned.
 
-> Caution! Breaks on manual linebreaks.
+<div class="warning">
+ Breaks on manual linebreaks.
+</div>
 
 `````typ
 #show figure.caption: it => {
