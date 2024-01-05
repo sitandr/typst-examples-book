@@ -28,3 +28,23 @@ pub fn main() {
 
 #disable-codly()
 ``````
+
+## Codelst
+
+``````typ
+#import "@preview/codelst:2.0.0": sourcecode
+
+#sourcecode[```typ
+#show "ArtosFlow": name => box[
+  #box(image(
+    "logo.svg",
+    height: 0.7em,
+  ))
+  #name
+]
+
+This report is embedded in the
+ArtosFlow project. ArtosFlow is a
+project of the Artos Institute.
+```]
+``````

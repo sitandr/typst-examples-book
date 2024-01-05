@@ -113,3 +113,31 @@ Not included.
 = Analysis
 == Setup
 ```
+
+## Long and short captions for the outline
+
+```typ
+// author: laurmaedje
+// Put this somewhere in your template or at the start of your document.
+#let in-outline = state("in-outline", false)
+#show outline: it => {
+  in-outline.update(true)
+  it
+  in-outline.update(false)
+}
+
+#let flex-caption(long, short) = locate(loc =>
+  if in-outline.at(loc) { short } else { long }
+)
+
+// And this is in the document.
+#outline(title: [Figures], target: figure)
+
+#figure(
+  rect(),
+  caption: flex-caption(
+    [This is my long caption text in the document.],
+    [This is short],
+  )
+)
+```

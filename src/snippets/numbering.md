@@ -61,3 +61,46 @@
 
 ## Math numbering
 See [there](./math/numbering.md).
+
+## Numbering each paragraph
+
+```typ
+// author: roehlichA
+// Legal formatting of enumeration
+#show enum: it => locate(loc => {
+  // Retrieve the last heading so we know what level to step at
+  let headings = query(selector(heading).before(loc), loc)
+  let last = headings.at(-1)
+
+  // Combine the output items
+  let output = ()
+  for item in it.children {
+    output.push([
+      #counter(heading).step(level: last.level + 1)
+      #counter(heading).display()
+    ])
+    output.push([
+      #text(item.body)
+      #parbreak()
+    ])
+  }
+
+  // Display in a grid
+  grid(
+    columns: (auto, 1fr),
+    column-gutter: 1em,
+    row-gutter: 1em,
+    ..output
+  )
+})
+
+= Some heading
++ Paragraphs here are preceded with a number so they can be referenced directly.
++ _#lorem(100)_
++ _#lorem(100)_
+
+== A subheading
++ Paragraphs are also numbered correctly in subheadings.
++ _#lorem(50)_
++ _#lorem(50)_
+```

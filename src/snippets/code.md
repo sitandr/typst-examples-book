@@ -34,4 +34,4 @@ Then the code becomes `x <- a`
 
 ## Advanced formatting
 
-See [packages]() section.
+See [packages](../packages/code.md) section.
