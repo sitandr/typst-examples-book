@@ -1,7 +1,7 @@
 # Numbering
 ## Number by current heading
 
-> See also built-in numbering in [ctheorems](../../packages/math.md#ctheorem) and [lemmify](../../packages/math.md#lemmify)
+> See also built-in numbering in [math package section](../../packages/math.md#theorems)
 
 ```typ
 /// original author: indicatelove

@@ -38,6 +38,16 @@ Unfortunately `typst` doesn't expose margins to calling functions, so you'll nee
   overlap. This is because `typst` warns when the layout doesn't resolve after 5 attempts
   (initial layout + adjustment for each note)
 ]
+```````
+
+```````typ
+#import "@preview/drafting:0.1.1": *
+
+#let (l-margin, r-margin) = (1in, 2in)
+#set page(
+  margin: (left: l-margin, right: r-margin, rest: 0.1in),
+)
+#set-page-properties(margin-left: l-margin, margin-right: r-margin)
 
 == Adjusting the default style
 All function defaults are customizable through updating the module state:
@@ -81,7 +91,16 @@ Even deeper customization is possible by overriding the default `rect`:
 ]
 */
 #lorem(10)
+```````
 
+```````typ
+#import "@preview/drafting:0.1.1": *
+
+#let (l-margin, r-margin) = (1in, 2in)
+#set page(
+  margin: (left: l-margin, right: r-margin, rest: 0.1in),
+)
+#set-page-properties(margin-left: l-margin, margin-right: r-margin)
 
 == Hiding notes for print preview
 #set-margin-note-defaults(hidden: true)

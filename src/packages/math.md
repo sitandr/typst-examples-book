@@ -1,6 +1,7 @@
 # Math
 
-## `physica`
+## General
+### `physica`
 
 > Physica (Latin for _natural sciences_) provides utilities that simplify
 > otherwise complex and repetitive mathematical expressions in natural sciences.
@@ -8,7 +9,7 @@
 > Its [manual](https://github.com/Leedehai/typst-physics/blob/master/physica-manual.pdf)
 > provides a full set of demonstrations of how the package could be helpful.
 
-### Common notations
+#### Common notations
 
 * Calculus: differential, ordinary and partial derivatives
   * Optional function name,
@@ -111,7 +112,7 @@ Below is a preview of those notations.
 )
 ```
 
-### Matrices
+#### Matrices
 
 In addition to Typst's built-in `mat()` to write a matrix, physica provides a
 number of handy tools to make it even easier.
@@ -154,7 +155,8 @@ xmat(2, 2, #elem-ij)
 $
 ```
 
-## `ctheorem`
+## Theorems
+### `ctheorem`
 
 A numbered theorem environment in Typst. See more examples in its
 [manual](https://github.com/sahasatvik/typst-theorems/blob/main/manual.pdf).
@@ -194,7 +196,7 @@ A numbered theorem environment in Typst. See more examples in its
 #corollary[There are infinitely many composite numbers.]
 ```
 
-## `lemmify`
+### `lemmify`
 
 Lemmify is another theorem evironment generator with many selector and numbering
 capabilities. See documentations in its [readme](https://github.com/Marmare314/lemmify).
