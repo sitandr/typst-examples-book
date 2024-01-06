@@ -11,5 +11,9 @@ typst_default = true
 render = true
 warn_not_specified = true
 
+[output.html]
+additional-css = ["./theme/mdbook-pagetoc/style.css"]
+additional-js = ["./theme/mdbook-pagetoc/sidebar.js"]
+
 [output.html.redirect]
 "/snippets/hidding.html" = "./hiding.html"
