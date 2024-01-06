@@ -76,9 +76,9 @@
   - [Custom boxes](./packages/boxes.md) <!--TODO: add note "for theorems look into math"-->
   - [Math](./packages/math.md)
   - [Physics](./packages/physics.md)
-  - [Tables]()
+  - [Tables](./packages/tables.md)
   - [Code](./packages/code.md)
-  - [Presentations]()
+  - [Presentations](./packages/presentation.md)
   - [Themes]()
   - [Layout](./packages/layout.md)
   - [Scripting]()
