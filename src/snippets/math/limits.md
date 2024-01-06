@@ -77,7 +77,7 @@ liminf_(x->oo)
 $
 ```
 
-# Relates snippets
+# Related snippets
 ## Make every character upright when used in subscript
 
 ```typ

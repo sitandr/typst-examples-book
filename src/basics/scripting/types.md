@@ -42,6 +42,12 @@ String contains only plain text and no formatting. Just some chars. That allows 
 #s.split(" ") // split by space
 ```
 
+You can convert other types to their string representation using this type's constructor (e.g. convert number to string):
+
+```typ
+#str(5) // string, can be worked with as string
+```
+
 ## Boolean (`bool`)
 > [Link to Reference](https://typst.app/docs/reference/foundations/bool/).
 
@@ -63,7 +69,6 @@ A whole number.
 
 The number can also be specified as hexadecimal, octal, or binary by starting it with a zero followed by either x, o, or b.
 
-You can convert a value to an integer with this type's constructor.
 ```typ
 #let n = 5
 #n \
@@ -86,6 +91,8 @@ You can convert a value to an integer with this type's constructor.
 #0b1001
 ```
 
+You can convert a value to an integer with this type's constructor (e.g. convert string to int).
+
 ```typ
 #int(false) \
 #int(true) \
@@ -98,6 +105,7 @@ You can convert a value to an integer with this type's constructor.
 
 Works the same way as integer, but can store floating point numbers.
 However, precision may be lost.
+
 ```typ
 #let n = 5.0
 
@@ -114,6 +122,8 @@ However, precision may be lost.
 #1e4 \
 #(10 / 4)
 ```
+
+You can convert a value to a float with this type's constructor (e.g. convert string to float).
 
 ```typ
 #float(40%) \

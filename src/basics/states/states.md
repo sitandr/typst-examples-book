@@ -78,7 +78,9 @@ Updating is _a content_ that tells that in this place of document the state _sho
 ### ID collision
 _TLDR; **Never allow colliding states.**_
 
+<div class="warning">
 States are described by their id-s, if they are the same, the code will break.
+</div>
 
 So, if you write functions or loops that are used several times, _be careful_!
 ```typ
