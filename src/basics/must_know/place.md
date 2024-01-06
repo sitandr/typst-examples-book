@@ -26,7 +26,8 @@ Hello, world!
 ```
 
 ### Basic floating with place
-```typ-norender
+
+```typ
 #set page(height: 150pt)
 #let note(where, body) = place(
   center + where,

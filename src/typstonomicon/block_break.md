@@ -1,7 +1,10 @@
 # Breakpoints on broken blocks
-**Limitations: works only with one-column layout**
-```typ-norender
-// author: cdata
+
+<div class="warning">
+  Limitations: <strong>works only with one-column layout and one break</strong>.
+</div>
+
+```typ
 #let countBoundaries(loc, fromHeader) = {
   let startSelector = selector(label("boundary-start"))
   let endSelector = selector(label("boundary-end"))
@@ -30,12 +33,14 @@
 }
 
 #set page(
+  margin: 2em,
   // ... other page setup here ...
   header: locate(loc => {
     let boundaryCount = countBoundaries(loc, true)
 
     if boundaryCount.end > boundaryCount.start {
       // Decorate this header with an opening decoration
+      [Block break top: $-->$]
     }
   }),
   footer: locate(loc => {
@@ -43,6 +48,7 @@
 
     if boundaryCount.start > boundaryCount.end {
       // Decorate this footer with a closing decoration
+      [Block break end: $<--$]
     }
   })
 )
@@ -60,12 +66,9 @@
   ]
 })
 
-#set page(height: 5em)
-#show pagebreak: line(length: 100%)
+#set page(height: 10em)
 
 #breakable-block[
     #([Something \ ]*10)
 ]
 ```
-
-TODO: currently not rendered because of renderer limitations. Going to fix soon.

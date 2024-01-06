@@ -32,7 +32,7 @@ Value at `<here>` is
 ```
 
 ## Getting nearest chapter
-```typ-norender
+```typ
 #set page(header: locate(loc => {
   let elems = query(
     selector(heading).before(loc),
@@ -58,5 +58,3 @@ Value at `<here>` is
 = Analysis
 #lorem(15)
 ```
-
-TODO: enable after multipage render support adding
