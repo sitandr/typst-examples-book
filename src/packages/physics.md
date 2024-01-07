@@ -66,3 +66,45 @@ $ E = planck.reduce omega => E = hbar omega, wide
   (pi G^2) / (planck.reduce c^4) => (pi G^2) / (hbar c^4), wide
   e^(frac(i(p x - E t), planck.reduce)) => e^(frac(i(p x - E t), hbar)) $
 ```
+
+## `quill`: quantum diagrams
+
+> See [documentation](https://github.com/Mc-Zen/quill/tree/main).
+
+```typ
+#import "@preview/quill:0.2.0": *
+#quantum-circuit(
+  lstick($|0〉$), gate($H$), ctrl(1), rstick($(|00〉+|11〉)/√2$, n: 2), [\ ],
+  lstick($|0〉$), 1, targ(), 1
+)
+```
+
+```typ
+#import "@preview/quill:0.2.0": *
+
+#let ancillas = (setwire(0), 5, lstick($|0〉$), setwire(1), targ(), 2, [\ ],
+setwire(0), 5, lstick($|0〉$), setwire(1), 1, targ(), 1)
+
+#quantum-circuit(
+  scale-factor: 80%,
+  lstick($|ψ〉$), 1, 10pt, ctrl(3), ctrl(6), $H$, 1, 15pt, 
+    ctrl(1), ctrl(2), 1, [\ ],
+  ..ancillas, [\ ],
+  lstick($|0〉$), 1, targ(), 1, $H$, 1, ctrl(1), ctrl(2), 
+    1, [\ ],
+  ..ancillas, [\ ],
+  lstick($|0〉$), 2, targ(),  $H$, 1, ctrl(1), ctrl(2), 
+    1, [\ ],
+  ..ancillas
+)
+```
+
+```typ
+#import "@preview/quill:0.2.0": *
+
+#quantum-circuit(
+  lstick($|psi〉$),  ctrl(1), gate($H$), 1, ctrl(2), meter(), [\ ],
+  lstick($|beta_00〉$, n: 2), targ(), 1, ctrl(1), 1, meter(), [\ ],
+  3, gate($X$), gate($Z$),  midstick($|psi〉$)
+)
+```
