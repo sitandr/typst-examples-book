@@ -1,12 +1,12 @@
 # Extracting plain text
 ```typ
-// author: laurmaedge
+// author: ntjess
 #let stringify-by-func(it) = {
   let func = it.func()
   return if func in (parbreak, pagebreak, linebreak) {
     "\n"
   } else if func == smartquote {
-    if it.double { "\"" } else { "'" }
+    if it.double { "\"" } else { "'" } // "
   } else if it.fields() == (:) {
     // a fieldless element is either specially represented (and caught earlier) or doesn't have text
     ""
