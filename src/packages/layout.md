@@ -7,6 +7,8 @@ General useful things.
 The idea of [pinit](https://github.com/OrangeX4/typst-pinit) is pinning pins on the normal flow of the text, and then placing the content relative to pins.
 
 ```typ
+#import "@preview/pinit:0.1.3": *
+
 #set text(size: 24pt)
 
 A simple #pin(1)highlighted text#pin(2).
