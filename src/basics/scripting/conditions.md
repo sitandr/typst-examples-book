@@ -33,8 +33,7 @@ You can also use `else if` statement (known as `elif` in Python):
 
 #if a < 4 {
   a = 5
-}
-else if a < 6 {
+} else if a < 6 {
   a = -3
 }
 
