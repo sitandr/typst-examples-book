@@ -155,6 +155,92 @@ xmat(2, 2, #elem-ij)
 $
 ```
 
+### `mitex`
+
+> MiTeX provides LaTeX support powered by WASM in Typst, including real-time rendering of LaTeX math equations.
+> You can also use LaTeX syntax to write `\ref` and `\label`.
+
+> Please refer to the [manual](https://github.com/mitex-rs/mitex) for more details.
+
+```typ
+#import "@preview/mitex:0.2.0": *
+
+Write inline equations like #mi("x") or #mi[y].
+
+Also block equations:
+
+#mitex(`
+  \newcommand{\f}[2]{#1f(#2)}
+  \f\relax{x} = \int_{-\infty}^\infty
+    \f\hat\xi\,e^{2 \pi i \xi x}
+    \,d\xi
+`)
+
+Text mode:
+
+#mitext(`
+  \iftypst
+    #set math.equation(numbering: "(1)", supplement: "equation")
+  \fi
+
+  An inline equation $x + y$ and block \eqref{eq:pythagoras}.
+
+  \begin{equation}
+    a^2 + b^2 = c^2 \label{eq:pythagoras}
+  \end{equation}
+`)
+```
+
+
+### `i-figured`
+
+Configurable equation numbering per section in Typst.
+There is also figure numbering per section, see more examples in its [manual](https://github.com/RubixDev/typst-i-figured).
+
+
+```typ
+#import "@preview/i-figured:0.2.3"
+
+// make sure you have some heading numbering set
+#set heading(numbering: "1.1")
+
+// apply the show rules (these can be customized)
+#show heading: i-figured.reset-counters
+#show math.equation: i-figured.show-equation.with(
+  level: 1,
+  zero-fill: true,
+  leading-zero: true,
+  numbering: "(1.1)",
+  prefix: "eqt:",
+  only-labeled: false,  // numbering all block equations implicitly
+  unnumbered-label: "-",
+)
+
+
+= Introduction
+
+You can write inline equations such as $x + y$, and numbered block equations like:
+
+$ phi.alt := (1 + sqrt(5)) / 2 $ <ratio>
+
+To reference a math equation, please use the `eqt:` prefix. For example, with @eqt:ratio, we have:
+
+$ F_n = floor(1 / sqrt(5) phi.alt^n) $
+
+
+= Appdendix
+
+Additionally, you can use the <-> tag to indicate that a block formula should not be numbered:
+
+$ y = integral_1^2 x^2 dif x $ <->
+
+Subsequent math equations will continue to be numbered as usual:
+
+$ F_n = floor(1 / sqrt(5) phi.alt^n) $
+```
+
+
+
 ## Theorems
 ### `ctheorem`
 
