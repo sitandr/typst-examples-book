@@ -79,7 +79,7 @@ or `dictionary` (`for` iterates over its _key-value pairs_).
 ]
 ```
 
-To iterate to all numbers from `a` to `b`, use `range(a, b)`:
+To iterate to all numbers from `a` to `b`, use `range(a, b+1)`:
 
 ```typ
 #let s = 0
@@ -90,12 +90,12 @@ To iterate to all numbers from `a` to `b`, use `range(a, b)`:
 }
 ```
 
-This is equal to
+Because range is end-exclusive his is equal to
 
 ```typ
 #let s = 0
 
-#for i in (3, 4, 5, 6) {
+#for i in (3, 4, 5) {
     s += i
     [Number #i is added to sum. Now sum is #s.]
 }
