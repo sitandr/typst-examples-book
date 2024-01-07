@@ -91,3 +91,4 @@
   - [Breakpoints on broken blocks](./typstonomicon/block_break.md)
   - [Extracting plain text](./typstonomicon/extract_plain_text.md)
   - [Inline with](./typstonomicon/inline_with.md)
+  - [Create zero-level chapters](./typstonomicon/chapters.md)
