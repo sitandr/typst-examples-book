@@ -1,29 +1,72 @@
 # Extracting plain text
 ```typ
 // author: laurmaedge
-#let plain-text(it) = {
-  if it == [ ] {
-    " "
-  } else if it.func() == text {
-    it.text
-  } else if it.func() == smartquote {
-    if it.double { "\"" } else { "'" } // "
-  } else if it.func() == [].func() {
-    it.children.map(plain-text).join()
+#let stringify-by-func(it) = {
+  let func = it.func()
+  return if func in (parbreak, pagebreak, linebreak) {
+    "\n"
+  } else if func == smartquote {
+    if it.double { "\"" } else { "'" }
+  } else if it.fields() == (:) {
+    // a fieldless element is either specially represented (and caught earlier) or doesn't have text
+    ""
   } else {
-    it
+    panic("Not sure how to handle type `" + repr(func) + "`")
   }
 }
 
-#locate(loc => {
-  query(heading.where(level: 2).after(<Details>), loc).map(it => {
+#let plain-text(it) = {
+  return if type(it) == str {
+    it
+  } else if it == [ ] {
+    " "
+  } else if it.has("children") {
+    it.children.map(plain-text).join()
+  } else if it.has("body") {
     plain-text(it.body)
-  })
-})
+  } else if it.has("text") {
+    it.text
+  } else {
+    stringify-by-func(it)
+  }
+}
 
-= Test <Details>
+#plain-text(`raw inline text`)
 
-== Foo
-== Bar
-== Baz (Baj) "ok"
+#plain-text(highlight[Highlighted text])
+
+#plain-text[List
+  - With
+  - Some
+  - Elements
+
+  + And
+  + Enumerated
+  + Too
+]
+
+#plain-text(underline[Underlined])
+
+#for el in (
+  circle,
+  rect,
+  ellipse,
+  block,
+  box,
+  par,
+  raw.with(block: true),
+  raw.with(block: false),
+  heading,
+) {  
+  plain-text(el(repr(el)))
+  linebreak()
+}
+
+// Some empty elements
+#plain-text(circle())
+#plain-text(line())
+
+#for spacer in (linebreak, pagebreak, parbreak) {
+  plain-text(spacer())
+}
 ```
