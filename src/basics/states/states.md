@@ -66,13 +66,13 @@ Updating is _a content_ that tells that in this place of document the state _sho
 
 ```typ
 #let x = state("x", 0)
-#x \
+#x.display() \
 #let _ = x.update(3)
-// nothing happens, we don't put x into the document flow
-#x \
+// nothing happens, we don't put `update` into the document flow
+#x.display() \
 #repr(x.update(3)) \ // this is how that content looks \
 #x.update(3)
-#x // Finally!
+#x.display() // Finally!
 ```
 
 ### ID collision
