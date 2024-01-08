@@ -66,7 +66,7 @@ All symbols see [there](https://typst.app/docs/reference/symbols/sym/).
 
 ## Multiline equations
 
-To create multiline _display equation_, use the same symbol as in markup mode: `\`:
+To create multiline _display equation_, use the same symbol as in markup mode: `\\`:
 
 ```typ
 $
@@ -77,7 +77,7 @@ $
 
 ## Escaping
 
-Any symbol that is used may be escaped with `\`, like in markup mode. For example, you can disable fraction:
+Any symbol that is used may be escaped with `\\`, like in markup mode. For example, you can disable fraction:
 
 ```typ
 a  / b \
