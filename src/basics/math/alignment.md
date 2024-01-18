@@ -12,6 +12,12 @@ $
 $
 ```
 
+Or using `align` element:
+
+```typ
+#align(left, block($ x = 5 $))
+```
+
 ## Alignment points
 
 When equations include multiple alignment points (&), this creates blocks of alternatingly _right-_ and _left-_ aligned columns.

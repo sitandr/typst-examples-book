@@ -50,10 +50,22 @@ To make it short, Typst uses several simple rules:
 
 - All single-letter words _turn into variables_. That includes any _unicode symbols_ too!
 - All multi-letter words _turn into commands_. They may be built-in commands (available with math.something outside of math environment).
-  Or they may be user-defined variables/functions. If the command **isn't defined**, there will be **compilation error**.
-- To write simple text, use quotes: 
+  Or they **may be user-defined variables/functions**. If the command **isn't defined**, there will be **compilation error**.
+
+  <div class="warning">
+    If you use kebab-case or snake_case for variables you want to use in math,
+    you will have to refer to them as #snake-case-variable.
+  </div>
+- To write simple text, use quotes:
     ```typ
     $a "equals to" 2$
+    ```
+    <div class="warning">
+      Spacing matters there!
+    </div>
+
+    ```typ
+    $a "=" 2$, $a"="2$
     ```
 - You can turn it into multi-letter variables using `italic`:
     ```typ
@@ -85,4 +97,3 @@ a \/ b
 ```
 
 The same way it works with any other syntax.
-
