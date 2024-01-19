@@ -97,3 +97,17 @@ a \/ b
 ```
 
 The same way it works with any other syntax.
+
+## Wrapping inline math
+
+Sometimes, when you write large math, it may be too close to text (especially for some long letter tails).
+
+```typ
+#lorem(17) $display(1)/display(1+x^n)$ #lorem(20)
+```
+
+You may easily increase the distance it by wrapping into box:
+
+```typ
+#lorem(17) #box($display(1)/display(1+x^n)$, inset: 0.2em) #lorem(20)
+```

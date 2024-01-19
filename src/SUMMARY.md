@@ -35,7 +35,7 @@
     - [Alignment](./basics/math/alignment.md)
     - [Limits](./basics/math/limits.md)
     - [Operators](./basics/math/operators.md)
-    - [Location and sizes]()
+    - [Location and sizes](./basics/math/sizes.md)
     - [Vectors, Matrices, Semicolon syntax]()
     - [Classes](./basics/math/classes.md)
   - [Extra](./basics/extra.md)
@@ -94,3 +94,4 @@
   - [Extracting plain text](./typstonomicon/extract_plain_text.md)
   - [Inline with](./typstonomicon/inline_with.md)
   - [Create zero-level chapters](./typstonomicon/chapters.md)
+  - [Make all math display](./typstonomicon/math_display.md)
