@@ -2,3 +2,4 @@ book
 .vscode
 **/typst-src
 **/typst-img
+experimental.typ

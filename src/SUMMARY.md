@@ -36,7 +36,7 @@
     - [Limits](./basics/math/limits.md)
     - [Operators](./basics/math/operators.md)
     - [Location and sizes](./basics/math/sizes.md)
-    - [Vectors, Matrices, Semicolon syntax]()
+    - [Vectors, Matrices, Semicolon syntax](./basics/math/vec.md)
     - [Classes](./basics/math/classes.md)
   - [Extra](./basics/extra.md)
 - [Typst Snippets](./snippets/index.md)
@@ -61,7 +61,7 @@
     - [Numbering](./snippets/math/numbering.md)
     - [Operations](./snippets/math/operations.md)
     - [Scripts](./snippets/math/scripts.md)
-    - [Symbols]() <!--TODO: emptyset, replacing-->
+    - [Vectors & Matrices](./snippets/math/vecs.md)
     - [Fonts](./snippets/math/fonts.md)
     - [Text & Content]()
   - [Color & Gradients](./snippets/gradients.md)
