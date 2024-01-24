@@ -8,6 +8,7 @@ The idea of [pinit](https://github.com/OrangeX4/typst-pinit) is pinning pins on 
 
 ```typ
 #import "@preview/pinit:0.1.3": *
+#set page(height: 6em, width: 20em)
 
 #set text(size: 24pt)
 
