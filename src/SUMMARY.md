@@ -38,6 +38,7 @@
     - [Location and sizes](./basics/math/sizes.md)
     - [Vectors, Matrices, Semicolon syntax](./basics/math/vec.md)
     - [Classes](./basics/math/classes.md)
+  - [Special symbols](./basics/special_symbols.md)
   - [Extra](./basics/extra.md)
 - [Typst Snippets](./snippets/index.md)
   - [Demos](./snippets/demos.md)
