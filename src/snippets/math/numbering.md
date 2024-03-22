@@ -4,18 +4,11 @@
 > See also built-in numbering in [math package section](../../packages/math.md#theorems)
 
 ```typ
-/// original author: indicatelove
+/// author: laurmaedje
 #set heading(numbering: "1.")
-#show heading.where(level:1): it => {
-  counter(math.equation).update(0)
-  it
-}
-
-#set math.equation(numbering: it => {
-  locate(loc => {
-    let count = counter(heading.where(level:1)).at(loc).last()
-    numbering("(1.1)", count, it)
-  })
+#set math.equation(numbering: n => {
+  let h1 = counter(heading).get().first()
+  numbering("(1.1)", h1, n)
 })
 
 = Section
