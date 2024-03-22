@@ -1,4 +1,6 @@
 # Query
+<div class="warning">This section is outdated. It may be still useful, but it is strongly recommended to study new context system (using the reference).</div>
+
 > Link [there](https://typst.app/docs/reference/meta/query/)
 
 Query is a thing that allows you getting location by _selector_ (this is the same thing we used in show rules).

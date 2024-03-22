@@ -1,4 +1,7 @@
 # Counters
+<div class="warning">This section is outdated. It may be still useful, but it is strongly recommended to study new context system (using the reference).</div>
+
+
 Counters are special states that _count_ elements of some type.
 As with states, you can create your own with identifier strings.
 

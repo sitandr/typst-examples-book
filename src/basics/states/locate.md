@@ -1,4 +1,7 @@
 # Locate
+<div class="warning">This section is outdated. It may be still useful, but it is strongly recommended to study new context system (using the reference).</div>
+
+
 > Link to [reference](https://typst.app/docs/reference/meta/locate/)
 
 Many things should be recompiled depending on some external things.

@@ -1,4 +1,8 @@
 # States
+
+<div class="warning">This section is outdated. It may be still useful, but it is strongly recommended to study new context system (using the reference).</div>
+
+
 Before we start something practical, it is important to understand states in general.
 
 Here is a good explanation of why do we _need_ them: [Official Reference about states](https://typst.app/docs/reference/meta/state/). It is highly recommended to read it first.

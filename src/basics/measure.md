@@ -1,4 +1,6 @@
 # Measure, Layout
+<div class="warning">This section is outdated. It may be still useful, but it is strongly recommended to study new context system (using the reference).</div>
+
 ## Style & Measure
 
 > Style [documentation](https://typst.app/docs/reference/foundations/style/).
