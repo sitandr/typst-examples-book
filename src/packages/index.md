@@ -1,5 +1,7 @@
 # Packages
-Quick examples to make it easier choosing a package that is better suited for your task.
+Once the [Typst Universe](https://typst.app/universe) was launched, this chapter has become almost redundant. This is actually a very cool place to look for packages.
+
+However, there are still some cool examples of interesting package usage.
 
 ## General
 Typst has packages, but, unlike LaTeX, you need to remember:

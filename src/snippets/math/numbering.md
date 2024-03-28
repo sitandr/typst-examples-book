@@ -6,6 +6,13 @@
 ```typ
 /// author: laurmaedje
 #set heading(numbering: "1.")
+
+// reset counter at each chapter
+#show heading.where(level:1): it => {
+  counter(math.equation).update(0)
+  it
+}
+
 #set math.equation(numbering: n => {
   let h1 = counter(heading).get().first()
   numbering("(1.1)", h1, n)
