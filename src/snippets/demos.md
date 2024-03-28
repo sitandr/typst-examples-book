@@ -1,6 +1,7 @@
 # Demos
 
 ## Resume (using template)
+
 ```typ
 #import "@preview/modern-cv:0.1.0": *
 
@@ -23,19 +24,20 @@
 
 = Education
 
-#resume_entry(
+#resume-entry(
   title: "Example University",
   location: "B.S. in Computer Science",
   date: "August 2014 - May 2019",
   description: "Example"
 )
 
-#resume_item[
+#resume-item[
   - #lorem(20)
   - #lorem(15)
-  - #lorem(25)  
+  - #lorem(25)
 ]
 ```
+
 ## Book cover
 ```typ
 // author: bamdone
