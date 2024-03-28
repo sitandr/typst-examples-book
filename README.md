@@ -12,11 +12,16 @@ If you have a snippet you want to have in a book, feel free to create an issue.
 
 Any PR-s are very welcome!
 
-Currently needed (any work encouraged):
+Generally encouraged:
 
 - Editing (expanding examples, fixing bad language issues)
-- Package overviews (see current empty themes)
 - Selecting any really useful code examples from Discord and Github
+- Ideas (just any ideas how to make the book more useful)
+
+Currently needed:
+- Help with updating state manual to context expressions.
+- Updating examples with possibilities of new Typst versions
+- Some impressive demos
 
 If you think you can do some large work, please DM me in Discord (@sitandr) or mail (andr.sitnikov34@gmail.com) to avoid duplication.
 
