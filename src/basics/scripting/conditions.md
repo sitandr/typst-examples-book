@@ -89,7 +89,7 @@ To iterate to all numbers from `a` to `b`, use `range(a, b+1)`:
 }
 ```
 
-Because range is end-exclusive his is equal to
+Because range is end-exclusive this is equal to
 
 ```typ
 #let s = 0
