@@ -17,7 +17,7 @@ We have already seen it. A type that represents what is displayed in document.
 #repr(c)
 ```
 
-**Important:** It is very hard to convert _content_ to _plain text_, as _content_ may contain *anything*! Sp be careful when passing and storing content in variables.
+**Important:** It is very hard to convert _content_ to _plain text_, as _content_ may contain *anything*! So be careful when passing and storing content in variables.
 
 ## None (`none`)
 Nothing. Also known as `null` in other languages. It isn't displayed, converts to empty content.
