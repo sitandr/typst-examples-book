@@ -126,9 +126,7 @@ Not included.
   in-outline.update(false)
 }
 
-#let flex-caption(long, short) = locate(loc =>
-  if in-outline.at(loc) { short } else { long }
-)
+#let flex-caption(long, short) = context if in-outline.get() { short } else { long }
 
 // And this is in the document.
 #outline(title: [Figures], target: figure)

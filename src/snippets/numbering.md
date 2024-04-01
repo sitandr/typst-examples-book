@@ -67,9 +67,9 @@ See [there](./math/numbering.md).
 ```typ
 // author: roehlichA
 // Legal formatting of enumeration
-#show enum: it => locate(loc => {
+#show enum: it => context {
   // Retrieve the last heading so we know what level to step at
-  let headings = query(selector(heading).before(loc), loc)
+  let headings = query(selector(heading).before(here()))
   let last = headings.at(-1)
 
   // Combine the output items
@@ -92,7 +92,7 @@ See [there](./math/numbering.md).
     row-gutter: 1em,
     ..output
   )
-})
+}
 
 = Some heading
 + Paragraphs here are preceded with a number so they can be referenced directly.

@@ -4,9 +4,9 @@ While tables are not that necessary to know if you don't plan to use them in you
 
 Let's not bother with copying examples from official documentation. Just make sure to skim through it, okay?
 
-== Basic snippets
+## Basic snippets
 
-=== Spreading
+### Spreading
 
 Spreading operators (see [there](../scripting/arguments.md)) may be especially useful for the tables:
 
@@ -51,7 +51,7 @@ Spreading operators (see [there](../scripting/arguments.md)) may be especially u
 )
 ```
 
-=== Splitting tables
+### Splitting tables
 
 Tables are split between pages automatically.
 ```typ

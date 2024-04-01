@@ -8,7 +8,7 @@ This may be very useful with `typst query` to pass values to external tools.
 #metadata("This is a note") <note>
 
 // And find it from anywhere else.
-#locate(loc => {
-  query(<note>, loc).first().value
-})
+#context {
+  query(<note>).first().value
+}
 ```

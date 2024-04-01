@@ -20,11 +20,11 @@ It is currently one of the _the darkest magics currently existing in Typst_. It 
 ]
 
 Value at `<here>` is
-#locate(loc => s.at(
-  query(<here>, loc)
+#context s.at(
+  query(<here>)
     .first()
     .location()
-))
+)
 
 #compute("10") \
 #compute("x + 3") \
@@ -35,10 +35,10 @@ Value at `<here>` is
 
 ## Getting nearest chapter
 ```typ
-#set page(header: locate(loc => {
+#set page(header: context {
   let elems = query(
-    selector(heading).before(loc),
-    loc,
+    selector(heading).before(here()),
+    here(),
   )
   let academy = smallcaps[
     Typst Academy
@@ -49,7 +49,7 @@ Value at `<here>` is
     let body = elems.last().body
     academy + h(1fr) + emph(body)
   }
-}))
+})
 
 = Introduction
 #lorem(23)

@@ -40,20 +40,20 @@
     }
   }
 }
-#show link: it => locate(loc => {
-  let dest = query(it.dest, loc)
+#show link: it => context {
+  let dest = query(it.dest)
   if dest.len() == 2 {
     link(dest.first().location(), it.body)
   } else {
     it
   }
-})
-#show: body => locate(start-loc => grid(
+}
+#show: body => context grid(
   columns: (1fr, 1fr),
   column-gutter: 1cm,
   body,
   {
-    let reset-counter(kind) = counter(kind).update(counter(kind).at(start-loc))
+    let reset-counter(kind) = counter(kind).update(counter(kind).get())
     reset-counter(heading)
     reset-counter(figure.where(kind: image))
     reset-counter(figure.where(kind: raw))
@@ -61,7 +61,7 @@
     set figure(outlined: false)
     body
   },
-))
+)
 
 #outline()
 

@@ -212,8 +212,8 @@ the page with rule lines:
 == Absolute positioning
 What about absolutely positioning something regardless of margin and relative location? `absolute-place` is your friend. You can put content anywhere:
 
-#locate(loc => {
-  let (dx, dy) = (25%, loc.position().y)
+#context {
+  let (dx, dy) = (25%, here().position().y)
   let content-str = (
     "This absolutely-placed box will originate at (" + repr(dx) + ", " + repr(dy) + ")"
     + " in page coordinates"
@@ -228,7 +228,7 @@ What about absolutely positioning something regardless of margin and relative lo
       [#align(center + horizon, content-str)]
     )
   )
-})
+}
 #v(1in)
 
 The "rule-grid" also supports absolute placement at the top-left of the page by passing `relative: false`. This is helpful for "rule"-ing the whole page.
