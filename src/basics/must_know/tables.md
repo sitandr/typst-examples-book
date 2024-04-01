@@ -51,6 +51,31 @@ Spreading operators (see [there](../scripting/arguments.md)) may be especially u
 )
 ```
 
+### Highlighting table row
+
+```typ
+#table(
+  columns: 2,
+  fill: (x, y) => if y == 2 { highlight.fill },
+  [A], [B],
+  [C], [D],
+  [E], [F],
+  [G], [H],
+)
+```
+
+For individual cells, use
+
+```typ
+#table(
+  columns: 2,
+  [A], [B],
+  table.cell(fill: yellow)[C], table.cell(fill: yellow)[D],
+  [E], [F],
+  [G], [H],
+)
+```
+
 ### Splitting tables
 
 Tables are split between pages automatically.

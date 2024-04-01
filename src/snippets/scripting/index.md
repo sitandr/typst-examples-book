@@ -28,3 +28,9 @@
 }
 #letts
 ```
+
+## Split the string retrieving separators
+
+```typ
+#",this, is a a a a; a. test? string!".matches(regex("(\b[\P{Punct}\s]+\b|\p{Punct})")).map(x => x.captures).join()
+```

@@ -1,15 +1,14 @@
 # Horizontally align something with something
 ```typ
 // author: tabiasgeehuman
-#let inline-with(select, content) = locate(loc => {
+#let inline-with(select, content) = context {
   let target = query(
-    selector(select),
-    loc,
+    selector(select)
   ).last().location().position().x
-  let current = loc.position().x
+  let current = here().position().x
 
   box(inset: (x: target - current + 0.3em), content)
-})
+}
 
 #let inline-label(name) = [#line(length: 0%) #name]
 
