@@ -1,6 +1,6 @@
 # Extracting plain text
 ```typ
-// author: ntjess
+// original author: ntjess
 #let stringify-by-func(it) = {
   let func = it.func()
   return if func in (parbreak, pagebreak, linebreak) {
@@ -25,8 +25,13 @@
   } else if it.has("body") {
     plain-text(it.body)
   } else if it.has("text") {
-    it.text
+    if type(it.text) == "string" {
+      it.text
+    } else {
+      plain-text(it.text)
+    }
   } else {
+    // remove this to ignore all other non-text elements
     stringify-by-func(it)
   }
 }
@@ -47,6 +52,8 @@
 
 #plain-text(underline[Underlined])
 
+#plain-text($sin(x + y)$)
+
 #for el in (
   circle,
   rect,
@@ -57,7 +64,7 @@
   raw.with(block: true),
   raw.with(block: false),
   heading,
-) {  
+) {
   plain-text(el(repr(el)))
   linebreak()
 }

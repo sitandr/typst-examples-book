@@ -66,6 +66,7 @@
     - [Vectors & Matrices](./snippets/math/vecs.md)
     - [Fonts](./snippets/math/fonts.md)
     - [Text & Content]()
+    - [Calligraphic letters](./snippets/math/calligraphic.md)
   - [Color & Gradients](./snippets/gradients.md)
   - [Pretty things](./snippets/pretty.md)
   - [Text]()
