@@ -81,7 +81,7 @@ It is very easy, see yourself:
   set text(12pt, weight: "regular")
   // see more about blocks and boxes
   // in corresponding chapter
-  block(smallcaps(it.body))
+  smallcaps(it.body)
 }
 
 = Smallcaps heading
