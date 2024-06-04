@@ -60,13 +60,6 @@ To make it short, Typst uses several simple rules:
     ```typ
     $a "equals to" 2$
     ```
-    <div class="warning">
-      Spacing matters there!
-    </div>
-
-    ```typ
-    $a "=" 2$, $a"="2$
-    ```
 - You can turn it into multi-letter variables using `italic`:
     ```typ
     $(italic("mass") v^2)/2$
@@ -92,8 +85,10 @@ $
 Any symbol that is used may be escaped with `\\`, like in markup mode. For example, you can disable fraction:
 
 ```typ
+$
 a  / b \
 a \/ b
+$
 ```
 
 The same way it works with any other syntax.
