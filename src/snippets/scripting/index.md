@@ -34,3 +34,64 @@
 ```typ
 #",this, is a a a a; a. test? string!".matches(regex("(\b[\P{Punct}\s]+\b|\p{Punct})")).map(x => x.captures).join()
 ```
+
+## Create selector matching any values in an array
+
+This snippet creates a selector (that is then used in a show rule) that
+matches any of the values inside the array. Here, it is used to highlight
+a few raw lines, but it can be adapted to any kind of selector obviously
+
+````typ
+#let lines = (2, 3, 5)
+#let lines-selectors = lines.map(lineno => raw.line.where(number: lineno))
+#let lines-combined-selector = lines-selectors.fold(
+  // start with the first selector by default
+  // you can also use a selector that wouldn't ever match anything, if possible
+  lines-selectors.at(0),
+  selector.or // create an OR of all selectors (alternatively: (acc, sel) => acc.or(sel))
+)
+
+#show lines-combined-selector: highlight
+
+```py
+def foo(x, y):
+  if x == y:
+    return False
+  z = x + y
+  return z * x - z * y >= z
+```
+````
+
+## Synthesize show (or show-set) rules from dictionnary
+
+This snippet applies a show-set rule to any element inside a dictionary,
+by using the key as the selector and the value as the parameter to set.
+In this example, it's used to give custom supplements to custom figure
+kinds, based on a dictionnary of correspondances.
+
+```typ
+#let kind_supp_dict = (
+  algo: "Pseudo-code",
+  ex: "Example",
+  prob: "Problem",
+)
+
+// apply this rule to the whole (rest of the) document
+#show: it => {
+  kind_supp_dict
+    .pairs() // get an array of key-value pairs
+    .fold( // we're going to stack show-set rules before the document
+      it, // start with the default document
+      (acc, (kind, supp)) => {
+        // add the curent kind-supp combination on top of the rest
+        show figure.where(kind: kind): set figure(supplement: supp)
+        acc
+      }
+    ) 
+}
+```
+
+Additonnaly, as this is this is applied at the position where you
+write it, these show-set rules will appear as if they were added in
+the same place where you wrote this rule. This means that you can
+override them later, just like any other show-set rules.
