@@ -46,6 +46,7 @@
   - [Labels](./snippets/labels.md)
   - [Chapters]()
       - [Headings]()
+      - [Page numbering](./snippets/chapters/page-numbering.md)
       - [Outlines](./snippets/chapters/outlines.md)
       - [Bibliography]()
   - [General layout]()
@@ -100,3 +101,4 @@
   - [Inline with](./typstonomicon/inline_with.md)
   - [Create zero-level chapters](./typstonomicon/chapters.md)
   - [Make all math display](./typstonomicon/math_display.md)
+  - [Empty pages without numbering](./typstonomicon/totally-empty.md)

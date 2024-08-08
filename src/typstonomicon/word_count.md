@@ -1,6 +1,7 @@
 # Word count
 
 <div class="warning">This chapter is deprecated now. It will be removed soon.</div>
+
 ## Recommended solution
 
 Use `wordometr` [package](https://github.com/Jollywatt/typst-wordometer):

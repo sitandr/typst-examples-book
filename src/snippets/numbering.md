@@ -65,7 +65,7 @@ See [there](./math/numbering.md).
 ## Numbering each paragraph
 
 ```typ
-// author: roehlichA
+// original author: roehlichA
 // Legal formatting of enumeration
 #show enum: it => context {
   // Retrieve the last heading so we know what level to step at
@@ -76,8 +76,12 @@ See [there](./math/numbering.md).
   let output = ()
   for item in it.children {
     output.push([
-      #counter(heading).step(level: last.level + 1)
-      #counter(heading).display()
+      #context{
+        counter(heading).step(level: last.level + 1)
+      }
+      #context {
+        counter(heading).display() 
+      }
     ])
     output.push([
       #text(item.body)
@@ -92,9 +96,14 @@ See [there](./math/numbering.md).
     row-gutter: 1em,
     ..output
   )
+
 }
 
+#set heading(numbering: "1.")
+
 = Some heading
++ Paragraph
+= Other
 + Paragraphs here are preceded with a number so they can be referenced directly.
 + _#lorem(100)_
 + _#lorem(100)_

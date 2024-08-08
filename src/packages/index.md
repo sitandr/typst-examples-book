@@ -1,5 +1,5 @@
 # Packages
-Once the [Typst Universe](https://typst.app/universe) was launched, this chapter has become almost redundant. This is actually a very cool place to look for packages.
+Once the [Typst Universe](https://typst.app/universe) was launched, this chapter has become almost redundant. The Universe is actually a very cool place to look for packages.
 
 However, there are still some cool examples of interesting package usage.
 

@@ -3,8 +3,10 @@
 (also known as quote formatting)
 
 ```typ
+#let line-block = rect.with(fill: luma(240), stroke: (left: 0.25em))
+
 + #lorem(10) \
-  #rect(fill: luma(240), stroke: (left: 0.25em))[
+  #line-block[
     *Solution:* #lorem(10)
 
     $ a_(n+1)x^n = 2... $
