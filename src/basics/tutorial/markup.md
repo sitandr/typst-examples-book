@@ -2,14 +2,12 @@
 ## Starting
 ```typ
 Starting typing in Typst is easy.
-No including packages or other weird things.
+You don't need packages or other weird things for most of things.
 
-Blank line will move text to new paragraph.
+Blank line will move text to a new paragraph.
 
 Btw, you can use any language and unicode symbols
-with no problems by default: ßçœ̃ɛ̃ø∀αβёыა😆…
-
-(as long as current font supports it)
+without any problems as long as the font supports it: ßçœ̃ɛ̃ø∀αβёыა😆…
 ```
 
 ## Markup
@@ -18,9 +16,10 @@ with no problems by default: ßçœ̃ɛ̃ø∀αβёыა😆…
 
 This was a heading. Number of `=` in front of name corresponds to heading level.
 
-===== Fifth-level heading
+== Second-level heading
 
 Okay, let's move to _emphasis_ and *bold* text.
+
 Markup syntax is generally similar to
 `AsciiDoc` (this was `raw` for monospace text!)
 ```
@@ -29,7 +28,7 @@ Markup syntax is generally similar to
 ```typ
 You can break \
 line anywhere you \
-want using \\ symbol.
+want using "\\" symbol.
 
 Also you can use that symbol to
 escape \_all the symbols you want\_,
@@ -57,6 +56,7 @@ By the way, I'm writing it all in a _fenced code block_ with *syntax highlightin
 ```````
 
 ## Smart quotes
+
 ```typ
 == What else?
 
@@ -83,16 +83,18 @@ I hope you noticed auto-matched "smart quotes" there.
 
 **Notice:**
 ```typ
-Typst doesn't support markdown-like syntax for lists:
+Typst numbered lists differ from markdown-like syntax for lists. If you write them by hand, numbering is preserved:
+
 1. Apple
-1. Pair
-1. Soup
+1. Orange
+1. Peach
 ```
 
 ## Math
 ```typ
-I will just mention math ($a + b/c = sum_i x^i$) 
-is possible there and is quite pretty:
+
+I will just mention math ($a + b/c = sum_i x^i$)
+is possible and quite pretty there:
 
 $
 7.32 beta +

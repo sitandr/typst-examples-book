@@ -1,5 +1,6 @@
 # Functions
 ## Functions
+
 ```typ
 Okay, let's now move to more complex things.
 
@@ -15,6 +16,7 @@ _That *function* just generated 50 "Lorem Ipsum" words!_
 ```
 
 ## More functions
+
 ```typ
 #underline[functions can do everything!]
 
@@ -37,11 +39,12 @@ and #emph[just write] functions everywhere!
 ```
 
 ## How to call functions
+
 ```typ
-First, start with `#`. Then write a name.
+First, start with `#`. Then write the name.
 Finally, write some parentheses and maybe something inside.
 
-You can navigate lots of built-in functions 
+You can navigate lots of built-in functions
 in #link("https://typst.app/docs/reference/")[Official Reference].
 
 #quote(block: true, attribution: "Typst Examples Book")[
@@ -96,9 +99,9 @@ When you use `[]`, you turn back:
 
 ## Passing content into functions
 ```typ
-So why do we need square braces?
+So what are these square brackets after functions?
 
-The main answer is that if you *write content right after
+If you *write content right after
 function, it will be passed as positional argument there*.
 
 #quote(block: true)[
@@ -109,15 +112,17 @@ function, it will be passed as positional argument there*.
 ```
 
 ## Passing content, part II
+
 `````typ
 So, just to make it clear, when I write
 
 ```typ
 - #text(red)[red text]
 - #text([red text], red)
-- #text("red text", red) 
-  Quotes there mean a plain string, not a content!
-  You can't use markup inside.
+- #text("red text", red)
+//      ^        ^
+// Quotes there mean a plain string, not a content!
+// This is just text.
 ```
 
 It all will result in a #text([red text], red).

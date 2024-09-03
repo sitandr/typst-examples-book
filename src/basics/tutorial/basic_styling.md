@@ -23,9 +23,9 @@ but will work only in it's _scope_ (we will discuss them later).
   of an argument of an element.
 ]
 
-And in start of this document (snippet) 
+And in start of this document (snippet)
 I've reduced page size to make justifying more visible,
-and also increased margins to add blank space on edges. 
+and also increased margins to add blank space on edges.
 ```
 
 ## A bit about length units
