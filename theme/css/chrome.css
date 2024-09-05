@@ -440,11 +440,15 @@ ul#searchresults span.teaser em {
     display: block;
     padding: 0;
     text-decoration: none;
-    color: var(--sidebar-fg);
+    color: var(--sidebar-new);
 }
 
 .chapter li a:hover {
     color: var(--sidebar-active);
+}
+
+.chapter li a:visited {
+    color: var(--sidebar-fg);
 }
 
 .chapter li a.active {
