@@ -60,6 +60,14 @@ To make it short, Typst uses several simple rules:
     ```typ
     $a "equals to" 2$
     ```
+
+    <div class="warning">
+      Spacing matters there!
+    </div>
+
+    ```typ
+    $a "is" 2$, $a"is"2$
+    ```
 - You can turn it into multi-letter variables using `italic`:
     ```typ
     $(italic("mass") v^2)/2$
