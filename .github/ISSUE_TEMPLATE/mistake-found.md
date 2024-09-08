@@ -9,4 +9,4 @@ assignees: sitandr
 
 **Issue**: [what problem have you found]
 
-**Location**: [where in the book the mistake is located]
+**Location**: [where in the book the mistake is located, attach the url and specify the example if possible]

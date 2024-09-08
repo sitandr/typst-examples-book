@@ -1,5 +1,5 @@
 [book]
-authors = ["sitandr"]
+author = "sitandr"
 language = "en"
 multilingual = false
 src = "src"
@@ -13,7 +13,8 @@ warn_not_specified = true
 
 [output.html]
 additional-css = ["./theme/mdbook-pagetoc/style.css"]
-additional-js = ["./theme/mdbook-pagetoc/sidebar.js"]
+additional-js = ["./theme/mdbook-pagetoc/sidebar.js", "./theme/popup/popup.js"]
+git-repository-url = "https://github.com/sitandr/typst-examples-book"
 
 [output.html.redirect]
 "/snippets/hidding.html" = "./hiding.html"
