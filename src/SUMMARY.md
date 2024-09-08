@@ -57,6 +57,7 @@
     - [Lines between list items](./snippets/layout/insert_lines.md)
     - [Shadowed shape](./snippets/layout/shapes.md)
   - [Code formatting](./snippets/code.md)
+  - [Tables & grids](./snippets/grids.md)
   - [Hyphenation]()
   - [Scripting](./snippets/scripting/index.md)
   - [Numbering](./snippets/numbering.md)
@@ -75,6 +76,7 @@
     - [Fake italic & Text shadows](./snippets/text/text_shadows.md)
   - [Special documents](./snippets/special/index.md)
   - [Use with external tools](./snippets/external.md)
+
 - [Typst Packages](./packages/index.md)
   - [Overview]()
   - [Drawing](./packages/drawing.md)
@@ -92,6 +94,7 @@
   - [Misc](./packages/misc.md)
     - [Counting words](./packages/word_count.md)
   - [External](./packages/external.md)
+
 - [Typstonomicon, or The Code You Should Not Write](./typstonomicon/index.md)
   - [Image with original size](./typstonomicon/original_image.md)
   - [Word count](./typstonomicon/word_count.md)
@@ -102,3 +105,5 @@
   - [Create zero-level chapters](./typstonomicon/chapters.md)
   - [Make all math display](./typstonomicon/math_display.md)
   - [Empty pages without numbering](./typstonomicon/totally-empty.md)
+  - [Multiple show rules](./typstonomicon/multiple-show.md)
+  - [Removing indent of nested lists](./typstonomicon/remove-indent-nested.md)
