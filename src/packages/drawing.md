@@ -65,3 +65,43 @@ It is the best choice in most of cases you want to draw something in Typst.
   circle("g.top", radius: .1, fill: black)
 })
 ```
+
+```typ
+// author: LDemetrios
+#import "@preview/cetz:0.2.2"
+
+#cetz.canvas({
+  let left = (a:2, b:1, d:-1, e:-2)
+  let right = (p:2.7, q: 1.8, r: 0.9, s: -.3, t: -1.5, u: -2.4)
+  let edges = "as,bq,dq,et".split(",")
+
+  let ell-width = 1.5
+  let ell-height = 3
+  let dist = 5
+  let dot-radius = 0.1
+  let dot-clr = blue
+
+  import cetz.draw: *
+  circle((-dist/2, 0), radius:(ell-width ,  ell-height))
+  circle((+dist/2, 0), radius:(ell-width ,  ell-height))
+
+  for (name, y) in left {
+    circle((-dist/2, y), radius:dot-radius, fill:dot-clr, name:name)
+    content(name, anchor:"east", pad(right:.7em, text(fill:dot-clr, name)))
+  }
+
+  for (name, y) in right {
+    circle((dist/2, y), radius:dot-radius, fill:dot-clr, name:name)
+    content(name, anchor:"west", pad(left:.7em, text(fill:dot-clr, name)))
+  }
+
+  for edge in edges {
+    let from = edge.at(0)
+    let to = edge.at(1)
+    line(from, to)
+    mark(from, to, symbol: ">",  fill: black)
+  }
+
+  content((0, - ell-height), text(fill:blue)[APPLICATION], anchor:"south")
+})
+```

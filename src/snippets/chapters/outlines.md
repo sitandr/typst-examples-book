@@ -139,3 +139,28 @@ Not included.
   )
 )
 ```
+
+## Ignore citations and footnotes
+
+That's a workaround a problem that if you make a footnote a heading, its number will be displayed in outline:
+
+```typ
+
+= Heading #footnote[A footnote]
+
+Text
+
+#outline() // bad :(
+
+#pagebreak()
+#{
+  set footnote.entry(
+    separator: none
+  )
+  show footnote.entry: hide
+  show ref: none
+  show footnote: none
+
+  outline()
+}
+```
