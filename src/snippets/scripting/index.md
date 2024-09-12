@@ -39,9 +39,10 @@
 
 This snippet creates a selector (that is then used in a show rule) that
 matches any of the values inside the array. Here, it is used to highlight
-a few raw lines, but it can be adapted to any kind of selector obviously
+a few raw lines, but it can be easily adapted to any kind of selector.
 
 ````typ
+// author: Blokyk
 #let lines = (2, 3, 5)
 #let lines-selectors = lines.map(lineno => raw.line.where(number: lineno))
 #let lines-combined-selector = lines-selectors.fold(
@@ -70,6 +71,7 @@ In this example, it's used to give custom supplements to custom figure
 kinds, based on a dictionnary of correspondances.
 
 ```typ
+// author: laurmaedje
 #let kind_supp_dict = (
   algo: "Pseudo-code",
   ex: "Example",
@@ -88,10 +90,14 @@ kinds, based on a dictionnary of correspondances.
         acc
       }
     ) 
-}
+#figure(
+    kind: "algo",
+    caption: [My code], 
+    ```Algorithm there```
+)
 ```
 
-Additonnaly, as this is this is applied at the position where you
+Additonnaly, as this is applied at the position where you
 write it, these show-set rules will appear as if they were added in
 the same place where you wrote this rule. This means that you can
 override them later, just like any other show-set rules.
