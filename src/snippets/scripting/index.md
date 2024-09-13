@@ -89,10 +89,11 @@ kinds, based on a dictionnary of correspondances.
         show figure.where(kind: kind): set figure(supplement: supp)
         acc
       }
-    ) 
+    )
+}
 #figure(
     kind: "algo",
-    caption: [My code], 
+    caption: [My code],
     ```Algorithm there```
 )
 ```

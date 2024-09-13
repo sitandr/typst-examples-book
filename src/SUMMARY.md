@@ -15,6 +15,7 @@
     - [Placing, Moving, Scale & Hide](./basics/must_know/place.md)
     - [Align & Padding]()
     - [Tables & Grids](./basics/must_know/tables.md)
+    - [Project structure](./basics/must_know/project_struct.md)
   - [Scripting](./basics/scripting/index.md)
     - [Basics](./basics/scripting/basics.md)
     - [Braces, brackets and default](./basics/scripting/braces.md)
