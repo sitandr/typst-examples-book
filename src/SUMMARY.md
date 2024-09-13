@@ -22,6 +22,7 @@
     - [Types, part II](./basics/scripting/types_2.md)
     - [Conditions & loops](./basics/scripting/conditions.md)
     - [Advanced arguments](./basics/scripting/arguments.md)
+    - [Tips](./basics/scripting/tips.md)
   - [States, Query, Context Dependence](./basics/states/index.md)
     - [States](./basics/states/states.md)
     - [Locate](./basics/states/locate.md)
