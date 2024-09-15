@@ -20,6 +20,17 @@ $product/sum root(3, x)/2$
 $product/sum root(3, x)/2$
 ```
 
+The recursion problem may be avoided with the power of `fold`, with basically the same idea:
+
+```typ
+// author: Eric
+#let kind_supp = (code: "Listing", algo: "Algorithme")
+#show: it => kind_supp.pairs().fold(it, (acc, (kind, supp)) => {
+  show figure.where(kind: kind): set figure(supplement: supp)
+  acc
+})
+```
+
 Note that just in case of symbols (if you don't need element functions), one can use regular expressions. That is a more robust way:
 
 ```typ

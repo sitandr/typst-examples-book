@@ -1,4 +1,12 @@
 # Numbering
+## Individual heading without numbering
+```typ
+#let numless(it) = {set heading(numbering: none); it }
+
+= Heading
+#numless[=No numbering heading]
+```
+
 ## "Clean" numbering
 ```typ
 // original author: tromboneher
@@ -63,6 +71,10 @@
 See [there](./math/numbering.md).
 
 ## Numbering each paragraph
+
+<div class="warning">
+  By the 0.12 version of Typst, this should be replaced with good native solution.
+<div>
 
 ```typ
 // original author: roehlichA
