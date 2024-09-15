@@ -89,6 +89,7 @@
   - [Tables](./packages/tables.md)
   - [Code](./packages/code.md)
   - [Presentations](./packages/presentation.md)
+  - [Glossary](./packages/glossary.md)
   - [Themes]()
   - [Layout](./packages/layout.md)
     -  [Wrapping figures](./packages/wrapping.md)
