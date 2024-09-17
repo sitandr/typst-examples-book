@@ -19,3 +19,25 @@
 = Implementation
 In #ref-heading(<design>), we discussed...
 ```
+
+## Allow missing references
+
+```typ
+// author: Enivex
+#set heading(numbering: "1.")
+
+#let myref(label) = locate(loc =>{
+    if query(label,loc).len() != 0 {
+        ref(label)
+    } else {
+        // missing reference
+        text(fill: red)[???]
+    }
+})
+
+= Second <test2>
+
+#myref(<test>)
+
+#myref(<test2>)
+```
