@@ -1,10 +1,10 @@
 # Basic styling
-## Let's start with justifying
+## `Set` rule
 ```typ
 #set page(width: 15cm, margin: (left: 4cm, right: 4cm))
 
-Okay, that was great, but using functions everywhere,
-specifying all arguments every time is awfully cumbersome.
+That was great, but using functions everywhere, especially
+with many arguments every time is awfully cumbersome.
 
 That's way Typst has _rules_. No, not for you, for the document.
 
@@ -23,14 +23,14 @@ but will work only in it's _scope_ (we will discuss them later).
   of an argument of an element.
 ]
 
-And in start of this document (snippet)
+By the way, at first line of this snippet
 I've reduced page size to make justifying more visible,
-and also increased margins to add blank space on edges.
+also increasing margins to add blank space on left and right.
 ```
 
 ## A bit about length units
 ```typ
-There are several absolute length units in Typst:
+Before we continue with rules, we should talk about length. There are several absolute length units in Typst:
 
 #set rect(height: 1em)
 
@@ -49,10 +49,11 @@ so we are going to use it a lot
 ```
 
 ## Setting something else
-Of course, you can use `set` rule with all built-in functions
-and all their named arguments to make something "default".
 
-For example, let's make all quotes there authored by that book:
+Of course, you can use `set` rule with all built-in functions
+and all their named arguments to make some argument "default".
+
+For example, let's make all quotes in this snippet authored by the book:
 
 ```typ
 #set quote(block: true, attribution: [Typst Examples Book])
@@ -68,7 +69,9 @@ For example, let's make all quotes there authored by that book:
 ```
 
 ## Opinionated defaults
-That allows you to set the defaults for the document in general as you want:
+
+That allows you to set Typst default styling as you want it:
+
 ```typ
 #set par(justify: true)
 #set list(indent: 1em)
@@ -82,11 +85,13 @@ That allows you to set the defaults for the document in general as you want:
 + Enum item
 ```
 
-Don't complain about bad defaults! Set your own.
+Don't complain about bad defaults! `Set` your own.
 
 ## Numbering
+
 ```typ
 = Numbering
+
 Some of elements have a property called "numbering".
 They accept so-called "numbering patterns" and
 are very useful with set rules. Let's see what I mean.
@@ -104,7 +109,7 @@ are very useful with set rules. Let's see what I mean.
 ```
 
 Of course, there are lots of other cool properties
-that can be _set_, so feel free to dive into Reference
+that can be _set_, so feel free to dive into [Official Reference](https://typst.app/docs/reference/)
 and explore them!
 
-And we are now moving to something much more interesting…
+And now we are moving into something much more interesting…

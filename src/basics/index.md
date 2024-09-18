@@ -8,5 +8,5 @@ Most are created and edited specially for this book.
 
 > _Important:_ in most cases there will be used "clipped" examples of your rendered documents (no margins, smaller width and so on). 
 >
-> To set up the spacing as you want, see corresponding example section [WIP]() and [Official Page Setup Guide](https://typst.app/docs/guides/page-setup-guide/).
+> To set up the spacing as you want, see [Official Page Setup Guide](https://typst.app/docs/guides/page-setup-guide/).
 

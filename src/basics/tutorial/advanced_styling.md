@@ -1,7 +1,11 @@
 # Advanced styling
-## The show rule
+
+## The `show` rule
+
 ```typ
 Advanced styling comes with another rule. The _`show` rule_.
+
+Now please compare the source code and the output.
 
 #show "Be careful": strong[Play]
 
@@ -31,9 +35,49 @@ it will be both _emphasized_ and _blue_.
 Isn't that cool?
 ```
 
+## About syntax
+
+```typ
+Sometimes show rules may be confusing. They may seem very diverse, but in fact they all are quite the same! So
+
+// actually, this is the same as
+// redify = text.with(red)
+// `with` creates a new function with this argument already set
+#let redify(string) = text(red, string)
+
+// and this is the same as
+// framify = rect.with(stroke: orange)
+#let framify(object) = rect(object, stroke: orange)
+
+// set default color of text blue for all following text
+#show: set text(blue)
+
+Blue text.
+
+// wrap everything into a frame
+#show: framify
+
+Framed text.
+
+// it's the same, just creating new function that calls framify
+#show: a => framify(a)
+
+Double-framed.
+
+// apply function to `the`
+#show "the": redify
+// set text color for all the headings
+#show heading: set text(purple)
+
+= Conclusion
+
+All these rules do basically the same!
+```
+
 ## Blocks
 
 One of the most important usages is that you can set up all spacing using blocks. Like every element with text contains text that can be set up, every _block element_ contains blocks:
+
 ```typ
 Text before
 = Heading
@@ -49,9 +93,11 @@ Text after
 ## Selector
 
 ```typ
-So show rule can accept selectors.
+So show rule can accept _selectors_.
+
 There are lots of different selector types,
 for example
+
 - element functions
 - strings
 - regular expressions
@@ -74,7 +120,7 @@ no need to use show rules
 ## Custom formatting
 
 ```typ
-Let's try now writing custom functions. 
+Let's try now writing custom functions.
 It is very easy, see yourself:
 
 // "it" is a heading, we take it and output things in braces
