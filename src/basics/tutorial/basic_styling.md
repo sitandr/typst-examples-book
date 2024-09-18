@@ -6,7 +6,7 @@
 That was great, but using functions everywhere, especially
 with many arguments every time is awfully cumbersome.
 
-That's way Typst has _rules_. No, not for you, for the document.
+That's why Typst has _rules_. No, not for you, for the document.
 
 #set par(justify: true)
 
