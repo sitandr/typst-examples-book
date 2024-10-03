@@ -10,6 +10,7 @@ That enables "time travel", getting information about document from its parts an
 It is currently one of the _the darkest magics currently existing in Typst_. It gives you great powers, but with great power comes great responsibility.
 
 ## Time travel
+
 ```typ
 #let s = state("x", 0)
 #let compute(expr) = [
