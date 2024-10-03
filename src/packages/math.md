@@ -163,7 +163,7 @@ $
 > Please refer to the [manual](https://github.com/mitex-rs/mitex) for more details.
 
 ```typ
-#import "@preview/mitex:0.2.0": *
+#import "@preview/mitex:0.2.4": *
 
 Write inline equations like #mi("x") or #mi[y].
 
