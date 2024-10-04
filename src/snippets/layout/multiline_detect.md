@@ -10,10 +10,10 @@ If the caption is multiline, it makes it left-aligned.
 
 `````typ
 #show figure.caption: it => {
-  layout(size => style(styles => [
+  layout(size => context [
     #let text-size = measure(
+      ..size,
       it.supplement + it.separator + it.body,
-      styles,
     )
 
     #let my-align
@@ -25,8 +25,7 @@ If the caption is multiline, it makes it left-aligned.
     }
 
     #align(my-align, it)
-
-  ]))
+  ])
 }
 
 #figure(caption: lorem(6))[

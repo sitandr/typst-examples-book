@@ -172,8 +172,8 @@ See a demo project (more comments, I stripped some of them) [there](https://typs
     endSelector = endSelector.before(loc)
   }
 
-  let startMarkers = query(startSelector, loc)
-  let endMarkers = query(endSelector, loc)
+  let startMarkers = query(startSelector)
+  let endMarkers = query(endSelector)
   let currentPage = loc.position().page
 
   let pageStartMarkers = startMarkers.filter(elem =>
@@ -188,22 +188,22 @@ See a demo project (more comments, I stripped some of them) [there](https://typs
 #set page(
   margin: 2em,
   // ... other page setup here ...
-  header: locate(loc => {
-    let boundaryCount = countBoundaries(loc, true)
+  header: context {
+    let boundaryCount = countBoundaries(here(), true)
 
     if boundaryCount.end > boundaryCount.start {
       // Decorate this header with an opening decoration
       [Block break top: $-->$]
     }
-  }),
-  footer: locate(loc => {
-    let boundaryCount = countBoundaries(loc, false)
+  },
+  footer: context {
+    let boundaryCount = countBoundaries(here(), false)
 
     if boundaryCount.start > boundaryCount.end {
       // Decorate this footer with a closing decoration
       [Block break end: $<--$]
     }
-  })
+  }
 )
 
 #let breakable-block(body) = block({

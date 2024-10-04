@@ -266,23 +266,3 @@ Render markdown tables in Typst.
   | Wally  | Third Av.  | 160 cm   |  10     |
 ]
 ```
-
-### Tbl: compact syntax
-
-Compact syntax and some new features:
-
-```````typ
-#import "@preview/tbl:0.0.4"
-#show: tbl.template.with(box: true, tab: "|")
-
-```tbl
-      R | L
-      R   N.
-software|version
-_
-     AFL|2.39b
-    Mutt|1.8.0
-    Ruby|1.8.7.374
-TeX Live|2015
-```
-```````

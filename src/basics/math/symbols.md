@@ -32,7 +32,7 @@ $
 integral, integral.cont, integral.double, integral.square, sum.integral\
 
 // lt — less than, gt — greater than
-lt, lt.circle, lt.curly, lt.eq, lt.eq.curly, lt.not, lt.eq.not, lt.eq.not.curly, gt, lt.gt.eq, lt.gt.not
+lt, lt.circle, lt.eq, lt.not, lt.eq.not, lt.tri, lt.tri.eq, lt.tri.eq.not, gt, lt.gt.eq, lt.gt.not
 $
 ```
 

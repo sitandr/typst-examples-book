@@ -26,14 +26,14 @@ In #ref-heading(<design>), we discussed...
 // author: Enivex
 #set heading(numbering: "1.")
 
-#let myref(label) = locate(loc =>{
-    if query(label,loc).len() != 0 {
+#let myref(label) = context {
+    if query(label).len() != 0 {
         ref(label)
     } else {
         // missing reference
         text(fill: red)[???]
     }
-})
+}
 
 = Second <test2>
 

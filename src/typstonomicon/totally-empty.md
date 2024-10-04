@@ -2,7 +2,11 @@
 
 ## Empty pages before chapters starting at odd pages
 
-`````typ
+<div class="warning">
+  This snippet has been broken on 0.12.0. If someone will help fixing it, this would be cool.
+</div>
+
+`````typ -norender
 // author: janekfleper
 
 #set page(height: 20em)

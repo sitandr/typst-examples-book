@@ -26,7 +26,6 @@
     - [Tips](./basics/scripting/tips.md)
   - [States, Query, Context Dependence](./basics/states/index.md)
     - [States](./basics/states/states.md)
-    - [Locate](./basics/states/locate.md)
     - [Counters](./basics/states/counters.md)
     - [Measure, Layout](./basics/measure.md)
     - [Query](./basics/states/query.md)
