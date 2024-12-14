@@ -13,7 +13,7 @@ a class("normal", b) c\
 a class("punctuation", b) c\
 a class("opening", b) c\
 a lr(b c]) c\
-a lr(class("opening", b) c ]) c // notice it is moved vertically \
+a lr(class("opening", b) c ]) c\ // notice it is moved vertically
 a class("closing", b) c\
 a class("fence", b) c\
 a class("large", b) c\
