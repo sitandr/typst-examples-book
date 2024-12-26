@@ -1,9 +1,11 @@
 # Calligraphic letters
 
 ```typ
-#let scr(it) = math.class("normal",
-  text(font: "", stylistic-set: 1, $cal(it)$) + h(0em)
-)
+#let scr(it) = math.class("normal", box({
+  show math.equation: set text(stylistic-set: 1)
+  $cal(it)$
+}))
+
 
 $ scr(A) scr(B) + scr(C), -scr(D) $
 ```
