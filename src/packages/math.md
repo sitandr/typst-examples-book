@@ -318,3 +318,60 @@ capabilities. See documentations in its [readme](https://github.com/Marmare314/l
   of all primes. ... #highlight[_a contradiction_].]<proof>
 #lemma[There are infinitely many composite numbers.]
 ```
+
+### `frame-it`
+[Frame-It](https://typst.app/universe/package/frame-it/) is enables highlighting theorems with 2 pre-defined styles
+and the option to define arbitrary custom styles. 
+If no color is provided for a frame, it is automatically generated.
+For documentation, have a look at the [README](https://github.com/marc-thieme/frame-it).
+
+```typst
+#import "@preview/frame-it:1.0.0": *
+
+// You have to define the kinds of frames you need
+#let (theorem, lemma, definition, important) = make-frames(
+  // This identifies the counter used for all theorems in this definition
+  "counter-id",
+  theorem: ("Theorem",),
+  // You can provide a color or leave it out and it will be generated
+  lemma: ("Lemma", gray),
+  // For each frame kind, you have to provide its supplement title to be displayed
+  definition: ("Definition",),
+  // You can add as many as you want
+  important: ("Important", blue.lighten(25%)),
+)
+
+= Primes
+
+Your frames will have a title.
+
+#definition[Prime Number][
+  A natural number greater than 1 is called a _prime number_ 
+  if it is divisible only by 1 and itself. For example, 2, 3, 5, and 7 
+  are all prime numbers.
+]
+
+Which you can also leave out if you want. 
+
+#lemma[][Each prime number greater than 2 is divisible by 2 or is an odd number, 
+  but no prime number is divisible by any even number other than 2 itself.
+]
+
+If you need a custom style, look at the project README to see how to define a custom styling function.
+By default, there are two different styles predefined.
+This is the second one:
+
+#important(style: styles.hint)[Unique Prime Factorization][Heads–Up][
+  Every positive integer greater than 1 can be uniquely factored 
+  into prime numbers. This is known as the Fundamental Theorem of Arithmetic. 
+  It’s crucial for understanding the structure of integers in number theory.
+]
+
+An additional feature is to add tags with additional information
+
+#theorem[Euclid's Theorem][Very Important][Exam relevant][
+  There are infinitely many prime numbers. 
+  This fundamental result in number theory demonstrates 
+  that primes cannot be exhausted, no matter how large the set of primes discovered.
+]
+```
