@@ -15,9 +15,6 @@ let's take this file.json for example:
         "b": "CO2",
         "c": "O2",
         "d": "N2",
-        "e": "H2SO4",
-        "f": "NaCl",
-        "g": ""
     },
     {
         "sn": "2",
@@ -26,63 +23,7 @@ let's take this file.json for example:
         "answer": "a",
         "a": "George Washington",
         "b": "Abraham Lincoln",
-        "c": "Thomas Jefferson",
         "d": "John Adams",
-        "e": "James Madison",
-        "f": "Benjamin Franklin",
-        "g": ""
-    },
-    {
-        "sn": "3",
-        "source": "Geography",
-        "question": "What is the capital city of France?",
-        "answer": "b",
-        "a": "Berlin",
-        "b": "Paris",
-        "c": "London",
-        "d": "Madrid",
-        "e": "Rome",
-        "f": "Amsterdam",
-        "g": ""
-    },
-    {
-        "sn": "4",
-        "source": "Mathematics",
-        "question": "What is the value of Pi (\u03c0) to two decimal places?",
-        "answer": "c",
-        "a": "2.14",
-        "b": "2.71",
-        "c": "3.14",
-        "d": "3.72",
-        "e": "4.00",
-        "f": "2.00",
-        "g": ""
-    },
-    {
-        "sn": "5",
-        "source": "Literature",
-        "question": "Who wrote the play \"Romeo and Juliet\"?",
-        "answer": "a",
-        "a": "William Shakespeare",
-        "b": "Charles Dickens",
-        "c": "Mark Twain",
-        "d": "Jane Austen",
-        "e": "Ernest Hemingway",
-        "f": "F. Scott Fitzgerald",
-        "g": ""
-    },
-    {
-        "sn": "6",
-        "source": "Technology",
-        "question": "Which company developed the Windows operating system?",
-        "answer": "d",
-        "a": "Apple Inc.",
-        "b": "Google",
-        "c": "IBM",
-        "d": "Microsoft",
-        "e": "Amazon",
-        "f": "Facebook",
-        "g": ""
     }
 ]
 ```
