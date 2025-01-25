@@ -15,7 +15,7 @@ As you see, I've just used it on `par` (which is short from paragraph)
 and now all paragraphs became _justified_.
 
 It will apply to all paragraphs after the rule,
-but will work only in it's _scope_ (we will discuss them later).
+but will work only in its _scope_ (we will discuss them later).
 
 #par(justify: false)[
   Of course, you can override a `set` rule.
