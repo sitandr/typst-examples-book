@@ -61,6 +61,8 @@
   - [Tables & grids](./snippets/grids.md)
   - [Hyphenation]()
   - [Scripting](./snippets/scripting/index.md)
+  - [Data loading]()
+    - [Json](./snippets/dataload/json.md)
   - [Numbering](./snippets/numbering.md)
   - [Math]()
     - [Numbering](./snippets/math/numbering.md)

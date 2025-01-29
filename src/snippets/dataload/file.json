@@ -1,0 +1,21 @@
+[
+    {
+        "sn": "1",
+        "source": "Science",
+        "question": "What is the chemical symbol for water?",
+        "answer": "a",
+        "a": "H2O",
+        "b": "CO2",
+        "c": "O2",
+        "d": "N2"
+    },
+    {
+        "sn": "2",
+        "source": "History",
+        "question": "Who was the first president of the United States?",
+        "answer": "a",
+        "a": "George Washington",
+        "b": "Abraham Lincoln",
+        "d": "John Adams"
+    }
+]
