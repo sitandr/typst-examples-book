@@ -21,17 +21,13 @@ However, there is a catch. Element size depends on styles, applied to this eleme
 So if we will set the big text size for some part of our text, to measure the element's size,
 we have to know _where the element is located_. Without knowing it, we can't tell what styles should be applied.
 
-So we need a scheme similar to `locate`.
-
-This is what `styles` function is used for. It is _a content_, which, when located in document, calls a function inside on _current styles_.
-
-Now, when we got fixed `styles`, we can get the element's size using `measure`:
+So yep, you are right. We need the `context`.
 
 ```typ
-#let thing(body) = style(styles => {
+#let thing(body) = context {
   let size = measure(body, styles)
   [Width of "#body" is #size.width]
-})
+}
 
 #thing[Hey] \
 #thing[Welcome]
@@ -43,9 +39,10 @@ Layout is similar to `measure`, but it returns current scope **parent size**.
 
 If you are putting elements in block, that will be block's size. If you are just putting right on the page, that will be page's size.
 
-As parent's size depends on it's place in document, it uses the similar scheme to `locate` and `style`:
+For some technical reasons, however, it can't use `context` and needs to use the very similar scheme (it is the one the `context` has emerged from, in fact):
 
 ```typ
+/// It's a black box that receives the parent size and renders something with it:
 #layout(size => {
   let half = 50% * size.width
   [Half a page is #half wide.]
