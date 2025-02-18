@@ -1,24 +1,11 @@
 # Locate
-<div class="warning">This section is outdated. It may be still useful, but it is strongly recommended to study new context system (using the reference).</div>
-
-
-> Link to [reference](https://typst.app/docs/reference/meta/locate/)
-
-Many things should be recompiled depending on some external things.
-To understand, what those external things are, it should be a content that
-_is put into a document_. It works roughly the same way as `state.update`.
-
-Locate takes a function that, when that `locate` is put in the document
-and given a _location in the document_, returns some content instead of that `locate`.
+<div class="warning">This section may be not very complete and fully updated for last Typst versions. Any contribution is very welcome!.</div>
 
 ## Location
 > Link to [reference](https://typst.app/docs/reference/meta/location/)
 
 ```typ
-#locate(loc => [
-  My location: \
-  #loc.position()!
-])
+My location: #context #here()!
 ```
 
 ## `state.at(loc)`

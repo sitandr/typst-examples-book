@@ -1,9 +1,9 @@
 # Query
-<div class="warning">This section is outdated. It may be still useful, but it is strongly recommended to study new context system (using the reference).</div>
+<div class="warning">This section may be not very complete and fully updated for last Typst versions. Any contribution is very welcome!.</div>
 
-> Link [there](https://typst.app/docs/reference/introspection/query/)
+> Link [to reference](https://typst.app/docs/reference/introspection/query/)
 
-Query is a thing that allows you getting location by _selector_ (this is the same thing we used in show rules).
+Query is a thing that allows you getting _a location_ (an object that represents literally a place in document, see [docs here](https://typst.app/docs/reference/introspection/location/)) by _selector_ (this is the same thing we used in show rules).
 
 That enables "time travel", getting information about document from its parts and so on. _That is a way to violate Typst's purity._
 

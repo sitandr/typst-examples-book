@@ -1,5 +1,8 @@
 # Misc
 
+hydra ()
+outrageous (outline styling, upcoming release with aligned repeated dots)
+
 # Formatting strings
 
 ## `oxifmt`, general purpose string formatter

@@ -1,6 +1,6 @@
 # States & Query
 
-<div class="warning">This section is outdated. It may be still useful, but it is strongly recommended to study new context system (using the reference).</div>
+<div class="warning">This section may be not very complete and fully updated for last Typst versions. Any contribution is very welcome!.</div>
 
 Typst tries to be a _pure language_ as much as possible.
 

@@ -27,6 +27,7 @@
   - [States, Query, Context Dependence](./basics/states/index.md)
     - [States](./basics/states/states.md)
     - [Counters](./basics/states/counters.md)
+    - [Context](./basics/states/context.md)
     - [Measure, Layout](./basics/measure.md)
     - [Query](./basics/states/query.md)
     - [Metadata](./basics/states/metadata.md)
