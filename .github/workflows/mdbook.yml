@@ -53,7 +53,7 @@ jobs:
           mdbook build 
         # building two times to prevent any packages from interfering, hopefully can remove in future
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: .
 
