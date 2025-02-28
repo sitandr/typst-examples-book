@@ -2,7 +2,7 @@
 
 # Outlines
 
-> Lots of outlines examples are already available in [official reference](https://typst.app/docs/reference/meta/outline/)
+> Lots of outlines examples are already available in [official reference](https://typst.app/docs/reference/model/outline/)
 
 ## Table of contents
 
