@@ -37,7 +37,7 @@
       res += h(1fr)
     }
 
-    res += link(it.element.location(), it.page)
+    res += link(it.element.location(), it.page())
     strong(res)
   } else {
     // we're doing indenting here
