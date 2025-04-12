@@ -25,7 +25,7 @@ So yep, you are right. We need the `context`.
 
 ```typ
 #let thing(body) = context {
-  let size = measure(body, styles)
+  let size = measure(body)
   [Width of "#body" is #size.width]
 }
 
@@ -53,13 +53,12 @@ It may be extremely useful to combine `layout` with `measure`, to get width of t
 
 ```typ
 #let text = lorem(30)
-#layout(size => style(styles => [
+#layout(size => context [
   #let (height,) = measure(
-    block(width: size.width, text),
-    styles,
+    block(width: size.width, text)
   )
   This text is #height high with
   the current page width: \
   #text
-]))
+])
 ```

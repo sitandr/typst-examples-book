@@ -6,7 +6,7 @@ Cetz is an analogue of LaTeX's `tikz`. Maybe it is not as powerful yet, but cert
 It is the best choice in most of cases you want to draw something in Typst.
 
 ```typ
-#import "@preview/cetz:0.1.2"
+#import "@preview/cetz:0.3.4"
 
 #cetz.canvas(length: 1cm, {
   import cetz.draw: *
@@ -23,7 +23,7 @@ It is the best choice in most of cases you want to draw something in Typst.
 ```
 
 ```typ
-#import "@preview/cetz:0.1.2": canvas, draw
+#import "@preview/cetz:0.3.4": canvas, draw
 
 #canvas(length: 1cm, {
   import draw: *
@@ -40,7 +40,7 @@ It is the best choice in most of cases you want to draw something in Typst.
 ```
 
 ```typ
-#import "@preview/cetz:0.1.2": canvas, draw
+#import "@preview/cetz:0.3.4": canvas, draw
 
 #canvas(length: 1cm, {
   import draw: *
@@ -53,7 +53,7 @@ It is the best choice in most of cases you want to draw something in Typst.
 ```
 
 ```typ
-#import "@preview/cetz:0.1.2": canvas, draw
+#import "@preview/cetz:0.3.4": canvas, draw
 
 #canvas(length: 1cm, {
   import draw: *
@@ -68,7 +68,7 @@ It is the best choice in most of cases you want to draw something in Typst.
 
 ```typ
 // author: LDemetrios
-#import "@preview/cetz:0.2.2"
+#import "@preview/cetz:0.3.4"
 
 #cetz.canvas({
   let left = (a:2, b:1, d:-1, e:-2)

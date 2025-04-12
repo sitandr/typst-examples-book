@@ -9,13 +9,13 @@ Package to manage glossary and abbreviations.
 <div class="info">One of the very first cool packages of Typst, made specially for (probably) the first thesis written in Typst.<div>
 
 ```typ
-#import "@preview/glossarium:0.4.1": make-glossary, print-glossary, gls, glspl
+#import "@preview/glossarium:0.5.4": make-glossary, register-glossary, print-glossary, gls, glspl
 #show: make-glossary
 
 // for better link visibility
 #show link: set text(fill: blue.darken(60%))
 
-#print-glossary(
+#let entry-list = (
     (
     // minimal term
     (key: "kuleuven", short: "KU Leuven"),
@@ -28,7 +28,7 @@ Package to manage glossary and abbreviations.
       key: "oidc",
       short: "OIDC",
       long: "OpenID Connect",
-      desc: [OpenID is an open standard and decentralized authentication protocol promoted by the non-profit
+      description: [OpenID is an open standard and decentralized authentication protocol promoted by the non-profit
       #link("https://en.wikipedia.org/wiki/OpenID#OpenID_Foundation")[OpenID Foundation].],
       group: "Accronyms",
     ),
@@ -39,7 +39,7 @@ Package to manage glossary and abbreviations.
       short: "potato",
       // "plural" will be used when "short" should be pluralized
       plural: "potatoes",
-      desc: [#lorem(10)],
+      description: [#lorem(10)],
     ),
 
     // a term with a long plural
@@ -49,9 +49,16 @@ Package to manage glossary and abbreviations.
       long: "diagonal matrix",
       // "longplural" will be used when "long" should be pluralized
       longplural: "diagonal matrices",
-      desc: "Probably some math stuff idk",
+      description: "Probably some math stuff idk",
     ),
   )
+)
+
+#register-glossary(entry-list)
+
+// Your document body
+#print-glossary(
+ entry-list
 )
 
 // referencing the OIDC term using gls

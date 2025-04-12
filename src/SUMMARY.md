@@ -84,13 +84,13 @@
 - [Typst Packages](./packages/index.md)
   - [Overview]()
   - [Drawing](./packages/drawing.md)
-  - [Graphs](./packages/graphs.md)
-  - [Custom boxes](./packages/boxes.md) <!--TODO: add note "for theorems look into math"-->
+  - [Graphs](./packages/graphs.md) <!--Became too outdated. :( Custom boxes(./packages/boxes.md) -->
+  <!--TODO: add note "for theorems look into math"-->
   - [Math](./packages/math.md)
   - [Physics](./packages/physics.md)
   - [Tables](./packages/tables.md)
   - [Code](./packages/code.md)
-  - [Presentations](./packages/presentation.md)
+  <!-- - [Presentations](./packages/presentation.md) -->
   - [Themes]()
   - [Layout](./packages/layout.md)
     -  [Wrapping figures](./packages/wrapping.md)
@@ -102,7 +102,6 @@
   - [External](./packages/external.md)
 
 - [Typstonomicon, or The Code You Should Not Write](./typstonomicon/index.md)
-  - [Image with original size](./typstonomicon/original_image.md)
   - [Word count](./typstonomicon/word_count.md)
   - [Try & Catch](./typstonomicon/try_catch.md)
   - [Breakpoints on broken blocks](./typstonomicon/block_break.md)

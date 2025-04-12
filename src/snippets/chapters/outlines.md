@@ -69,9 +69,9 @@ Not included.
   indent: 2em,
 )
 
+#set outline.entry(fill: "→")
 #outline(
   title: [Contents (Function)],
-  indent: n => [→ ] * n,
 )
 
 = About ACME Corp.
@@ -86,7 +86,8 @@ Not included.
 ## Replace default dots
 
 ```typ
-#outline(fill: line(length: 100%), indent: 2em)
+#set outline.entry(fill: line(length: 100%))
+#outline(indent: 2em)
 
 = First level
 == Second level

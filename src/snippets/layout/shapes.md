@@ -4,7 +4,7 @@
 
 ```typ
 /// author: JustForFun88
-#import "@preview/oxifmt:0.2.0": strfmt
+#import "@preview/oxifmt:0.2.1": strfmt
 
 #let shadow_svg_path = `
 <svg
@@ -96,7 +96,7 @@
         opts.vertices += prefix + p.map(x => str((x + d).pt())).join(", ");
     }
 
-    let svg-shadow = image.decode(strfmt(shadow_svg_path, ..opts))
+    let svg-shadow = image(strfmt(shadow_svg_path, ..opts))
     place(dx: dx, dy: dy, svg-shadow)
     place(path(..vertices, fill: fill, stroke: stroke, closed: true))
     box(h((shape_width - size.width) / 2) + content, width: shape_width)

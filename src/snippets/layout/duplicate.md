@@ -23,7 +23,7 @@
   if it.element != none {
     it
   } else {
-    let targets = query(it.target, it.location())
+    let targets = query(it.target)
     if targets.len() == 2 {
       let target = targets.first()
       if target.func() == heading {

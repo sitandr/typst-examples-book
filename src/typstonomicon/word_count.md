@@ -7,7 +7,7 @@
 Use `wordometr` [package](https://github.com/Jollywatt/typst-wordometer):
 
 ```typ
-#import "@preview/wordometer:0.1.0": word-count, total-words
+#import "@preview/wordometer:0.1.4": word-count, total-words
 
 #show: word-count
 
@@ -33,7 +33,7 @@ In this document, there are #total-words words all up.
 
 // it is ignoring comments
 
-#align(right)[(#words.display() words)]
+#align(right)[(#context words.display() words)]
 ```
 
 ## Count only some elements, ignore others

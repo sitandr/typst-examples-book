@@ -25,7 +25,7 @@
   } else if it.has("body") {
     plain-text(it.body)
   } else if it.has("text") {
-    if type(it.text) == "string" {
+    if type(it.text) == str {
       it.text
     } else {
       plain-text(it.text)

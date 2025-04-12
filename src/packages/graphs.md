@@ -8,9 +8,8 @@ so it is recommended to skim through its possibilities.
 
 > See full manual [there](https://github.com/johannes-wolf/cetz/blob/master/manual.pdf?raw=true).
 
-<!-- // wait till cetz:0.1.3 is published
 ```typ
-#import "@preview/cetz:0.1.2"
+#import "@preview/cetz:0.3.4"
 
 #import cetz.plot
 #plot.plot(size: (3,2), x-tick-step: 1, y-tick-step: 1, {
@@ -28,7 +27,7 @@ so it is recommended to skim through its possibilities.
   [A], ([B], [C], [D]), ([E], [F])
 )
 
-#import "@preview/cetz:0.1.2": canvas, draw, tree
+#import "@preview/cetz:0.3.4": canvas, draw, tree
 
 #canvas(length: 1cm, {
   import draw: *
@@ -52,7 +51,7 @@ so it is recommended to skim through its possibilities.
 ```
 
 ```typ
-#import "@preview/cetz:0.1.2": canvas, draw
+#import "@preview/cetz:0.3.4": canvas, draw
 
 #canvas({
     import draw: *
@@ -88,7 +87,7 @@ so it is recommended to skim through its possibilities.
 ```
 
 ```typ
-#import "@preview/cetz:0.1.2": canvas, chart
+#import "@preview/cetz:0.3.4": canvas, chart
 
 #let data2 = (
   ([15-24], 18.0, 20.1, 23.0, 17.0),
@@ -112,7 +111,7 @@ so it is recommended to skim through its possibilities.
 
 ### Draw a graph in polar coords
 ```typ
-#import "@preview/cetz:0.1.2": canvas, plot
+#import "@preview/cetz:0.3.4": canvas, plot
 
 #figure(
 canvas(length: 1cm, {

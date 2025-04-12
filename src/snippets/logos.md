@@ -32,14 +32,14 @@ Typst is not that hard to learn when you know #TeX and #LaTeX.
 <!--TODO: Make scrollable-->
 ```typ
 // author: fenjalien
-#import "@preview/cetz:0.1.2": *
+#import "@preview/cetz:0.3.4": *
 
 #set page(width: auto, height: auto)
 
 #canvas(length: 1pt, {
   import draw: *
   let color = rgb("239DAD")
-  scale((y: -1))
+  scale(y: -1)
   set-style(fill: color, stroke: none,)
 
   // body

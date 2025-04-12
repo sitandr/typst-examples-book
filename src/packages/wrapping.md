@@ -3,7 +3,7 @@
 The better native support for wrapping is planned, however, something is already possible via package:
 
 ```typ
-#import "@preview/wrap-it:0.1.0": wrap-content, wrap-top-bottom
+#import "@preview/wrap-it:0.1.1": wrap-content, wrap-top-bottom
 
 #set par(justify: true)
 #let fig = figure(

@@ -7,7 +7,7 @@ General useful things.
 The idea of [pinit](https://github.com/OrangeX4/typst-pinit) is pinning pins on the normal flow of the text, and then placing the content relative to pins.
 
 ```typ
-#import "@preview/pinit:0.1.3": *
+#import "@preview/pinit:0.2.2": *
 #set page(height: 6em, width: 20em)
 
 #set text(size: 24pt)
@@ -22,7 +22,7 @@ A simple #pin(1)highlighted text#pin(2).
 More complex example:
 
 ```typ
-#import "@preview/pinit:0.1.3": *
+#import "@preview/pinit:0.2.2": *
 
 // Pages
 #set page(paper: "presentation-4-3")
@@ -86,7 +86,7 @@ More complex example:
 ## Margin notes
 
 ```````typ
-#import "@preview/drafting:0.1.1": *
+#import "@preview/drafting:0.2.2": *
 
 #let (l-margin, r-margin) = (1in, 2in)
 #set page(
@@ -122,7 +122,7 @@ Unfortunately `typst` doesn't expose margins to calling functions, so you'll nee
 ```````
 
 ```````typ
-#import "@preview/drafting:0.1.1": *
+#import "@preview/drafting:0.2.2": *
 
 #let (l-margin, r-margin) = (1in, 2in)
 #set page(
@@ -175,7 +175,7 @@ Even deeper customization is possible by overriding the default `rect`:
 ```````
 
 ```````typ
-#import "@preview/drafting:0.1.1": *
+#import "@preview/drafting:0.2.2": *
 
 #let (l-margin, r-margin) = (1in, 2in)
 #set page(
@@ -241,7 +241,7 @@ The "rule-grid" also supports absolute placement at the top-left of the page by 
 ### Basic usage
 
 ```typ
-#import "@preview/droplet:0.1.0": dropcap
+#import "@preview/droplet:0.3.1": dropcap
 
 #dropcap(gap: -2pt, hanging-indent: 8pt)[
   #lorem(42)
@@ -251,14 +251,14 @@ The "rule-grid" also supports absolute placement at the top-left of the page by 
 ### Extended styling
 
 ```typ
-#import "@preview/droplet:0.1.0": dropcap
+#import "@preview/droplet:0.3.1": dropcap
 
 #dropcap(
   height: 2,
   justify: true,
   gap: 6pt,
-  transform: letter => style(styles => {
-    let height = measure(letter, styles).height
+  transform: letter => context {
+    let height = measure(letter).height
 
     grid(columns: 2, gutter: 6pt,
       align(center + horizon, text(blue, letter)),
@@ -270,7 +270,7 @@ The "rule-grid" also supports absolute placement at the top-left of the page by 
         stroke: blue.lighten(40%) + 1pt
       )),
     )
-  })
+  }
 )[
   #lorem(42)
 ]
@@ -281,9 +281,9 @@ The "rule-grid" also supports absolute placement at the top-left of the page by 
 > See [hydra](https://github.com/tingerrr/hydra)
 
 ```typ-nopreamble
-#import "@preview/hydra:0.2.0": hydra
+#import "@preview/hydra:0.6.1": hydra
 
-#set page(header: hydra() + line(length: 100%))
+#set page(header: context hydra() + line(length: 100%))
 #set heading(numbering: "1.1")
 #show heading.where(level: 1): it => pagebreak(weak: true) + it
 

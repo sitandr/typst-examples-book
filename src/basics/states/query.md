@@ -17,7 +17,7 @@ It is currently one of the _the darkest magics currently existing in Typst_. It 
   #s.update(x =>
     eval(expr.replace("x", str(x)))
   )
-  New value is #s.display().
+  New value is #context s.get().
 ]
 
 Value at `<here>` is
@@ -38,8 +38,7 @@ Value at `<here>` is
 ```typ
 #set page(header: context {
   let elems = query(
-    selector(heading).before(here()),
-    here(),
+    selector(heading).before(here())
   )
   let academy = smallcaps[
     Typst Academy

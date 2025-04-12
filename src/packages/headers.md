@@ -5,7 +5,7 @@
 We have discussed in `Typst Basics` how to get current heading with `query(selector(heading).before(here()))` for headers. However, this works badly for nested headings with numbering and similar things. For these cases there is `hydra`:
 
 ```typ
-#import "@preview/hydra:0.5.1": hydra
+#import "@preview/hydra:0.6.1": hydra
 
 #set page(height: 10 * 20pt, margin: (y: 4em), numbering: "1", header: context {
   if calc.odd(here().page()) {
