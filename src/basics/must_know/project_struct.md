@@ -39,7 +39,7 @@ In the "template" file goes _all useful functions and variables_ you will use ac
     doc
 }
 
-#let info-block = block.with(stroke: blue, fill: blue.lighten(70%))
+#let infoblock = block.with(stroke: blue, fill: blue.lighten(70%))
 #let author = "@sitandr"
 ```
 
