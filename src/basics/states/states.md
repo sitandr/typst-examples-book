@@ -4,7 +4,7 @@
 
 Before we start something practical, it is important to understand states in general.
 
-Here is a good explanation of why do we _need_ them: [Official Reference about states](https://typst.app/docs/reference/meta/state/). It is highly recommended to read it first.
+Here is a good explanation of why do we _need_ them: [Official Reference about states](https://typst.app/docs/reference/introspection/state/). It is highly recommended to read it first.
 
 So instead of
 ```typ -norender
