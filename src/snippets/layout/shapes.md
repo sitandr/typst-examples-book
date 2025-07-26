@@ -96,9 +96,9 @@
         opts.vertices += prefix + p.map(x => str((x + d).pt())).join(", ");
     }
 
-    let svg-shadow = image(strfmt(shadow_svg_path, ..opts))
+    let svg-shadow = image(bytes(strfmt(shadow_svg_path, ..opts)))
     place(dx: dx, dy: dy, svg-shadow)
-    place(path(..vertices, fill: fill, stroke: stroke, closed: true))
+    place(curve(..((curve.move(vertices.at(0)),) + vertices.slice(1).map(curve.line) + (curve.close(),)), fill: fill, stroke: stroke))
     box(h((shape_width - size.width) / 2) + content, width: shape_width)
 })
 

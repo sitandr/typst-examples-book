@@ -42,7 +42,7 @@ Sometimes show rules may be confusing. They may seem very diverse, but in fact t
 
 // actually, this is the same as
 // redify = text.with(red)
-// `with` creates a new function with this argument already set
+// `with` creates a new function with that argument already set
 #let redify(string) = text(red, string)
 
 // and this is the same as
@@ -71,7 +71,7 @@ Double-framed.
 
 = Conclusion
 
-All these rules do basically the same!
+All these rules are doing basically the same thing!
 ```
 
 ## Blocks

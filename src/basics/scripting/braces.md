@@ -15,6 +15,7 @@ We may use same for functions bodies:
 **Important:** It is very hard to convert _content_ to _plain text_, as _content_ may contain *anything*! So be careful when passing and storing content in variables.
 
 ## Braces
+
 However, we often want to use code inside functions.
 That's when we use `{}`:
 ```typ
@@ -40,6 +41,48 @@ That's when we use `{}`:
 #f("Joe")
 #f("world")
 ```
+
+## When to use what
+
+So, as we have seen, we can use both
+
+```typ
+#let f(name) = [
+  Hello, #name
+]
+#f("Joe")
+```
+
+And
+
+```typ
+#let f(name) = {
+  [Hello,]
+  name
+}
+#f("Joe")
+```
+
+So when to use what?
+
+Well, the answer is simple: which way the code is cleaner.
+
+So don't do that:
+```typ
+// DON'T DO THAT
+// PLEASE
+#let f(inner) = [
+  #set align(center)
+  #set box(stroke: red)
+  #show heading: it => [
+    #set text(size: 2em)
+    #it
+  ]
+  #box[#inner]
+]
+```
+
+Can you see how it can be simplified when using code mode?
 
 ## Scopes
 **This is a very important thing to remember**.

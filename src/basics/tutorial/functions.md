@@ -54,6 +54,7 @@ in #link("https://typst.app/docs/reference/")[Official Reference].
 ```
 
 ## Function arguments
+
 ```typ
 There are _two types_ of function arguments:
 
@@ -69,6 +70,9 @@ To find out what it is, see
 ```
 
 ## Content
+
+Now we should probably try writing our own functions
+
 ```typ
 The most "universal" type in Typst language is *content*.
 Everything you write in the document becomes content.
@@ -85,7 +89,7 @@ Everything you write in the document becomes content.
 ## Markup and code modes
 ```typ
 When you use `#`, you are "switching" to code mode.
-When you use `[]`, you turn back:
+When you use `[]`, you turn back into _markup_ (or content) mode:
 
 // +-- going from markup (the default mode) to scripting for that function
 // |                 +-- scripting mode: calling `text`, the last argument is markup

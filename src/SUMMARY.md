@@ -1,5 +1,6 @@
 # Summary
 - [About](./about.md)
+- [Getting Started with Typst](./getting_started.md)
 
 # The Book
 - [Typst Basics](./basics/index.md)
