@@ -53,6 +53,24 @@ You can combine booleans as described in [types section](./types.md#boolean-bool
 ]
 ```
 
+### Set-if
+
+Typst supports a pretty useful instruction: `set if`, use set rule if condition is applied. This may be very useful for conditional styling, either of the whole document or inside a function:
+
+```typ
+#let draft = true
+
+// you can do any condition operation right there
+#set page(columns: 2, width: 20em, height: 10em) if not draft
+
+// and even use it inside show rules
+#show "TODO": set text(red, size: 2em) if draft
+
+TODO: write real text
+
+#lorem(50)
+```
+
 ## Loops
 
 > See [official documentation](https://typst.app/docs/reference/scripting/#loops).
