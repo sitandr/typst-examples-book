@@ -7,6 +7,7 @@
   - [Tutorial by Examples](./basics/tutorial/index.md)
     - [Markup language](./basics/tutorial/markup.md)
     - [Functions](./basics/tutorial/functions.md)
+    - [Cheatsheet](./basics/tutorial/cheatsheet.md)
     - [Basic styling](./basics/tutorial/basic_styling.md)
     - [Advanced styling](./basics/tutorial/advanced_styling.md)
     - [Templates](./basics/tutorial/templates.md)
