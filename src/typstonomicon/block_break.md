@@ -5,7 +5,7 @@
 See a demo project (more comments, I stripped some of them) [there](https://typst.app/project/r-yQHF952iFnPme9BWbRu3).
 
 ```typ
-/// author: wrzian
+/// author: isuffix
 
 // Underlying counter and zig-zag functions
 #let counter-family(id) = {
