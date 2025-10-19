@@ -78,6 +78,7 @@
   - [Color & Gradients](./snippets/gradients.md)
   - [Pretty things](./snippets/pretty.md)
   - [Text]()
+    - [First line indent](./snippets/text/line_indent.md)
     - [Individual language fonts](./snippets/text/individual_lang_fonts.md)
     - [Fake italic & Text shadows](./snippets/text/text_shadows.md)
   - [Special documents](./snippets/special/index.md)

@@ -78,6 +78,7 @@ These include:
 
 - SumatraPDF (works on Windows)
 - Zathura and Sioyek (Linux)
+- Okular (cross-platform)
 - MuPDF (must be combined with `entr` on Unix)
 - (some others I've forgotten, feel free to make an Issue / PR)
 
