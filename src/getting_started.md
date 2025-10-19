@@ -78,6 +78,7 @@ These include:
 
 - SumatraPDF (works on Windows)
 - Zathura and Sioyek (Linux)
+- MuPDF (must be combined with `entr` on Unix)
 - (some others I've forgotten, feel free to make an Issue / PR)
 
 (note that it is not perfect, there probably would be some blinking, but it's much better than having to reload)
