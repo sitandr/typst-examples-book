@@ -4,7 +4,7 @@
 #let numless(it) = {set heading(numbering: none); it }
 
 = Heading
-#numless[=No numbering heading]
+#numless[= No numbering heading]
 ```
 
 ## "Clean" numbering
