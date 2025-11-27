@@ -105,7 +105,7 @@ are very useful with set rules. Let's see what I mean.
 === Now third
 == And second again
 = Now returning to first
-= These are actual romanian numerals
+= These are actual roman numerals
 ```
 
 Of course, there are lots of other cool properties
