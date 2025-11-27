@@ -42,7 +42,24 @@ That's when we use `{}`:
 #f("world")
 ```
 
-## When to use what
+
+## Default values
+What we made just now was inventing "default values".
+
+They are very common in styling, so there is a special syntax for them:
+```typ
+#let f(name: "anonym") = [Hello, #name!]
+
+#f()
+#f(name: "Joe")
+#f(name: "world")
+```
+
+You may have noticed that the argument became _named_ now.
+In Typst, named argument is an argument _that has default value_.
+
+
+## When to use brackets and braces
 
 So, as we have seen, we can use both
 
@@ -121,7 +138,8 @@ This is true.
 #g()
 ```
 
-To avoid returning everything, return only what you want explicitly, otherwise everything will be joined:
+To avoid returning everything, return only what you want _explicitly_, otherwise everything will be joined into one object:
+
 ```typ
 #let f() = {
   "Some long text"
@@ -133,18 +151,3 @@ To avoid returning everything, return only what you want explicitly, otherwise e
 // Returns nothing
 #f()
 ```
-
-## Default values
-What we made just now was inventing "default values".
-
-They are very common in styling, so there is a special syntax for them:
-```typ
-#let f(name: "anonym") = [Hello, #name!]
-
-#f()
-#f(name: "Joe")
-#f(name: "world")
-```
-
-You may have noticed that the argument became _named_ now.
-In Typst, named argument is an argument _that has default value_.
