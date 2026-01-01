@@ -4,10 +4,8 @@
 ```typ
 Okay, let's now move to more complex things.
 
-First of all, there are *lots of magic* in Typst.
-And it major part of it is called "scripting".
-
-To go to scripting mode, type `#` and *some function name*
+A major part of Typst's magic is its scripting.
+To enter scripting mode, type `#` and then a *function name*
 after that. We will start with _something dull_:
 
 #lorem(50)
@@ -131,3 +129,4 @@ So, just to make it clear, when I write
 
 It all will result in a #text([red text], red).
 `````
+
