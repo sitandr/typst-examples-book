@@ -3,7 +3,7 @@
 ## Resume (using template)
 
 ```typ
-#import "@preview/modern-cv:0.8.0": *
+#import "@preview/modern-cv:0.9.0": *
 
 #show: resume.with(
   author: (
