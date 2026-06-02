@@ -4,10 +4,10 @@
         "source": "Science",
         "question": "What is the chemical symbol for water?",
         "answer": "a",
-        "a": "H2O",
-        "b": "CO2",
-        "c": "O2",
-        "d": "N2"
+        "a": "H₂O",
+        "b": "CO₂",
+        "c": "O₂",
+        "d": "N₂"
     },
     {
         "sn": "2",
@@ -16,6 +16,6 @@
         "answer": "a",
         "a": "George Washington",
         "b": "Abraham Lincoln",
-        "d": "John Adams"
+        "c": "John Adams"
     }
 ]
