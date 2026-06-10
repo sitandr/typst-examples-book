@@ -4,6 +4,7 @@
     Notice that this implementation will mess up with labels and similar things.
     For complex cases see one below.
 </div>
+
 ```typ
 #set page(paper: "a4", flipped: true)
 #show: body => grid(
