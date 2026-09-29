@@ -6,7 +6,7 @@
 
 Package to manage glossary and abbreviations.
 
-<div class="info">One of the very first cool packages of Typst, made specially for (probably) the first thesis written in Typst.<div>
+<div class="info">One of the very first cool packages of Typst, made specially for (probably) the first thesis written in Typst.</div>
 
 ```typ
 #import "@preview/glossarium:0.5.4": make-glossary, register-glossary, print-glossary, gls, glspl

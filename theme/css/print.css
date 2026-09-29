@@ -1,18 +1,18 @@
 
-#sidebar,
-#menu-bar,
+#mdbook-sidebar,
+#mdbook-menu-bar,
 .nav-chapters,
 .mobile-nav-chapters {
     display: none;
 }
 
-#page-wrapper.page-wrapper {
-    transform: none;
-    margin-left: 0px;
+#mdbook-page-wrapper.page-wrapper {
+    transform: none !important;
+    margin-inline-start: 0px;
     overflow-y: initial;
 }
 
-#content {
+#mdbook-content {
     max-width: none;
     margin: 0;
     padding: 0;
@@ -20,6 +20,10 @@
 
 .page {
     overflow-y: initial;
+}
+
+code {
+    direction: ltr !important;
 }
 
 pre > .buttons {

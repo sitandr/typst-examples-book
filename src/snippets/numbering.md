@@ -74,7 +74,7 @@ See [there](./math/numbering.md).
 
 <div class="warning">
   By the 0.12 version of Typst, this should be replaced with good native solution.
-<div>
+</div>
 
 ```typ
 // original author: roehlichA
