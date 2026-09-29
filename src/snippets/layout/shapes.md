@@ -4,7 +4,7 @@
 
 ```typ
 /// author: JustForFun88
-#import "@preview/oxifmt:0.2.1": strfmt
+#import "@preview/oxifmt:1.0.0": strfmt
 
 #let shadow_svg_path = `
 <svg

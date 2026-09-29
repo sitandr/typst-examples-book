@@ -39,18 +39,18 @@ jobs:
       - name: Install mdbook-typst-highlight
         run: |
           curl -sSL https://github.com/sitandr/mdbook-typst-highlight/releases/download/v0.3.0/mdbook-typst-highlight-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=.
+          pwd >> $GITHUB_PATH
       - name: Install typst
-        run: |
-          curl -sSL https://github.com/typst/typst/releases/download/v0.13.1/typst-x86_64-unknown-linux-musl.tar.xz | tar -xJ --directory=.
-          mv typst-x86_64-unknown-linux-musl/typst .
-          echo `pwd` >> $GITHUB_PATH
+        uses: typst-community/setup-typst@v5
+        with:
+          typst-version: 0.15.1
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
       - name: Build with mdBook
         run: |
           mdbook build
-          mdbook build 
+          mdbook build
         # building two times to prevent any packages from interfering, hopefully can remove in future
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
