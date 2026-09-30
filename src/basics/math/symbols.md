@@ -32,7 +32,7 @@ $
 integral, integral.cont, integral.double, integral.square, sum.integral\
 
 // lt — less than, gt — greater than
-lt, lt.circle, lt.eq, lt.not, lt.eq.not, lt.tri, lt.tri.eq, lt.tri.eq.not, gt, lt.gt.eq, lt.gt.not
+lt, lt.o, lt.eq, lt.not, lt.eq.not, lt.closed, lt.closed.eq, lt.closed.eq.not, gt, lt.gt.eq, lt.gt.not
 $
 ```
 
@@ -52,7 +52,7 @@ $
 
 - `.b, .t, .l, .r`: bottom, top, left, right. Change direction of symbol.
     ```typ
-    $arrow.b, triangle.r, angle.l$
+    $arrow.b, triangle.r, chevron.l$
     ```
 - `.bl, tr`: bottom-left, top-right and so on. Where diagonal directions are possible.
 - `.bar, .circle, .times, ...`: adds corresponding element to symbol
@@ -61,7 +61,7 @@ $
 - `.cw, .ccw`: clock-wise and counter-clock-wise. For arrows and other things.
 - `.big, .small`:
     ```typ
-    $plus.circle.big plus.circle, times.circle.big plus.circle$
+    $plus.o.big plus.o, times.o.big plus.o$
     ```
 - `.filled`: fills the symbol
     ```typ
@@ -78,7 +78,7 @@ For different versions of letters, use `.alt`
 $
 alpha, Alpha, beta, Beta, beta.alt, gamma, pi, Pi,\
 pi.alt, phi, phi.alt, Phi, omicron, kappa, kappa.alt, Psi,\
-theta, theta.alt, xi, zeta, rho, rho.alt, kai, Kai,
+theta, theta.alt, xi, zeta, rho, rho.alt,  \u{3d7}, \u{3c5}, 
 $
 ```
 
