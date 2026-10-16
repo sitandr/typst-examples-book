@@ -1,6 +1,6 @@
 # Tables and grids
 
-While tables are not that necessary to know if you don't plan to use them in your documents, grids may be very useful for _document layout_. We will use both of them them in the book later.
+While tables are not that necessary to know if you don't plan to use them in your documents, grids may be very useful for _document layout_. We will use both of them in the book later.
 
 Let's not bother with copying examples from official documentation. Just make sure to skim through it, okay?
 
