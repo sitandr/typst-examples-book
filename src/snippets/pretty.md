@@ -13,6 +13,29 @@
   ]
 ```
 
+If you want to apply this style to the [quote](https://typst.app/docs/reference/model/quote/) element, then extra work is needed to clean the default styling:
+
+```typ
+#show quote.where(block: true): it => {
+  // Eliminate the spacing added by the default show rule.
+  set block(above: auto, below: auto)
+  // Instead, use `rect` to control spacing on our own.
+  rect(fill: luma(240), stroke: (left: 0.25em), it.body)
+  // Also, use `it.body` to get rid of the default `pad` in `it`.
+}
+
+#set quote(block: true)
+
++ #lorem(10) \
+  #quote[
+    *Solution:* #lorem(10)
+
+    $ a_(n+1)x^n = 2... $
+  ]
+```
+
+Please note that the above is only a simple implementation. It does not take into account [attributions](https://typst.app/docs/reference/model/quote/#parameters-attribution) or HTML export.
+
 ## Text on box top
 ```typ
 // author: gaiajack
